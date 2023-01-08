@@ -1,0 +1,42 @@
+import React, { AnchorHTMLAttributes, ButtonHTMLAttributes } from 'react';
+import { tuple } from '../util/type';
+import ButtonBase from './ButtonBase';
+
+const ButtonType = tuple(
+  'primary',
+  'danger',
+  'outline',
+  'warning',
+  'gradual',
+  'text',
+);
+const SizeType = tuple('large', 'small', 'medium');
+
+export type ButtonType = (typeof ButtonType)[number];
+
+export type SizeType = (typeof SizeType)[number];
+
+export interface BaseButtonProps {
+  size?: SizeType;
+  type: ButtonType;
+  children: React.ReactNode;
+  style?: React.CSSProperties;
+  width?: number | string;
+  height?: number | string;
+  animationColor?: string;
+  loading?: boolean;
+  onClick?: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
+}
+
+type NativeButtonProps = BaseButtonProps &
+  Omit<ButtonHTMLAttributes<HTMLElement>, 'type'>;
+type AnchorButtonProps = BaseButtonProps &
+  Omit<AnchorHTMLAttributes<HTMLElement>, 'type'>;
+
+export type ButtonProps = Partial<NativeButtonProps & AnchorButtonProps>;
+
+const Button: React.FC<ButtonProps> = (props) => {
+  return <ButtonBase {...props}>{props.children}</ButtonBase>;
+};
+
+export default Button;
