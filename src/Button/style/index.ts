@@ -1,6 +1,7 @@
+import { SizeType } from 'Ocean/common/type';
 import { GlobalColor } from 'Ocean/common/variable';
 import styled from 'styled-components';
-import { BaseButtonProps, ButtonType, SizeType } from '..';
+import { BaseButtonProps, ButtonType } from '..';
 
 export const ButtonLoading = styled.span<{ type: ButtonType }>`
   width: 17px;

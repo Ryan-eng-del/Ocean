@@ -1,7 +1,11 @@
+import {
+  AppstoreOutlined,
+  MailOutlined,
+  SettingOutlined,
+} from '@ant-design/icons';
 import { Menu } from 'Ocean';
-import type { MenuItem } from '../index';
 import React from 'react';
-import { AppstoreOutlined, MailOutlined, SettingOutlined } from '@ant-design/icons';
+import type { MenuItem } from '../index';
 
 function getItem(
   label: React.ReactNode,
@@ -35,7 +39,7 @@ const items: MenuItem[] = [
 ];
 
 const MenuUse = () => {
-  return <Menu items={items} ableToggle={true} curSelectKey={'sub2'} />;
+  return <Menu items={items} curSelectKey={'sub2'} />;
 };
 
 export default MenuUse;

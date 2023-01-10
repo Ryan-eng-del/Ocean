@@ -1,3 +1,4 @@
+import { SizeType } from 'Ocean/common/type';
 import React, { AnchorHTMLAttributes, ButtonHTMLAttributes } from 'react';
 import { tuple } from '../util/type';
 import ButtonBase from './ButtonBase';
@@ -10,11 +11,8 @@ const ButtonType = tuple(
   'gradual',
   'text',
 );
-const SizeType = tuple('large', 'small', 'medium');
 
 export type ButtonType = (typeof ButtonType)[number];
-
-export type SizeType = (typeof SizeType)[number];
 
 export interface BaseButtonProps {
   size?: SizeType;

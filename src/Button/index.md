@@ -1,9 +1,3 @@
----
-nav:
-  title: Components
-  path: /components
----
-
 # Button
 
 ---
