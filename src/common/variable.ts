@@ -19,11 +19,25 @@ export const TypeButtonColor = {
 export const GlobalFontSize = {
   small: '12px',
   medium: '15px',
-  large: '18px',
+  large: '20px',
 };
 
 export const GlobalRadioSize = {
   small: '25px',
   medium: '35px',
   large: '45px',
+};
+
+export const GlobalMargin = {
+  xs: '5px',
+  ms: ' 10px',
+  md: '15px',
+  lg: '20px',
+};
+
+export const GlobalPadding = {
+  xs: '5px',
+  ms: ' 10px',
+  md: '15px',
+  lg: '20px',
 };

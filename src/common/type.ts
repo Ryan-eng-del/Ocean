@@ -4,3 +4,4 @@ const SizeType = tuple('large', 'small', 'medium');
 
 export type SizeType = (typeof SizeType)[number];
 export type DirectionType = 'horizontal' | 'vertical';
+export type AlignType = 'left' | 'right' | 'top' | 'bottom';

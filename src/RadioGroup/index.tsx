@@ -17,6 +17,8 @@ interface RadioGroup {
   mode?: DirectionType;
   type?: ButtonType;
   style?: CSSProperties;
+  noExam?: boolean;
+  solid?: boolean;
 }
 
 const RadioGroupWrapper = styled.div<{ mode: DirectionType }>`
@@ -24,7 +26,17 @@ const RadioGroupWrapper = styled.div<{ mode: DirectionType }>`
 `;
 
 const RadioGroup = (props: RadioGroup) => {
-  const { children, mode = 'vertical' } = props;
+  const {
+    children,
+    mode = 'vertical',
+    noExam = false,
+    size,
+    type,
+    value,
+    solid,
+  } = props;
+
+  //toDO 统一导出接口类型
   const onChange = (
     e: React.MouseEvent<HTMLElement, MouseEvent>,
     value: any,
@@ -35,10 +47,12 @@ const RadioGroup = (props: RadioGroup) => {
   return (
     <RadioContext.Provider
       value={{
-        value: props.value,
+        value,
         onChange,
-        size: props.size,
-        type: props.type,
+        size,
+        type,
+        noExam,
+        solid,
       }}
     >
       <>

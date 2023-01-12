@@ -10,6 +10,8 @@ interface RadioContext {
   ) => void;
   size?: SizeType;
   type?: ButtonType;
+  noExam?: boolean;
+  solid?: boolean;
 }
 const RadioContext = createContext<RadioContext | null>(null);
 

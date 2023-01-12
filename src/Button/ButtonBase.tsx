@@ -74,7 +74,7 @@ const ButtonBase = React.forwardRef(function (props: ButtonProps) {
   const handleOnMouseDown = useHandleRipper('startRipple', props.onMouseDown);
 
   return (
-    <ButtonBaseStyle ownState={ownState}>
+    <ButtonBaseStyle ownState={ownState} className={props.className}>
       <button
         type={'button'}
         onMouseDown={handleOnMouseDown}
