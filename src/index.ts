@@ -1,3 +1,5 @@
+export { default as Breadcrumb } from './Breadcrumb';
+export { default as BreadcrumbItem } from './Breadcrumb/BreadcrumbItem';
 export { default as Button } from './Button';
 export { default as ButtonGroup } from './ButtonGroup';
 export { default as CheckBoxGroup } from './CheckBoxGroup';
