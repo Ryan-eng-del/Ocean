@@ -40,4 +40,5 @@ export const GlobalPadding = {
   ms: ' 10px',
   md: '15px',
   lg: '20px',
+  lgg: '30px',
 };

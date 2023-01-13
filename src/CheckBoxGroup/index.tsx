@@ -1,8 +1,7 @@
 import { Radio, RadioGroup } from 'Ocean';
 import { ButtonType } from 'Ocean/Button';
 import { DirectionType, SizeType } from 'Ocean/common/type';
-import React from 'react';
-import { CSSProperties } from 'styled-components';
+import React, { CSSProperties } from 'react';
 import { useImmer } from 'use-immer';
 
 interface CheckOption {

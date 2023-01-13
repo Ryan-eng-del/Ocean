@@ -1,5 +1,10 @@
 import { SizeType } from 'Ocean/common/type';
-import React, { AnchorHTMLAttributes, ButtonHTMLAttributes } from 'react';
+import React, {
+  AnchorHTMLAttributes,
+  ButtonHTMLAttributes,
+  CSSProperties,
+  ReactNode,
+} from 'react';
 import { tuple } from '../util/type';
 import ButtonBase from './ButtonBase';
 
@@ -17,8 +22,8 @@ export type ButtonType = (typeof ButtonType)[number];
 export interface BaseButtonProps {
   size?: SizeType;
   type: ButtonType;
-  children: React.ReactNode;
-  style?: React.CSSProperties;
+  children: ReactNode;
+  style?: CSSProperties;
   width?: number | string;
   height?: number | string;
   animationColor?: string;

@@ -1,7 +1,7 @@
 import { ButtonType } from 'Ocean/Button';
 import { SizeType } from 'Ocean/common/type';
-import React, { ReactNode } from 'react';
-import styled, { CSSProperties } from 'styled-components';
+import React, { CSSProperties, ReactNode } from 'react';
+import styled from 'styled-components';
 import { DirectionType } from '../common/type';
 import RadioContext from './RadioContext';
 
