@@ -1,6 +1,6 @@
 ## Radio
 
-### 不同 type Radio
+### 自定义 type
 
 <code src="./document/radio.tsx"></code>
 
@@ -8,10 +8,10 @@
 
 <code src="./document/exam.tsx"></code>
 
-### 不同方向 Radio
+### 自定义方向
 
 <code src="./document/direction.tsx"></code>
 
-### 不同大小 Radio
+### 自定义大小
 
 <code src="./document/sizeRadio.tsx"></code>

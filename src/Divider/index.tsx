@@ -8,7 +8,7 @@ import { handlePx } from '../util/common';
 interface Divider {
   children?: ReactNode;
   align?: DividerAlign;
-  padding?: PxType;
+  padding?: number;
   style?: CSSProperties;
   size?: SizeType;
   fontSize?: PxType;
@@ -73,10 +73,10 @@ const getFontSize = (size: SizeType, fontSize: PxType | undefined) => {
   return value;
 };
 
-const getPxStyle = (padding: PxType | undefined, defaultValue: string) => {
+const getPxStyle = (padding: number | undefined, defaultValue: string) => {
   let value = defaultValue;
-  if (padding) {
-    value = handlePx(padding) as string;
+  if (padding !== undefined) {
+    value = `0 ${padding}px`;
   }
   return value;
 };

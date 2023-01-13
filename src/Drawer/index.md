@@ -4,7 +4,7 @@
 
 <code src="./document/basic.tsx"></code>
 
-### 不同方向
+### 自定义方向
 
 <code src="./document/dialogBasic.tsx"></code>
 
@@ -16,7 +16,7 @@
 
 <code src="./document/fullScreen.tsx"></code>
 
-### 自定义尺寸抽屉
+### 自定义尺寸
 
 <code src="./document/sizeDrawer.tsx"></code>
 
