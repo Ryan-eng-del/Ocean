@@ -42,8 +42,14 @@ const DialogBasic = () => {
       >
         Drawer
       </Drawer>
-      <Button width={100} onClick={() => setVisible(!visible)} type="primary">
-        打开抽屉
+      <Button
+        width={120}
+        height={40}
+        type="outline"
+        onClick={() => setVisible(!visible)}
+        style={{ marginTop: '20px' }}
+      >
+        打开Modal
       </Button>
     </>
   );

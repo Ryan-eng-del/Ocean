@@ -1,28 +1,29 @@
-import { Button, Drawer } from 'Ocean';
+import { Button, Modal } from 'Ocean';
 import React, { useState } from 'react';
 
-const DialogBasic = () => {
+const Basic = () => {
   const [visible, setVisible] = useState(false);
-
   return (
     <>
-      <Drawer
+      <Modal
         visible={visible}
         title="Modal"
         onCancel={() => setVisible(false)}
         onOk={() => setVisible(false)}
       >
-        DialogBasic
-      </Drawer>
+        I am Modal
+      </Modal>
+
       <Button
         width={100}
         height={40}
         onClick={() => setVisible(!visible)}
         type="primary"
       >
-        打开抽屉
+        打开Modal
       </Button>
     </>
   );
 };
-export default DialogBasic;
+
+export default Basic;

@@ -1,18 +1,19 @@
-import { Button, Drawer, Radio, RadioGroup } from 'Ocean';
+import { Button, Modal, Radio, RadioGroup } from 'Ocean';
+import { DividerAlign } from 'Ocean/common/type';
 import React, { useState } from 'react';
-import { AlignType } from '../../common/type';
 
-const DialogBasic = () => {
+const Basic = () => {
   const [visible, setVisible] = useState(false);
-  const [value, setValue] = useState<AlignType>('right');
-  const changeDirection = (d: AlignType) => {
+  const [value, setValue] = useState<DividerAlign>('right');
+
+  const changeSize = (d: DividerAlign) => {
     setValue(d);
   };
   return (
     <>
       <RadioGroup
         value={value}
-        onChange={(d: any) => changeDirection(d)}
+        onChange={(d: any) => changeSize(d)}
         noExam={true}
         type="primary"
         mode="horizontal"
@@ -21,19 +22,19 @@ const DialogBasic = () => {
       >
         <Radio value={'left'}>Left</Radio>
         <Radio value={'right'}>Right</Radio>
-        <Radio value={'bottom'}>Bottom</Radio>
-        <Radio value={'top'}>Top</Radio>
+        <Radio value={'center'}>center</Radio>
       </RadioGroup>
-      <Drawer
+
+      <Modal
         visible={visible}
         title="Modal"
         onCancel={() => setVisible(false)}
         onOk={() => setVisible(false)}
-        align={value}
-        fullScreen
+        footerPosition={value}
       >
-        DialogBasic
-      </Drawer>
+        I am Modal
+      </Modal>
+
       <Button
         width={120}
         height={40}
@@ -47,4 +48,4 @@ const DialogBasic = () => {
   );
 };
 
-export default DialogBasic;
+export default Basic;

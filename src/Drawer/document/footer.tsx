@@ -34,7 +34,12 @@ const DialogBasic = () => {
       >
         DialogBasic
       </Drawer>
-      <Button width={100} onClick={() => setVisible(!visible)} type="primary">
+      <Button
+        width={100}
+        height={40}
+        onClick={() => setVisible(!visible)}
+        type="primary"
+      >
         打开抽屉
       </Button>
     </>

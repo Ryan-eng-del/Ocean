@@ -6,6 +6,7 @@ export { default as CheckBoxGroup } from './CheckBoxGroup';
 export { default as Divider } from './Divider';
 export { default as Drawer } from './Drawer';
 export { default as Menu } from './Menu';
+export { default as Modal } from './Modal';
 export { default as Radio } from './Radio';
 export { default as RadioGroup } from './RadioGroup';
 export { default as Tree } from './Tree';
