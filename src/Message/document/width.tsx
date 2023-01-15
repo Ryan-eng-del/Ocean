@@ -23,7 +23,7 @@ const Basic = () => {
         <Radio value={'200px'}>200px</Radio>
       </RadioGroup>
       <Button
-        width={100}
+        width={120}
         height={40}
         onClick={() => {
           Message.open({
@@ -32,7 +32,7 @@ const Basic = () => {
             width: value,
           });
         }}
-        type="primary"
+        type="outline"
       >
         打开Modal
       </Button>

@@ -23,7 +23,7 @@ const Basic = () => {
         <Radio value={1000}>1000</Radio>
       </RadioGroup>
       <Button
-        width={100}
+        width={120}
         height={40}
         onClick={() => {
           Message.open({
@@ -32,7 +32,7 @@ const Basic = () => {
             duration: value,
           });
         }}
-        type="primary"
+        type="outline"
       >
         打开Modal
       </Button>
