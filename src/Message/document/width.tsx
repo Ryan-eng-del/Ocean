@@ -11,6 +11,7 @@ const Basic = () => {
           Message.open({
             type: 'success',
             content: 'Welcome!  Ocean',
+            width: 100,
           });
         }}
         type="primary"
