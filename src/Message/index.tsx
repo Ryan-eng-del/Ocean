@@ -194,28 +194,22 @@ const addMessage = (message: Message) => {
   }
 
   topMessage++;
-
   const changeMessage = (count: number) => {
     topMessage = count;
   };
 
-  function changeHeight(children: Array<HTMLElement>, position: any) {
-    for (const key in children) {
-      if (children[key].getAttribute('class')?.startsWith('box1')) {
-        const child = children[key].childNodes[0] as HTMLElement;
-        child.style[position] = `${
-          Number(child.style[position].split('p')[0]) - 70
-        }px`;
-      }
-    }
+  function changeHeight(child: HTMLElement, position: any) {
+    (child.childNodes[0] as HTMLElement).style[position] = `${
+      Number(child.style[position].split('p')[0]) - 70
+    }px`;
   }
 
   setTimeout(() => {
-    changeHeight(
-      Array.prototype.slice.call(container?.childNodes),
-      judgePosition(message.position),
-    );
-    container?.removeChild(div);
+    changeHeight(div, judgePosition(message.position));
+    setTimeout(() => {
+      container?.removeChild(div);
+    }, 550);
+
     if (topMessage > 0) topMessage--;
   }, duration + 340);
 

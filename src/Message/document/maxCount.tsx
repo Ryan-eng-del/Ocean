@@ -2,9 +2,9 @@ import { Button, Message, Radio, RadioGroup } from 'Ocean';
 import React, { useState } from 'react';
 
 const Basic = () => {
-  const [value, setValue] = useState<number | string>(100);
+  const [value, setValue] = useState<number>(1);
 
-  const changeSize = (d: number | string) => {
+  const changeSize = (d: number) => {
     setValue(d);
   };
   return (
@@ -18,9 +18,9 @@ const Basic = () => {
         size="small"
         solid={false}
       >
-        <Radio value={100}>100px</Radio>
-        <Radio value={150}>150px</Radio>
-        <Radio value={'200px'}>200px</Radio>
+        <Radio value={1}>1</Radio>
+        <Radio value={3}>3</Radio>
+        <Radio value={5}>5</Radio>
       </RadioGroup>
       <Button
         width={100}
@@ -29,7 +29,7 @@ const Basic = () => {
           Message.open({
             type: 'success',
             content: 'Welcome!  Ocean',
-            width: value,
+            maxCount: value,
           });
         }}
         type="primary"

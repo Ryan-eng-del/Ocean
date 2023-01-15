@@ -15,3 +15,9 @@
 ## 不同位置动画
 
 <code src="./document/position.tsx"></code>
+
+## 最大 Message 个数
+
+组件库中，默认 Message 最大个数是一个
+
+<code src="./document/maxCount.tsx"></code>
