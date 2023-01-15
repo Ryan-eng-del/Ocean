@@ -21,3 +21,9 @@
 组件库中，默认 Message 最大个数是一个
 
 <code src="./document/maxCount.tsx"></code>
+
+## 自定义持续时间
+
+组件库中，默认 time 是 1000s
+
+<code src="./document/time.tsx"></code>

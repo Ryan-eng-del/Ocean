@@ -82,9 +82,9 @@ interface Message {
   duration?: number;
   type: MessageType;
   width?: PxType;
-
   position?: 'topLeft' | 'topCenter' | 'bottomLeft' | 'bottomCenter';
 }
+
 let container: HTMLElement | null;
 let topMessage = 0;
 
@@ -182,6 +182,7 @@ const Message = (props: Message) => {
 const addMessage = (message: Message) => {
   const { duration = 1000 } = message;
   const div = document.createElement('div');
+  //toDo 删除 message
   div.setAttribute('class', `box1`);
 
   if (container) {
@@ -194,6 +195,7 @@ const addMessage = (message: Message) => {
   }
 
   topMessage++;
+
   const changeMessage = (count: number) => {
     topMessage = count;
   };
@@ -211,6 +213,7 @@ const addMessage = (message: Message) => {
     }, 550);
 
     if (topMessage > 0) topMessage--;
+    //? 这里 + 340 是动画的时间
   }, duration + 340);
 
   return createRoot(div).render(
