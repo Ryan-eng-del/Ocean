@@ -31,6 +31,7 @@ const MessageWrapper = styled.div<{
   border-radius: 10px;
   height: 47px;
   box-sizing: border-box;
+  opacity: 1;
   color: #000;
   margin-left: 7px;
   padding: ${GlobalPadding.xs} ${GlobalPadding.lgg};
@@ -38,7 +39,7 @@ const MessageWrapper = styled.div<{
       props.isEdge ? 'ocean-show-message-rl' : 'ocean-show-message-tb'}
     330ms ease forwards;
   z-index: 11;
-  transition: 0.2s linear;
+  transition: 550ms ease;
   .toast-content {
     display: block;
     width: ${(props) => (props.width ? handlePx(props.width) : undefined)};
@@ -81,6 +82,7 @@ interface Message {
   duration?: number;
   type: MessageType;
   width?: PxType;
+
   position?: 'topLeft' | 'topCenter' | 'bottomLeft' | 'bottomCenter';
 }
 let container: HTMLElement | null;
@@ -200,7 +202,6 @@ const addMessage = (message: Message) => {
   function changeHeight(children: Array<HTMLElement>, position: any) {
     for (const key in children) {
       if (children[key].getAttribute('class')?.startsWith('box1')) {
-        console.log('Height');
         const child = children[key].childNodes[0] as HTMLElement;
         child.style[position] = `${
           Number(child.style[position].split('p')[0]) - 70
@@ -214,10 +215,8 @@ const addMessage = (message: Message) => {
       Array.prototype.slice.call(container?.childNodes),
       judgePosition(message.position),
     );
-
-    setTimeout(() => {
-      container?.removeChild(div);
-    }, 100);
+    container?.removeChild(div);
+    if (topMessage > 0) topMessage--;
   }, duration + 340);
 
   return createRoot(div).render(
