@@ -1,0 +1,23 @@
+# Switch
+
+## 基本使用
+
+<code src="./document/basic.tsx"></code>
+
+## 不同类别
+
+<code src="./document/type.tsx"> </code>
+
+## 自定义图标
+
+<code src="./document/custom.tsx"> </code>
+
+## 自定义内容
+
+最好是少于两个字的内容，作者建议使用受控组件状态来在外面包括标签来展示文字
+
+<code src="./document/context.tsx"> </code>
+
+## 受控 Switch
+
+<code src="./document/control.tsx"> </codes>

@@ -40,7 +40,7 @@ const MessageWrapper = styled.div<{
     330ms ease forwards;
   z-index: 11;
   transition: 550ms ease;
-  .toast-content {
+  .message-content {
     display: block;
     width: ${(props) => (props.width ? handlePx(props.width) : undefined)};
     margin-left: ${GlobalMargin.ms};
@@ -107,9 +107,9 @@ const Message = (props: Message) => {
     content,
     closeable,
     topMessage = 0,
-    maxCount = 3,
+    maxCount = 1,
     changeMessage,
-    type,
+    type = 'success',
     width,
     position = 'top',
   } = props;
@@ -173,7 +173,7 @@ const Message = (props: Message) => {
   return (
     <MessageWrapper ref={domRef} width={width} isEdge={isEdge}>
       {messageIcon}
-      <span className="toast-content">{content}</span>
+      <span className="message-content">{content}</span>
       {closeable && <CloseOutlined />}
     </MessageWrapper>
   );

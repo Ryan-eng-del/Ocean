@@ -12,3 +12,4 @@ export { default as Radio } from './Radio';
 export { default as RadioGroup } from './RadioGroup';
 export { default as Tree } from './Tree';
 export { default as TreeItem } from './TreeItem';
+export { default as Switch } from './Switch';

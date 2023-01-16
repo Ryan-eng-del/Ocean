@@ -21,3 +21,5 @@ export type MessagePosition =
   | 'topCenter'
   | 'bottomLeft'
   | 'bottomCenter';
+
+export type SwitchType = 'custom' | 'primary' | 'ios' | 'light';
