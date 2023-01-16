@@ -145,8 +145,8 @@ const Switch = (props: Switch) => {
   const ref = useRef();
 
   const toggleSwitch = () => {
-    onToggle?.(switchStatus);
-    setSwitchStatus(!switchStatus);
+    onToggle?.(!switchStatus);
+    checked ?? setSwitchStatus(!switchStatus);
   };
 
   return (

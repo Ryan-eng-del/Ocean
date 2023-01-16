@@ -20,4 +20,10 @@
 
 ## 受控 Switch
 
-<code src="./document/control.tsx"> </codes>
+<code src="./document/control.tsx"> </code>
+
+## 受控内容
+
+根据状态来决定文本内容
+
+<code src="./document/controlContext.tsx"> </code>
