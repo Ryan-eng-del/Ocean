@@ -8,12 +8,12 @@ import React, {
 import { ButtonType } from '../Button';
 import { Ripple } from './Ripple';
 
-type TouchRippleRef = { startRipple: (event: any) => void };
+export type TouchRippleRef = { startRipple: (event: any) => void };
 type params = { rippleSize: number; rippleX: number; rippleY: number };
 
 interface TouchRipple {
-  type: ButtonType;
-  animationColor: string | undefined;
+  type?: ButtonType;
+  animationColor?: string;
 }
 
 const TouchRipple = React.forwardRef(function (
@@ -33,7 +33,7 @@ const TouchRipple = React.forwardRef(function (
             rippleSize={rippleSize}
             rippleX={rippleX}
             rippleY={rippleY}
-            type={props.type}
+            type={props.type || 'primary'}
             animationColor={props.animationColor}
           />,
         ];

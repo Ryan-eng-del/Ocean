@@ -21,7 +21,7 @@ const RippleStyle = styled.span<{
   animation-duration: 550ms;
   animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   border-radius: 50%;
-  z-index: -1;
+  z-index: 13;
   background-color: ${(props) => {
     if (props.animationColor) return props.animationColor;
 

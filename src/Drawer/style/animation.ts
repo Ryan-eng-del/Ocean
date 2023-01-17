@@ -1,27 +1,31 @@
-export const markDrawerAnimation = `
-.mark-drawer-enter {
+export const opacityTransition = (className: string) => {
+  return `
+.${className}-enter,
+.${className}-appear {
   opacity: 0;
 }
 
-.mark-drawer-enter-active {
+.${className}-enter-active,
+.${className}-appear-active {
   opacity: 1;
   transition: opacity 100ms linear;
 }
 
-.mark-drawer-exit {
+.${className}-exit {
   opacity: 1;
 }
 
-.mark-drawer-exit-active {
+.${className}-exit-active {
   opacity: 0;
   transition: opacity 100ms linear;
 }
 
 
-.mark-drawer-exit-done {
+.${className}-exit-done {
   opacity: 0;
 }
 `;
+};
 
 export const drawerBodyAnimation = `
   .fadedrawer-right-content-enter,

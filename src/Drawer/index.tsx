@@ -47,7 +47,6 @@ const Drawer = (props: Drawer) => {
 
   const clickDocument = (e: React.MouseEvent<HTMLElement, MouseEvent>) => {
     const clickDom = e.target as HTMLElement;
-
     stopPropagation(e)(() => {
       if (clickDom.getAttribute('class')?.includes('mark-drawer')) {
         onCancel();

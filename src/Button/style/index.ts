@@ -52,7 +52,7 @@ export const ButtonBaseStyle = styled.div.attrs<{ ownState: BaseButtonProps }>(
 }>`
   button {
     position: relative;
-    z-index: 1;
+    z-index: 13;
     display: flex;
     align-items: center;
     justify-content: center;

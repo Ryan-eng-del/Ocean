@@ -8,6 +8,7 @@ export const GlobalColor = {
   OceanHoverLight: 'rgb(237, 245, 251)',
   OceanRedColor: 'rgb(211, 47, 47)',
   OceanBorderLightProColor: '#e5e6eb',
+  OceanPrimaryBlue: 'rgb(237, 242, 247)',
 };
 
 export const TypeButtonColor = {

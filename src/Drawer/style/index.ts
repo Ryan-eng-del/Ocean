@@ -1,7 +1,7 @@
 import { GlobalFontSize, GlobalPadding } from 'Ocean/common/variable';
 import styled, { FlattenSimpleInterpolation } from 'styled-components';
 import { AlignType } from '../../common/type';
-import { drawerBodyAnimation, markDrawerAnimation } from './animation';
+import { drawerBodyAnimation, opacityTransition } from './animation';
 import { getDrawerPosition } from './computedStyle';
 
 export const DialogItem = styled.div`
@@ -16,7 +16,7 @@ export const DialogItem = styled.div`
 `;
 
 export const DialogWrapper = styled.div`
-  ${markDrawerAnimation}
+  ${opacityTransition('mark-drawer')}
 `;
 
 export const DialogContent = styled.div`
