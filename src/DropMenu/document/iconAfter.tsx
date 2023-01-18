@@ -10,7 +10,7 @@ const Basic = () => {
       setVisible={setVisible}
       visible={visible}
       data={[
-        { content: 'Download', beforeIcon: <LeftOutlined /> },
+        { content: 'Download', afterIcon: <LeftOutlined /> },
         { content: 'Copy' },
         { content: '关闭菜单', click: () => setVisible(false) },
       ]}

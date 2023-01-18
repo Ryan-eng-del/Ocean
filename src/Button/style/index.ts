@@ -8,6 +8,7 @@ export const ButtonLoading = styled.span<{ type: ButtonType }>`
   height: 17px;
   margin-right: 10px;
   border: 2px solid white;
+
   border-color: ${(props) => {
     let borderColor = 'white';
     if (
@@ -52,7 +53,7 @@ export const ButtonBaseStyle = styled.div.attrs<{ ownState: BaseButtonProps }>(
 }>`
   button {
     position: relative;
-    z-index: 13;
+    z-index: 1;
     display: flex;
     align-items: center;
     justify-content: center;

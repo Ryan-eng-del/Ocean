@@ -1,3 +1,4 @@
+import { RightOutlined } from '@ant-design/icons';
 import Button from 'Ocean/Button';
 import { opacityTransition } from 'Ocean/Drawer/style/animation';
 import React, { ReactNode, useEffect } from 'react';
@@ -30,6 +31,13 @@ const DropMenuItem = styled.div`
   background-color: #fff;
   position: relative;
   z-index: 19;
+  display: flex;
+
+  :hover {
+    .child-menu-wrapper {
+      opacity: 1;
+    }
+  }
 `;
 
 const DropMenuWrapper = styled.div`
@@ -45,7 +53,7 @@ const DropStartMenu = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 20px 0;
+  margin: 10px 0;
   .ocean-menu-content {
     pointer-events: none;
   }
@@ -55,7 +63,8 @@ type DropMenuData = {
   content: string;
   children?: DropMenuData[];
   disabled?: boolean;
-  icon?: ReactNode;
+  beforeIcon?: ReactNode;
+  afterIcon?: ReactNode;
   click?: () => void;
 };
 
@@ -65,12 +74,25 @@ interface DropMenu {
   as?: ReactNode;
   visible: boolean;
   setVisible: any;
+  mode?: 'hover';
 }
 
+const ChildrenMenuWrapper = styled.div`
+  background-color: #fff;
+  position: absolute;
+  z-index: 19;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  outline: transparent solid 2px;
+  outline-offset: 2px;
+  border: 1px solid #e2e8f0;
+  right: -211px;
+  opacity: 0;
+  &:hover {
+    opacity: 1;
+  }
+`;
 const DropMenu = (props: DropMenu) => {
-  const { content, data, visible, setVisible, as } = props;
-
-  // const [menuVisible, setVisible] = useState(visible);
+  const { content, data, visible, setVisible, as, mode } = props;
 
   const menuClick = (e: any) => {
     e.stopPropagation();
@@ -98,7 +120,19 @@ const DropMenu = (props: DropMenu) => {
   }, [visible]);
 
   return (
-    <DropMenuWrapper>
+    <DropMenuWrapper
+      className="ocean-menu-wrapper"
+      onMouseEnter={(e) => {
+        if (mode === 'hover') {
+          menuClick(e);
+        }
+      }}
+      onMouseLeave={() => {
+        if (mode === 'hover') {
+          setVisible(false);
+        }
+      }}
+    >
       <DropStartMenu onClick={(e) => menuClick(e)}>
         {as || (
           <Button type="text">
@@ -121,10 +155,26 @@ const DropMenu = (props: DropMenu) => {
                 key={index}
                 onClick={(e) => menuItemClick(e, menu.click)}
               >
-                <Button type="text">
+                <Button type="text" width={210}>
+                  {menu.beforeIcon && menu.beforeIcon}
                   {menu.content}
-                  {menu?.icon}
+                  {menu.afterIcon}
+                  {menu.children && <RightOutlined />}
                 </Button>
+
+                {menu.children && (
+                  <ChildrenMenuWrapper className="child-menu-wrapper">
+                    {menu.children?.map((child, index) => {
+                      return (
+                        <Button type="text" key={index} width={210}>
+                          {child.beforeIcon && child.beforeIcon}
+                          {child.content}
+                          {child.afterIcon && child.afterIcon}
+                        </Button>
+                      );
+                    })}
+                  </ChildrenMenuWrapper>
+                )}
               </DropMenuItem>
             );
           })}
