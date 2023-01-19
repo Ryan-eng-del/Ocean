@@ -16,9 +16,9 @@
 
 <code src="./document/position.tsx"></code>
 
-## 最大 Message 个数
+## 最大 Notification 个数
 
-组件库中，默认 Message 最大个数是一个
+组件库中，默认 Notification 最大个数是一个
 
 <code src="./document/maxCount.tsx"></code>
 

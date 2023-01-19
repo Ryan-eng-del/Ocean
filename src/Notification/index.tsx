@@ -213,7 +213,8 @@ const addMessage = (message: Notification) => {
 
   function changeHeight(child: HTMLElement, position: any) {
     (child.childNodes[0] as HTMLElement).style[position] = `${
-      Number(child.style[position].split('p')[0]) - 70
+      Number(child.style[position].split('p')[0]) -
+      (child.childNodes[0] as HTMLElement).clientHeight
     }px`;
   }
 

@@ -34,7 +34,7 @@ const Basic = () => {
         }}
         type="outline"
       >
-        打开 Message
+        Message
       </Button>
     </>
   );

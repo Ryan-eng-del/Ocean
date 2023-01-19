@@ -15,7 +15,7 @@ const Basic = () => {
         }}
         type="primary"
       >
-        打开 Message
+        Message
       </Button>
     </>
   );

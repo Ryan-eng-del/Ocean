@@ -40,6 +40,7 @@ const MessageWrapper = styled.div<{
     330ms ease forwards;
   z-index: 11;
   transition: 550ms ease;
+
   .message-content {
     display: block;
     width: ${(props) => (props.width ? handlePx(props.width) : undefined)};
@@ -203,7 +204,8 @@ const addMessage = (message: Message) => {
 
   function changeHeight(child: HTMLElement, position: any) {
     (child.childNodes[0] as HTMLElement).style[position] = `${
-      Number(child.style[position].split('p')[0]) - 70
+      Number(child.style[position].split('p')[0]) -
+      (child.childNodes[0] as HTMLElement).clientHeight
     }px`;
   }
 

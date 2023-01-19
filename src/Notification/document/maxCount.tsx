@@ -35,7 +35,7 @@ const Basic = () => {
         }}
         type="primary"
       >
-        打开 Notification
+        Notification
       </Button>
     </>
   );

@@ -22,6 +22,7 @@ const Basic = () => {
         <Radio value={150}>150px</Radio>
         <Radio value={'200px'}>200px</Radio>
       </RadioGroup>
+
       <Button
         width={120}
         height={40}
@@ -34,7 +35,7 @@ const Basic = () => {
         }}
         type="outline"
       >
-        打开 Message
+        Message
       </Button>
     </>
   );

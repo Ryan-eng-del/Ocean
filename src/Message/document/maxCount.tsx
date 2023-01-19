@@ -29,12 +29,13 @@ const Basic = () => {
           Message.open({
             type: 'success',
             content: 'Welcome!  Ocean',
+
             maxCount: value,
           });
         }}
         type="primary"
       >
-        打开 Message
+        Message
       </Button>
     </>
   );
