@@ -9,8 +9,8 @@ import { offEvent, onEvent } from '../util/dom';
 const ContentWrapper = styled.div`
   transition: 330ms linear;
   width: 210px;
-  box-sizing: border-box;
   position: absolute;
+  box-sizing: border-box;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   outline: transparent solid 2px;
   outline-offset: 2px;
@@ -91,6 +91,7 @@ const ChildrenMenuWrapper = styled.div`
     opacity: 1;
   }
 `;
+
 const DropMenu = (props: DropMenu) => {
   const { content, data, visible, setVisible, as, mode } = props;
 
@@ -140,7 +141,6 @@ const DropMenu = (props: DropMenu) => {
           </Button>
         )}
       </DropStartMenu>
-
       <CSSTransition
         classNames={'drop-menu-container'}
         in={visible}

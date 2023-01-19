@@ -5,13 +5,9 @@ import {
   ExclamationCircleFilled,
   LoadingOutlined,
 } from '@ant-design/icons';
-import {
-  GlobalColor,
-  GlobalMargin,
-  GlobalPadding,
-} from 'Ocean/common/variable';
+import { GlobalColor, GlobalPadding } from 'Ocean/common/variable';
 import { handlePx } from 'Ocean/util/common';
-import React, { useLayoutEffect, useMemo, useRef } from 'react';
+import React, { ReactNode, useLayoutEffect, useMemo, useRef } from 'react';
 import { createRoot } from 'react-dom/client';
 import styled from 'styled-components';
 import { MessageType, PxType } from '../common/type';
@@ -22,31 +18,40 @@ const MessageWrapper = styled.div<{
   width: PxType | undefined;
   isEdge: boolean;
 }>`
+  max-width: 400px;
+  min-width: 300px;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   background-color: #fff;
   border: 1px solid ${GlobalColor.OceanBorderLightColor};
   position: fixed;
   border-radius: 10px;
-  height: 47px;
+  min-height: 100px;
   box-sizing: border-box;
   opacity: 1;
   color: #000;
   margin-left: 7px;
-  padding: ${GlobalPadding.xs} ${GlobalPadding.lgg};
+  padding: ${GlobalPadding.lg} ${GlobalPadding.md};
+
   animation: ${(props) =>
       props.isEdge ? 'ocean-show-message-rl' : 'ocean-show-message-tb'}
     330ms ease forwards;
   z-index: 11;
+  box-sizing: border-box;
   transition: 550ms ease;
-  .message-content {
-    display: block;
+  .ocean-content-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .ocean-notification-icon {
+    margin: 0 23px 0 13px;
+  }
+  .ocean-content {
     width: ${(props) => (props.width ? handlePx(props.width) : undefined)};
-    margin-left: ${GlobalMargin.ms};
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+    font-size: ${GlobalFontSize.small};
+    margin-top: 12px;
   }
 
   @keyframes ocean-show-message-tb {
@@ -73,7 +78,7 @@ const MessageWrapper = styled.div<{
   }
 `;
 
-interface Message {
+interface Notification {
   content: string;
   closeable?: boolean;
   topMessage?: number;
@@ -83,6 +88,7 @@ interface Message {
   type: MessageType;
   width?: PxType;
   position?: 'topLeft' | 'topCenter' | 'bottomLeft' | 'bottomCenter';
+  title: ReactNode;
 }
 
 let container: HTMLElement | null;
@@ -92,7 +98,8 @@ const primaryColor = GlobalColor.OceanPrimaryColor,
   errorColor = GlobalColor.OceanRedColor,
   successColor = '#00b42a',
   warningColor = '#ff7d00',
-  defaultFontSize = GlobalFontSize.medium;
+  defaultFontSize = '24px';
+
 const judgePosition = (position: any) => {
   let value = 'top';
 
@@ -102,7 +109,7 @@ const judgePosition = (position: any) => {
   return value;
 };
 
-const Message = (props: Message) => {
+const Notification = (props: Notification) => {
   const {
     content,
     closeable,
@@ -112,6 +119,7 @@ const Message = (props: Message) => {
     type = 'success',
     width,
     position = 'top',
+    title,
   } = props;
 
   const domRef = useRef<any>(null);
@@ -128,7 +136,6 @@ const Message = (props: Message) => {
       }px`;
     }
   }, [topMessage]);
-
   const messageIcon = useMemo(() => {
     if (type === 'info') {
       return (
@@ -172,14 +179,17 @@ const Message = (props: Message) => {
 
   return (
     <MessageWrapper ref={domRef} width={width} isEdge={isEdge}>
-      {messageIcon}
-      <span className="message-content">{content}</span>
+      <div className="ocean-notification-icon">{messageIcon}</div>
+      <div className="ocean-content-wrapper">
+        <div className="ocean-title">{title}</div>
+        <div className="ocean-content">{content}</div>
+      </div>
       {closeable && <CloseOutlined />}
     </MessageWrapper>
   );
 };
 
-const addMessage = (message: Message) => {
+const addMessage = (message: Notification) => {
   const { duration = 1000 } = message;
   const div = document.createElement('div');
   //toDo 删除 message
@@ -218,7 +228,7 @@ const addMessage = (message: Message) => {
   }, duration + 340);
 
   return createRoot(div).render(
-    <Message
+    <Notification
       {...message}
       changeMessage={changeMessage}
       topMessage={topMessage}
@@ -226,8 +236,8 @@ const addMessage = (message: Message) => {
   );
 };
 
-Message.open = (props: Message) => {
+Notification.open = (props: Notification) => {
   addMessage({ ...props });
 };
 
-export default Message;
+export default Notification;
