@@ -34,7 +34,7 @@ const Basic = () => {
         }}
         type="primary"
       >
-        打开Modal
+        打开 Message
       </Button>
     </>
   );

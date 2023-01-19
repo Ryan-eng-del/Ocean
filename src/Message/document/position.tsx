@@ -59,7 +59,7 @@ const Basic = () => {
         }}
         type="outline"
       >
-        打开Modal
+        打开 Message
       </Button>
     </>
   );
