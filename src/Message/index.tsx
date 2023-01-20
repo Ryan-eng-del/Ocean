@@ -131,44 +131,51 @@ const Message = (props: Message) => {
   }, [topMessage]);
 
   const messageIcon = useMemo(() => {
+    let result = (
+      <ExclamationCircleFilled
+        style={{ color: primaryColor, fontSize: defaultFontSize }}
+      />
+    );
     if (type === 'info') {
-      return (
+      result = (
         <ExclamationCircleFilled
           style={{ color: primaryColor, fontSize: defaultFontSize }}
         />
       );
     }
     if (type === 'error') {
-      return (
+      result = (
         <CloseCircleFilled
           style={{ color: errorColor, fontSize: defaultFontSize }}
         />
       );
     }
     if (type === 'normal') {
-      return <></>;
+      result = <></>;
     }
+
     if (type === 'success') {
-      return (
+      result = (
         <CheckCircleFilled
           style={{ color: successColor, fontSize: defaultFontSize }}
         />
       );
     }
     if (type === 'warning') {
-      return (
+      result = (
         <ExclamationCircleFilled
           style={{ color: warningColor, fontSize: defaultFontSize }}
         />
       );
     }
     if (type === 'loading') {
-      return (
+      result = (
         <LoadingOutlined
           style={{ color: primaryColor, fontSize: defaultFontSize }}
         />
       );
     }
+    return result;
   }, [type]);
 
   return (

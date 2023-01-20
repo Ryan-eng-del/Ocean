@@ -2,7 +2,7 @@ import { Alert } from 'Ocean';
 import React from 'react';
 
 const Basic = () => {
-  return <Alert content="This is a Alert!!"></Alert>;
+  return <Alert content="This is a Alert!!" closeElement="知道了" showClear />;
 };
 
 export default Basic;
