@@ -25,6 +25,7 @@ export const GlobalFontSize = {
   small: '12px',
   medium: '15px',
   large: '20px',
+  lgg: '32px',
 };
 
 export const GlobalRadioSize = {

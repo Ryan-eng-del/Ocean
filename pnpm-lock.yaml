@@ -10,6 +10,7 @@ specifiers:
   '@types/styled-components': ^5.1.26
   '@umijs/lint': ^4.0.0
   antd: ^5.1.2
+  dayjs: ^1.11.7
   dumi: ^2.0.2
   eslint: ^8.23.0
   father: ^4.1.0
@@ -29,6 +30,7 @@ specifiers:
 dependencies:
   '@ant-design/icons': registry.npmmirror.com/@ant-design/icons/4.8.0_biqbaboplfbrettd7655fr4n2y
   antd: registry.npmmirror.com/antd/5.1.2_biqbaboplfbrettd7655fr4n2y
+  dayjs: registry.npmmirror.com/dayjs/1.11.7
   immer: registry.npmmirror.com/immer/9.0.17
   react-transition-group: registry.npmmirror.com/react-transition-group/4.4.5_biqbaboplfbrettd7655fr4n2y
   styled-components: registry.npmmirror.com/styled-components/5.3.6_biqbaboplfbrettd7655fr4n2y

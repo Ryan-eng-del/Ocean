@@ -10,6 +10,6 @@ export const handlePx = (size: PxType) => {
   return value;
 };
 
-export const isNoPass = (value: undefined | any): value is any => {
+export const isNoPass = <T>(value: undefined | T): value is undefined => {
   return value === undefined;
 };

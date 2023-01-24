@@ -1,5 +1,10 @@
 import { CheckOutlined } from '@ant-design/icons';
-import { GlobalColor, GlobalMargin } from 'Ocean/common/variable';
+import {
+  GlobalColor,
+  GlobalFontSize,
+  GlobalMargin,
+} from 'Ocean/common/variable';
+import { isNoPass } from 'Ocean/util/common';
 import React, {
   CSSProperties,
   ReactNode,
@@ -17,6 +22,7 @@ interface Steps {
   current: number;
   lineStyle?: CSSProperties;
   onComplete?: () => void;
+  onChange?: (index: number) => void;
 }
 
 interface Step {
@@ -29,7 +35,6 @@ interface StepWrapper {
   isLast: boolean;
   dimension: string;
   isGoing: boolean;
-
   isComplete: boolean;
 }
 const getIconBack = (isComplete: boolean, isGoing: boolean) => {
@@ -59,6 +64,7 @@ const getIconColor = (isComplete: boolean, isGoing: boolean) => {
 
 const StepWrapper = styled.div<StepWrapper>`
   display: flex;
+  /* flex-direction: column; */
   align-items: center;
   margin-right: ${(props) => (!props.isLast ? GlobalMargin.ms : undefined)};
   transition: 330ms ease;
@@ -90,6 +96,14 @@ const StepWrapper = styled.div<StepWrapper>`
       margin-top: ${GlobalMargin.xs};
     }
   }
+  .ocean-icon-wrapper {
+    color: ${(props) =>
+      props.isComplete || props.isGoing
+        ? GlobalColor.OceanPrimaryColor
+        : GlobalColor.OceanFontGrey};
+
+    font-size: ${GlobalFontSize.lgg};
+  }
 `;
 
 const StepIcon = styled.div`
@@ -108,6 +122,7 @@ const StepsWrapper = styled.div`
   display: flex;
   align-items: center;
   position: relative;
+  cursor: pointer;
 `;
 
 const StepLine = styled.div`
@@ -117,8 +132,20 @@ const StepLine = styled.div`
   margin: 0 ${GlobalMargin.ms};
 `;
 
+const IconWrapper = styled.div`
+  color: ${GlobalColor.OceanPrimaryColor};
+  font-size: ${GlobalFontSize.large};
+`;
+
 const Steps = (props: Steps) => {
-  const { data, current, size = 'medium', lineStyle, onComplete } = props;
+  const {
+    data,
+    current,
+    size = 'medium',
+    lineStyle,
+    onComplete,
+    onChange,
+  } = props;
 
   const [curIndex, setCurIndex] = useState(current);
 
@@ -139,6 +166,13 @@ const Steps = (props: Steps) => {
     }
   }, [current]);
 
+  const clickStep = (index: number) => {
+    if (!isNoPass(onChange)) {
+      setCurIndex(index);
+      onChange(index);
+    }
+  };
+
   return (
     <StepsWrapper>
       {data.map((step, index) => {
@@ -150,19 +184,23 @@ const Steps = (props: Steps) => {
 
         return (
           <StepWrapper
+            onClick={() => clickStep(index + 1)}
             key={index}
             isLast={isLast}
             dimension={iconSize}
             isComplete={isComplete}
             isGoing={isGoing}
           >
-            <StepIcon className="ocean-step-icon">
-              {isComplete ? <CheckOutlined /> : index + 1}
-            </StepIcon>
+            {icon ? (
+              <IconWrapper className="ocean-icon-wrapper">{icon}</IconWrapper>
+            ) : (
+              <StepIcon className="ocean-step-icon">
+                {isComplete ? <CheckOutlined /> : index + 1}
+              </StepIcon>
+            )}
             <StepContent className="ocean-step-content">
               <div> {title}</div>
               <div> {subTitle}</div>
-              <div> {icon}</div>
               <div className="ocean-step-desc"> {description}</div>
             </StepContent>
 

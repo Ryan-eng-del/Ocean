@@ -4,6 +4,7 @@ export { default as BreadcrumbItem } from './Breadcrumb/BreadcrumbItem';
 export { default as Button } from './Button';
 export { default as ButtonGroup } from './ButtonGroup';
 export { default as CheckBoxGroup } from './CheckBoxGroup';
+export { default as CountDown } from './CountDown';
 export { default as Divider } from './Divider';
 export { default as Drawer } from './Drawer';
 export { default as DropMenu } from './DropMenu';
