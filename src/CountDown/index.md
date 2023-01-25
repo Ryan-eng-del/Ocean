@@ -18,3 +18,7 @@
 ## 倒计时大小
 
 <code src="./document/size.tsx"></code>
+
+## 分隔符
+
+<code src="./document/separator.tsx"></code>

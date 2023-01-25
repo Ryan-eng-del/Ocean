@@ -5,7 +5,6 @@ export default defineConfig({
   outputPath: 'docs-dist',
   themeConfig: {
     name: 'Ocean',
-
     logo: '/logo.png',
   },
 });
