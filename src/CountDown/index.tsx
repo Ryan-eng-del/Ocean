@@ -106,21 +106,18 @@ const CountDown = (props: CountDown) => {
     >
       <div className="ocean-hour-wrapper">
         <div className="ocean-hour-origin">{hour}</div>
-        <div className="ocean-hour-copy">{hour}</div>
       </div>
 
       {OceanSeparator}
 
       <div className="ocean-minute-wrapper">
         <div className="ocean-minute-origin">{minute}</div>
-        <div className="ocean-minute-copy">{minute}</div>
       </div>
 
       {OceanSeparator}
 
       <div className="ocean-second-wrapper" ref={secondRef}>
         <div className="ocean-second-origin">{second}</div>
-        <div className="ocean-second-copy">{second}</div>
       </div>
     </CountDownWrapper>
   );
