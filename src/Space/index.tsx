@@ -2,8 +2,10 @@ import React, { ReactNode } from 'react';
 interface Message {
   children: ReactNode;
 }
+
 const Message = (props: Message) => {
-  return <div>Message</div>;
+  const { children } = props;
+  return <div>{children}</div>;
 };
 
 export default Message;

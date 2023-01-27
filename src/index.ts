@@ -18,5 +18,6 @@ export { default as RadioGroup } from './RadioGroup';
 export { default as Skeleton } from './Skeleton';
 export { default as Steps } from './Steps';
 export { default as Switch } from './Switch';
+export { default as Tabs } from './Tab';
 export { default as Tree } from './Tree';
 export { default as TreeItem } from './TreeItem';

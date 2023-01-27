@@ -9,7 +9,7 @@ export const GlobalColor = {
   OceanRedColor: 'rgb(211, 47, 47)',
   OceanBorderLightProColor: '#e5e6eb',
   OceanPrimaryBlue: 'rgb(237, 242, 247)',
-  OceanDisableGrey: 'rgba(5,5,5,.06)',
+  OceanDisableGrey: 'rgba(0,0,0,.25)',
   OceanFontGrey: 'rgba(0, 0, 0, 0.6)',
   OceanPrimaryDeepBlue: '#e6f4ff',
 };

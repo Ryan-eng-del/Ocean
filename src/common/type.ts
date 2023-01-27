@@ -23,3 +23,4 @@ export type MessagePosition =
   | 'bottomCenter';
 
 export type SwitchType = 'custom' | 'primary' | 'ios' | 'light';
+export type TabType = 'line' | 'text' | 'round' | 'card';
