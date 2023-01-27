@@ -15,6 +15,7 @@ export { default as Modal } from './Modal';
 export { default as Notification } from './Notification';
 export { default as Radio } from './Radio';
 export { default as RadioGroup } from './RadioGroup';
+export { default as Skeleton } from './Skeleton';
 export { default as Steps } from './Steps';
 export { default as Switch } from './Switch';
 export { default as Tree } from './Tree';
