@@ -26,6 +26,6 @@
 
 <code src="./document/defaultValue.tsx"></code>
 
-## 表单默认值
+## 表单 type
 
 <code src="./document/type.tsx"></code>
