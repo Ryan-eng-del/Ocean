@@ -9,6 +9,7 @@ export { default as Divider } from './Divider';
 export { default as Drawer } from './Drawer';
 export { default as DropMenu } from './DropMenu';
 export { default as Empty } from './Empty';
+export { default as Input } from './Input';
 export { default as Menu } from './Menu';
 export { default as Message } from './Message';
 export { default as Modal } from './Modal';

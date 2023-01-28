@@ -51,6 +51,7 @@ export const RadioWrapper = styled.div<RadioWrapper>`
           ? GlobalColor.OceanHoverLight
           : undefined;
       if (re) return re;
+
       re =
         props.isDanger && props.isSelect
           ? TypeButtonColor.ganderColor
@@ -88,12 +89,14 @@ const RadioContentWrapper = styled.div`
   margin-left: 7px;
   font-size: ${GlobalFontSize.small};
 `;
+
 const RadioContainer = styled.div`
   display: flex;
   align-items: center;
   margin-bottom: 14px;
   margin-right: 17px;
 `;
+
 const Radio = (props: Radio) => {
   const RadioContext = useRadioContext();
 
