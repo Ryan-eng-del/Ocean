@@ -26,3 +26,7 @@ export type MessagePosition =
 
 export type SwitchType = 'custom' | 'primary' | 'ios' | 'light';
 export type TabType = 'line' | 'text' | 'round' | 'card';
+
+export interface CommonType {
+  ref?: any;
+}

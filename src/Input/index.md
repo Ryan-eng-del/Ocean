@@ -29,3 +29,11 @@
 ## 表单 type
 
 <code src="./document/type.tsx"></code>
+
+## 自动聚焦
+
+<code src="./document/autoFocus.tsx"></code>
+
+## 定制宽度
+
+<code src="./document/width.tsx"></code>

@@ -1,9 +1,16 @@
 import { GlobalColor, GlobalFontSize } from 'Ocean/common/variable';
-import React, { CSSProperties, ReactNode, useEffect, useState } from 'react';
-import styled from 'styled-components';
-import { SizeType } from '../common/type';
+import React, {
+  CSSProperties,
+  forwardRef,
+  ReactNode,
+  useEffect,
+  useRef,
+  useState,
+} from 'react';
+import styled, { css, FlattenSimpleInterpolation } from 'styled-components';
+import { PxType, SizeType } from '../common/type';
 import { isNoPass } from '../util/common';
-interface Input {
+export interface Input {
   placeholder?: string;
   onChange?: (value: string, e: React.ChangeEvent<HTMLInputElement>) => void;
   size?: SizeType;
@@ -20,7 +27,12 @@ interface Input {
   value?: any;
   defaultValue?: any;
   variant?: 'unstyle' | 'outline' | 'underline';
+  width?: PxType;
+  autoFocus?: boolean;
+  onKeyup?: (e: React.KeyboardEvent<HTMLInputElement>) => void;
+  onClick?: (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => void;
 }
+
 const InputStyled = styled.input<{
   height: string;
   variant: 'unstyle' | 'outline' | 'underline';
@@ -34,11 +46,11 @@ const InputStyled = styled.input<{
   outline: none;
   padding-left: 10px;
   height: ${(props) => props.height};
-  width: 100%;
   transition: ease 330ms;
+  width: 100%;
   border-color: ${(props) =>
     props.variant === 'underline'
-      ? `transparent transparent ${GlobalColor.OceanPrimaryColor} transparent`
+      ? `transparent transparent ${GlobalColor.OceanDisableGrey} transparent`
       : undefined};
 
   &:focus-visible {
@@ -66,14 +78,22 @@ const InputStyled = styled.input<{
   }
 `;
 
-const InputWrapper = styled.div<{ isLeftIcon: boolean; isRightIcon: boolean }>`
+const InputWrapper = styled.div<{
+  isLeftIcon: boolean;
+  isRightIcon: boolean;
+
+  __css: FlattenSimpleInterpolation;
+}>`
   position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  ${(props) => props.__css}
+
   .ocean-clear-svg {
     right: ${(props) => (props.isRightIcon ? '40px' : '5px')};
   }
+
   .ocean-input {
     padding-left: ${(props) => (props.isLeftIcon ? '35px' : '10px')};
     padding-right: ${(props) => (props.isRightIcon ? '35px' : '0')};
@@ -106,7 +126,7 @@ const RightIconWrapper = styled.div`
 
 const RightToolWrapper = styled.div``;
 
-const Input = (props: Input) => {
+const Input = forwardRef((props: Input, ref) => {
   const {
     placeholder,
     onChange,
@@ -121,9 +141,30 @@ const Input = (props: Input) => {
     value,
     defaultValue,
     variant = 'outline',
+    width = '100%',
+    onKeyup,
+    autoFocus = false,
+    onClick,
   } = props;
 
   const [inputValue, setInputValue] = useState(value ?? defaultValue ?? '');
+  const inputRef = useRef<null | HTMLInputElement>(null);
+  const isLeftIcon = !isNoPass(leftIcon);
+  const isRightIcon = !isNoPass(rightIcon);
+
+  useEffect(() => {
+    setInputValue(value);
+  }, [value]);
+
+  useEffect(() => {
+    autoFocus && inputRef.current?.focus();
+  }, []);
+
+  // ============ event ===================
+  const blur = (e: React.FocusEvent<HTMLInputElement, Element>) => {
+    onBlur?.(e.target.value, e);
+  };
+
   const change = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (isNoPass(value)) {
       setInputValue(e.target.value);
@@ -131,15 +172,18 @@ const Input = (props: Input) => {
     onChange?.(e.target.value, e);
   };
 
-  useEffect(() => {
-    setInputValue(value);
-  }, [value]);
-
-  const blur = (e: React.FocusEvent<HTMLInputElement, Element>) => {
-    onBlur?.(e.target.value, e);
+  const keyup = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    onKeyup?.(e);
   };
-  const isLeftIcon = !isNoPass(leftIcon);
-  const isRightIcon = !isNoPass(rightIcon);
+
+  const click = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+    onClick?.(e);
+  };
+
+  // ================= style ===============
+  const baseCSS = css`
+    width: ${width};
+  `;
 
   const dimensions = (): string => {
     let value = '35px';
@@ -152,10 +196,17 @@ const Input = (props: Input) => {
   };
 
   return (
-    <InputWrapper isLeftIcon={isLeftIcon} isRightIcon={isRightIcon}>
+    <InputWrapper
+      isLeftIcon={isLeftIcon}
+      isRightIcon={isRightIcon}
+      onClick={(e) => click(e)}
+      ref={ref as any}
+      __css={baseCSS}
+    >
       {leftIcon && <LeftIconWrapper>{leftIcon}</LeftIconWrapper>}
 
       <InputStyled
+        ref={inputRef}
         variant={variant}
         className="ocean-input"
         placeholder={placeholder ?? 'please input!'}
@@ -165,6 +216,7 @@ const Input = (props: Input) => {
         style={style}
         onBlur={(e) => blur(e)}
         type={type}
+        onKeyUp={(e) => keyup(e)}
       />
       {
         <RightToolWrapper>
@@ -196,6 +248,6 @@ const Input = (props: Input) => {
       }
     </InputWrapper>
   );
-};
+});
 
 export default Input;
