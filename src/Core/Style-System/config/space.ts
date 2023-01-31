@@ -1,4 +1,18 @@
 import { generateStyleToken as GST } from '../utils/index';
+import {
+  Margin,
+  MarginBlock,
+  MarginBottom,
+  MarginLeft,
+  MarginRight,
+  MarginTop,
+  Padding,
+  PaddingBlock,
+  PaddingBottom,
+  PaddingLeft,
+  PaddingRight,
+  PaddingTop,
+} from './css.type';
 
 export const space = {
   margin: GST.prop('margin'),
@@ -27,3 +41,18 @@ Object.assign(space, {
   pl: space.paddingLeft,
   pr: space.paddingRight,
 });
+
+export interface SpaceProps {
+  margin?: Margin;
+  marginTop?: MarginTop;
+  marginRight?: MarginRight;
+  marginBottom?: MarginBottom;
+  marginLeft?: MarginLeft;
+  marginBlock?: MarginBlock;
+  padding?: Padding;
+  paddingTop?: PaddingTop;
+  paddingRight?: PaddingRight;
+  paddingBottom?: PaddingBottom;
+  paddingLeft?: PaddingLeft;
+  paddingBlock?: PaddingBlock;
+}

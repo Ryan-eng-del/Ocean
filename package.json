@@ -62,6 +62,7 @@
     "@types/react-transition-group": "^4.4.5",
     "@types/styled-components": "^5.1.26",
     "@umijs/lint": "^4.0.0",
+    "csstype": "^3.1.1",
     "dumi": "^2.0.2",
     "eslint": "^8.23.0",
     "father": "^4.1.0",

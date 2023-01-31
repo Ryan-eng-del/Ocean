@@ -11,6 +11,7 @@ specifiers:
   '@types/styled-components': ^5.1.26
   '@umijs/lint': ^4.0.0
   antd: ^5.1.2
+  csstype: ^3.1.1
   dayjs: ^1.11.7
   dumi: ^2.0.2
   eslint: ^8.23.0
@@ -48,6 +49,7 @@ devDependencies:
   '@types/react-transition-group': registry.npmmirror.com/@types/react-transition-group/4.4.5
   '@types/styled-components': registry.npmmirror.com/@types/styled-components/5.1.26
   '@umijs/lint': registry.npmmirror.com/@umijs/lint/4.0.42_ce7rwib5khi7nw2ie2c6akd6hi
+  csstype: registry.npmmirror.com/csstype/3.1.1
   dumi: registry.npmmirror.com/dumi/2.1.1_vjnn33bgprdirh5bzcvtqramdu
   eslint: registry.npmmirror.com/eslint/8.31.0
   father: registry.npmmirror.com/father/4.1.2_styled-components@5.3.6

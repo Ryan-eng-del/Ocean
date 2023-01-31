@@ -1,4 +1,20 @@
 import { generateStyleToken as GST } from '../utils/index';
+import {
+  AlignContent,
+  AlignItems,
+  AlignSelf,
+  Flex,
+  FlexBasis,
+  FlexDirection,
+  FlexFlow,
+  FlexGrow,
+  FlexShrink,
+  FlexWrap,
+  JustifyContent,
+  JustifyItems,
+  JustifySelf,
+  Order,
+} from './css.type';
 
 export const flexBox = {
   alignItems: GST.prop('alignItems'),
@@ -16,3 +32,20 @@ export const flexBox = {
   alignSelf: GST.prop('alignSelf'),
   order: GST.prop('order'),
 };
+
+export interface FlexBoxProps {
+  alignItems?: AlignItems;
+  alignContent?: AlignContent;
+  justifyItems?: JustifyItems;
+  justifyContent?: JustifyContent;
+  flexWrap?: FlexWrap;
+  flexDirection?: FlexDirection;
+  flex?: Flex;
+  flexFlow?: FlexFlow;
+  flexGrow?: FlexGrow;
+  flexShrink?: FlexShrink;
+  flexBasis?: FlexBasis;
+  justifySelf?: JustifySelf;
+  alignSelf?: AlignSelf;
+  order?: Order;
+}

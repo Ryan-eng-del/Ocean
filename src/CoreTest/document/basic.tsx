@@ -3,7 +3,13 @@ import { ocean } from '../../Core/System/index';
 
 const Basic = () => {
   return (
-    <ocean.div display="flex" bgColor="black" min_h="550px">
+    <ocean.div
+      bgColor="black"
+      min_h="550px"
+      justifyContent="center"
+      alignItems="center"
+      display="flex"
+    >
       <ocean.div c="cyan" bg="green" w="130px">
         你好
       </ocean.div>

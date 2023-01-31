@@ -1,4 +1,13 @@
 import { generateStyleToken as GST } from '../utils/index';
+import {
+  Display,
+  Height,
+  MaxHeight,
+  MaxWidth,
+  MinHeight,
+  MinWidth,
+  Width,
+} from './css.type';
 
 export const SizeAndLayout = {
   width: GST.prop('width'),
@@ -27,15 +36,16 @@ Object.assign(SizeAndLayout, {
 });
 
 export interface SizeAndLayoutProps {
-  w?: string;
-  h?: string;
-  minWidth?: string;
-  maxWidth?: string;
-  minHeight?: string;
-  maxHeight?: string;
-  display?: string;
-  min_w?: string;
-  max_w?: string;
-  min_h?: string;
-  max_h?: string;
+  width?: Width;
+  w?: Width;
+  h?: Height;
+  minWidth?: MinWidth;
+  maxWidth?: MaxWidth;
+  minHeight?: MinHeight;
+  maxHeight?: MaxHeight;
+  display?: Display;
+  min_w?: MinWidth;
+  max_w?: MaxWidth;
+  min_h?: MinHeight;
+  max_h?: MaxHeight;
 }

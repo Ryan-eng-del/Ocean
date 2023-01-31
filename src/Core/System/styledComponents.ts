@@ -3,8 +3,8 @@ import styled from 'styled-components';
 import { MapOfSystemConfig } from '../Style-System/styleSystem';
 import { DOMElements, SystemProps } from './system.type';
 
-const filterProps = (restProps: Record<string, string>) => {
-  let resultProps = <Record<string, string>>{};
+const filterProps = (restProps: Record<string, any>) => {
+  let resultProps = <Record<string, any>>{};
   for (const k in restProps) {
     if (!Reflect.has(MapOfSystemConfig, k)) {
       resultProps[k] = restProps[k];
@@ -26,8 +26,8 @@ export function styledComponents(tagName: DOMElements) {
       const cssObject = convertCss(props);
       return createElement(
         styled(tagName)`
-          ${cssObject}
           ${__css}
+          ${cssObject}
         `,
         { ref, ...filterRestProps },
       );

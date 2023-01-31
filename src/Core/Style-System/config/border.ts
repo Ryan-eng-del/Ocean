@@ -1,4 +1,30 @@
 import { generateStyleToken as GST } from '../utils/index';
+import {
+  Border,
+  BorderBottom,
+  BorderBottomColor,
+  BorderBottomLeftRadius,
+  BorderBottomRightRadius,
+  BorderBottomStyle,
+  BorderBottomWidth,
+  BorderColor,
+  BorderLeft,
+  BorderLeftColor,
+  BorderLeftStyle,
+  BorderLeftWidth,
+  BorderRadius,
+  BorderRight,
+  BorderRightColor,
+  BorderRightStyle,
+  BorderRightWidth,
+  BorderStyle,
+  BorderTop,
+  BorderTopColor,
+  BorderTopLeftRadius,
+  BorderTopStyle,
+  BorderTopWidth,
+  BorderWidth,
+} from './css.type';
 
 export const border = {
   border: GST.prop('border'),
@@ -27,4 +53,29 @@ export const border = {
   borderRightStyle: GST.prop('borderRightStyle'),
 };
 
-export type Border = Partial<typeof border>;
+export interface BorderProps {
+  Border?: Border;
+  BorderWidth?: BorderWidth;
+  BorderStyle?: BorderStyle;
+  BorderColor?: BorderColor;
+  BorderRadius?: BorderRadius;
+  BorderTop?: BorderTop;
+  BorderTopLeftRadius?: BorderTopLeftRadius;
+  BorderRight?: BorderRight;
+  BorderBottom?: BorderBottom;
+  BorderBottomLeftRadius?: BorderBottomLeftRadius;
+  BorderBottomRightRadius?: BorderBottomRightRadius;
+  BorderLeft?: BorderLeft;
+  BorderTopWidth?: BorderTopWidth;
+  BorderTopColor?: BorderTopColor;
+  BorderTopStyle?: BorderTopStyle;
+  BorderBottomWidth?: BorderBottomWidth;
+  BorderBottomColor?: BorderBottomColor;
+  BorderBottomStyle?: BorderBottomStyle;
+  BorderLeftWidth?: BorderLeftWidth;
+  BorderLeftColor?: BorderLeftColor;
+  BorderLeftStyle?: BorderLeftStyle;
+  BorderRightWidth?: BorderRightWidth;
+  BorderRightColor?: BorderRightColor;
+  BorderRightStyle?: BorderRightStyle;
+}
