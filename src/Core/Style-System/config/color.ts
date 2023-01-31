@@ -1,4 +1,5 @@
 import { generateStyleToken as GST } from '../utils/index';
+
 export const Color = {
   color: GST.prop('color'),
   backgroundColor: GST.prop('background-color'),

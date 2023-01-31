@@ -11,7 +11,7 @@ const getCss = (styleProps: Record<string, any>, config: any) => {
       attributes[p] = styleProps[property];
     }
   }
-  console.log(attributes, 'attributes');
+
   return attributes;
 };
 
