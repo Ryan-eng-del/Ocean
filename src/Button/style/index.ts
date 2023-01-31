@@ -3,12 +3,13 @@ import { GlobalColor } from 'Ocean/common/variable';
 import styled from 'styled-components';
 import { BaseButtonProps, ButtonType } from '..';
 
-export const ButtonLoading = styled.span<{ type: ButtonType }>`
+export const ButtonLoading = styled.span<{
+  type: ButtonType;
+}>`
   width: 17px;
   height: 17px;
   margin-right: 10px;
   border: 2px solid white;
-
   border-color: ${(props) => {
     let borderColor = 'white';
     if (

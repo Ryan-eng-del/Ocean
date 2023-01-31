@@ -8,4 +8,5 @@ function factory() {
     },
   });
 }
+
 export default factory();
