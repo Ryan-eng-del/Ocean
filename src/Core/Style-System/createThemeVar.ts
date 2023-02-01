@@ -20,7 +20,7 @@ export const createThemeVar = (
   for (const [token, tokenValue] of Object.entries(flattenToken)) {
     const { varValue, varRef } = tokenToCssVar(token, prefix);
     globalCssVar[varValue] = tokenValue.value;
-    cssMap[token] = { value: tokenValue, var: varValue, varRef };
+    cssMap[token] = { value: tokenValue.value, var: varValue, varRef };
   }
   return { cssMap, globalCssVar };
 };

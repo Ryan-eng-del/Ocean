@@ -25,6 +25,7 @@ export function styledComponents(tagName: DOMElements) {
       return createElement(
         styled(tagName)`
           ${__css}
+
           ${cssObject}
         `,
         { ref, ...filterRestProps },
