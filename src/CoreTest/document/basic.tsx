@@ -2,7 +2,6 @@ import GlobalThemeProvider from 'Ocean/Core/System/provider';
 import React from 'react';
 import { useTheme } from 'styled-components';
 import { ocean } from '../../Core/System/index';
-
 const Base = () => {
   const theme = useTheme();
   console.log(theme, 'theme');
@@ -14,6 +13,7 @@ const Base = () => {
       justifyContent="center"
       alignItems="center"
       display="flex"
+      className="c_name"
     >
       <ocean.div c="cyan" bg="green" w="130px">
         你好

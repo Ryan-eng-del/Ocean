@@ -28,8 +28,11 @@ export interface StyleProps
 
 export type OceanHTMLComponent = {
   [T in DOMElements]: (
-    props: StyleProps & { children?: any } & OceanComponentProps,
+    props: StyleProps & { children?: any } & OceanComponentProps &
+      JSX.IntrinsicElements[T],
   ) => JSX.Element;
 };
 
 export type SystemProps = StyleProps & { children?: any } & OceanComponentProps;
+
+// const a: SystemProps;
