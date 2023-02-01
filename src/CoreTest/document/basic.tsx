@@ -1,7 +1,12 @@
+import GlobalThemeProvider from 'Ocean/Core/System/provider';
 import React from 'react';
+import { useTheme } from 'styled-components';
 import { ocean } from '../../Core/System/index';
 
-const Basic = () => {
+const Base = () => {
+  const theme = useTheme();
+  console.log(theme, 'theme');
+
   return (
     <ocean.div
       bgColor="black"
@@ -18,6 +23,14 @@ const Basic = () => {
       </ocean.a>
       <ocean.div color="blue">a</ocean.div>
     </ocean.div>
+  );
+};
+
+const Basic = () => {
+  return (
+    <GlobalThemeProvider>
+      <Base />
+    </GlobalThemeProvider>
   );
 };
 

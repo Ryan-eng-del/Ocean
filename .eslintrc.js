@@ -5,5 +5,6 @@ module.exports = {
     '@typescript-eslint/no-unused-expressions': 'off',
     '@typescript-eslint/no-empty-interface': 'off',
     'guard-for-in': 'off',
+    'array-callback-return': 'off',
   },
 };

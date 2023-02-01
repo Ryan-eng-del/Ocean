@@ -13,3 +13,12 @@ export const handlePx = (size: PxType): string => {
 export const isNoPass = <T>(value: undefined | T): value is undefined => {
   return value === undefined;
 };
+
+export function isObject(value: any): value is Record<string, any> {
+  const type = typeof value;
+  return (
+    value !== null &&
+    (type === 'object' || type === 'function') &&
+    !Array.isArray(value)
+  );
+}

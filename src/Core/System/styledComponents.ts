@@ -17,12 +17,10 @@ const filterProps = (restProps: Record<string, any>) => {
 export function styledComponents(tagName: DOMElements) {
   return function innerReactCpn(props: any) {
     const { convertCss } = props;
-
     return forwardRef((props: SystemProps, ref) => {
       const { __css, ...restProps } = props;
 
       const filterRestProps = filterProps(restProps);
-      console.log(filterRestProps, 'props');
       const cssObject = convertCss(props);
       return createElement(
         styled(tagName)`
