@@ -3,8 +3,6 @@
 [![NPM version](https://img.shields.io/npm/v/Ocean.svg?style=flat)](https://npmjs.org/package/Ocean)
 [![NPM downloads](http://img.shields.io/npm/dm/Ocean.svg?style=flat)](https://npmjs.org/package/Ocean)
 
-
-
 ## Usage
 
 TODO
