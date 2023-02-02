@@ -1,20 +1,25 @@
-import { MapOfSystemConfig } from './styleSystem';
+import { MapOfSystemConfig as MapProps } from './styleSystem';
+import { CSSGlobalTheme } from './styleSystem.type';
 
-const getCss = (styleProps: Record<string, any>, config: any) => {
-  const attributes: Record<string, any> = {};
-  let curProperty;
+const getCss = (theme: CSSGlobalTheme, MapProps: any) => {
+  return (styleProps: Record<string, any>) => {
+    const attributes: Record<string, any> = {};
+    let curProperty;
 
-  for (const property in styleProps) {
-    if (Reflect.has(config, property)) {
-      curProperty = config[property];
-      let p = curProperty.property;
-      attributes[p] = styleProps[property];
+    for (const property in styleProps) {
+      if (Reflect.has(MapProps, property)) {
+        curProperty = MapProps[property]; // {p: scale: transform: }
+        let p = curProperty.property; // color
+        let value = styleProps[property]; // red.500
+        value = curProperty.transform(value, theme);
+        attributes[p] = value;
+      }
     }
-  }
 
-  return attributes;
+    return attributes;
+  };
 };
 
-export const convertCss = (styleProps: Record<string, any>) => {
-  return getCss(styleProps, MapOfSystemConfig);
+export const convertCss = (theme: CSSGlobalTheme) => {
+  return getCss(theme, MapProps);
 };

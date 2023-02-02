@@ -6,24 +6,7 @@ const Base = () => {
   const theme = useTheme();
   console.log(theme, 'theme');
 
-  return (
-    <ocean.div
-      bgColor="black"
-      min_h="550px"
-      justifyContent="center"
-      alignItems="center"
-      display="flex"
-      className="c_name"
-    >
-      <ocean.div c="cyan" bg="green" w="130px">
-        你好
-      </ocean.div>
-      <ocean.a c="cyan" bg="red">
-        a 标签
-      </ocean.a>
-      <ocean.div color="blue">a</ocean.div>
-    </ocean.div>
-  );
+  return <ocean.div c={'red.300'}>Ocean Test</ocean.div>;
 };
 
 const Basic = () => {

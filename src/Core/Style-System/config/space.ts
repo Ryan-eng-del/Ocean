@@ -15,18 +15,18 @@ import {
 } from './css.type';
 
 export const space = {
-  margin: GST.prop('margin'),
-  marginTop: GST.prop('marginTop'),
-  marginRight: GST.prop('marginRight'),
-  marginBottom: GST.prop('marginBottom'),
-  marginLeft: GST.prop('marginLeft'),
-  marginBlock: GST.prop('marginBlock'),
-  padding: GST.prop('padding'),
-  paddingTop: GST.prop('paddingTop'),
-  paddingRight: GST.prop('paddingRight'),
-  paddingBottom: GST.prop('paddingBottom'),
-  paddingLeft: GST.prop('paddingLeft'),
-  paddingBlock: GST.prop('paddingBlock'),
+  margin: GST.space('margin'),
+  marginTop: GST.space('marginTop'),
+  marginRight: GST.space('marginRight'),
+  marginBottom: GST.space('marginBottom'),
+  marginLeft: GST.space('marginLeft'),
+  marginBlock: GST.space('marginBlock'),
+  padding: GST.space('padding'),
+  paddingTop: GST.space('paddingTop'),
+  paddingRight: GST.space('paddingRight'),
+  paddingBottom: GST.space('paddingBottom'),
+  paddingLeft: GST.space('paddingLeft'),
+  paddingBlock: GST.space('paddingBlock'),
 };
 
 Object.assign(space, {

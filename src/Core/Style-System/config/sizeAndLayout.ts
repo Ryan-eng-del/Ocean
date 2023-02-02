@@ -10,12 +10,12 @@ import {
 } from './css.type';
 
 export const SizeAndLayout = {
-  width: GST.prop('width'),
-  height: GST.prop('height'),
-  minWidth: GST.prop('minWidth'),
-  maxWidth: GST.prop('maxWidth'),
-  minHeight: GST.prop('minHeight'),
-  maxHeight: GST.prop('maxHeight'),
+  width: GST.sizes('width'),
+  height: GST.sizes('height'),
+  minWidth: GST.sizes('minWidth'),
+  maxWidth: GST.sizes('maxWidth'),
+  minHeight: GST.sizes('minHeight'),
+  maxHeight: GST.sizes('maxHeight'),
   display: GST.prop('display'),
 };
 

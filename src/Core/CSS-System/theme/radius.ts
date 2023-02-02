@@ -1,4 +1,4 @@
-const radii = {
+const radius = {
   none: '0',
   sm: '0.125rem',
   base: '0.25rem',
@@ -11,4 +11,4 @@ const radii = {
   ['1/2']: '50%',
 };
 
-export default radii;
+export default radius;
