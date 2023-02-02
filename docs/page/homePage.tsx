@@ -1,10 +1,12 @@
-import { ArrowRightOutlined } from '@ant-design/icons';
+import { ArrowRightOutlined, GithubOutlined } from '@ant-design/icons';
 import React, { useEffect } from 'react';
 import styled from 'styled-components';
+
 const HomePageHeader = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: all ease 110ms;
 `;
 
 const StartButton = styled.div`
@@ -19,7 +21,9 @@ const StartButton = styled.div`
   color: white;
   font-weight: 700;
   text-align: center;
-  margin: 30px auto 0 auto;
+  margin-top: 30px;
+  margin-right: 30px;
+  transition: all ease 110ms;
 
   &:hover {
     background-color: rgb(21, 101, 192);
@@ -40,11 +44,26 @@ const HomePageHeaderLeft = styled.div`
   -ms-background-clip: text;
   font-family: Alibaba-PuHuiTi, Gill Sans, Gill Sans MT, Calibri, Trebuchet MS,
     sans-serif;
+  transition: all ease 110ms;
 `;
+
 const HomePageSubTitle = styled.div`
   padding: 0 100px;
   color: #718096;
   text-align: center;
+  transition: all ease 110ms;
+`;
+
+const GithubButton = styled(StartButton)`
+  background-color: #edf2f7;
+  color: black;
+  padding: 0 20px;
+  margin-right: 0;
+
+  &:hover {
+    background-color: #e2e8f0;
+    box-shadow: none;
+  }
 `;
 
 const HomePageTitle = styled.h1``;
@@ -69,6 +88,10 @@ const HomePageContainer = styled.div`
     ${StartButton} {
       padding: 0 20px;
     }
+
+    ${GithubButton} {
+      padding: 0 10px;
+    }
   }
 `;
 
@@ -82,10 +105,20 @@ const KeyWords = styled.span`
   text-shadow: 0 10px 20px rgb(22 119 255 / 15%);
 `;
 
+const ButtonWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+`;
+
 const HomePage = () => {
   const clickStart = () => {
     window.location.href = window.location.href + 'components/button';
   };
+
+  const clickGithub = () => {
+    window.open('https://github.com/Ryan-eng-del/Ocean');
+  };
+
   useEffect(() => {
     document.title = 'Ocean UI';
   }, []);
@@ -98,7 +131,7 @@ const HomePage = () => {
         <HomePageHeaderRight>
           <HomePageTitle>
             构建快速，UI<KeyWords>高定制化</KeyWords>，CSS
-            <KeyWords>原子化的</KeyWords> React apps
+            <KeyWords>原子化</KeyWords>的 React apps
           </HomePageTitle>
 
           <HomePageSubTitle>
@@ -111,10 +144,19 @@ const HomePage = () => {
         </HomePageHeaderRight>
       </HomePageHeader>
 
-      <StartButton onClick={clickStart}>
-        Get Started
-        <ArrowRightOutlined style={{ fontSize: '18px', paddingLeft: '12px' }} />
-      </StartButton>
+      <ButtonWrapper>
+        <StartButton onClick={clickStart}>
+          Get Started
+          <ArrowRightOutlined
+            style={{ fontSize: '18px', paddingLeft: '12px' }}
+          />
+        </StartButton>
+
+        <GithubButton onClick={clickGithub}>
+          Github
+          <GithubOutlined style={{ fontSize: '18px', paddingLeft: '12px' }} />
+        </GithubButton>
+      </ButtonWrapper>
     </HomePageContainer>
   );
 };
