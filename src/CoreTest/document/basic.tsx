@@ -6,7 +6,7 @@ const Base = () => {
   const theme = useTheme();
   console.log(theme, 'theme');
 
-  return <ocean.div c={'red.300'}>Ocean Test</ocean.div>;
+  return <ocean.div bgColor={'red.300'}>Ocean Test</ocean.div>;
 };
 
 const Basic = () => {

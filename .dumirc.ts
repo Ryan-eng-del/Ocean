@@ -6,5 +6,6 @@ export default defineConfig({
   themeConfig: {
     name: 'Ocean',
     logo: '/logo.png',
+    nav: [{ title: '', link: '' }],
   },
 });
