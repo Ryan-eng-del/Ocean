@@ -15,7 +15,7 @@ export const toThemeConfig = (prop: string): any => {
       scale: prop,
     };
 
-    result.transform = createTransform(prop, property);
+    result.transform = createTransform(prop);
     return result;
   };
 };

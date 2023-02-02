@@ -20,6 +20,6 @@ const getCss = (theme: CSSGlobalTheme, MapProps: any) => {
   };
 };
 
-export const convertCss = (theme: CSSGlobalTheme) => {
+export const convertCSS = (theme: CSSGlobalTheme) => {
   return getCss(theme, MapProps);
 };

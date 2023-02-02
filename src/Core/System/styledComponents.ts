@@ -16,13 +16,13 @@ const filterProps = (restProps: Record<string, any>) => {
 
 export function styledComponents(tagName: DOMElements) {
   return function innerReactCpn(props: any) {
-    const { convertCss } = props;
+    const { convertCSS } = props;
     return forwardRef((props: SystemProps, ref) => {
       const theme = useTheme();
       const { __css, ...restProps } = props;
       console.log(theme, 'theme');
       const filterRestProps = filterProps(restProps);
-      const cssObject = convertCss(theme)(props);
+      const cssObject = convertCSS(theme)(props);
 
       return createElement(
         styled(tagName)`
