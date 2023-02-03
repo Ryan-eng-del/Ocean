@@ -1,3 +1,9 @@
+---
+group:
+  title: Component
+  order: 1
+---
+
 # Skeleton
 
 ## 基本使用

@@ -1,3 +1,9 @@
+---
+group:
+  title: Component
+  order: 1
+---
+
 # CheckBox
 
 ### 不同 type CheckBox

@@ -1,3 +1,9 @@
+---
+group:
+  title: Component
+  order: 1
+---
+
 # Empty
 
 ## 基本使用

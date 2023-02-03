@@ -1,7 +1,7 @@
 ---
-nav:
-  title: Components
-  path: /components
+group:
+  title: Component
+  order: 1
 ---
 
 # Tree

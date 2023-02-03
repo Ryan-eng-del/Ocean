@@ -1,3 +1,9 @@
+---
+group:
+  title: Component
+  order: 1
+---
+
 # Breadcrumb
 
 ## 基本使用

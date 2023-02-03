@@ -1,3 +1,9 @@
+---
+group:
+  title: Component
+  order: 1
+---
+
 # DropMenu
 
 ## 基本使用

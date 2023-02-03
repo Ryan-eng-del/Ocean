@@ -81,7 +81,7 @@ interface Message {
   maxCount?: number;
   changeMessage?: (count: number) => void;
   duration?: number;
-  type: MessageType;
+  type?: MessageType;
   width?: PxType;
   position?: 'topLeft' | 'topCenter' | 'bottomLeft' | 'bottomCenter';
 }

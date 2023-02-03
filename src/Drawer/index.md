@@ -1,3 +1,9 @@
+---
+group:
+  title: Component
+  order: 1
+---
+
 ## Drawer
 
 ### 基础使用

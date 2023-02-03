@@ -130,7 +130,7 @@ const HomePage = () => {
 
         <HomePageHeaderRight>
           <HomePageTitle>
-            构建快速，UI<KeyWords>高定制化</KeyWords>，CSS
+            构建快速，UI<KeyWords>高度定制化</KeyWords>，CSS
             <KeyWords>原子化</KeyWords>的 React apps
           </HomePageTitle>
 

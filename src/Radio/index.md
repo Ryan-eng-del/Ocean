@@ -1,3 +1,9 @@
+---
+group:
+  title: Component
+  order: 1
+---
+
 ## Radio
 
 ### 自定义 type
