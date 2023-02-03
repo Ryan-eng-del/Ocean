@@ -5,6 +5,7 @@ const transitionProperty = {
     'background-color, border-color, color, text-decoration-color, fill, stroke',
   dimensions: 'width, height',
   position: 'left, right, top, bottom',
+  all: 'all',
   background: 'background-color, background-image, background-position',
 };
 

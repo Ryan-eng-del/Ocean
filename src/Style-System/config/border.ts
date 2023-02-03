@@ -42,7 +42,6 @@ export const border = {
   borderTopWidth: GST.prop('borderTopWidth'),
   borderTopColor: GST.colors('borderTopColor'),
   borderTopStyle: GST.prop('borderTopStyle'),
-
   borderBottomWidth: GST.prop('borderBottomWidth'),
   borderBottomColor: GST.prop('borderBottomColor'),
   borderBottomStyle: GST.prop('borderBottomStyle'),
