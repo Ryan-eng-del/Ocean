@@ -3,6 +3,8 @@ import { spacing } from './space';
 const largeSizes = {
   max: 'max-content',
   min: 'min-content',
+  fit: 'fit-content',
+  screen: '100vh',
   full: '100%',
   '3xs': '14rem',
   '2xs': '16rem',
