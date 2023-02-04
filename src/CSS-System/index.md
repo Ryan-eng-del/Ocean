@@ -7,19 +7,19 @@ group:
 
 # Style System
 
-## Color
+## Colors
 
-### 基本颜色
+#### 基本颜色
 
 <code src="./document/color.tsx" inline></code>
 
-### 如何使用
+#### 如何使用
 
-## Sizing
+## Sizes
 
-### width | height | maxWidth | minHeight | maxHeight | max-width
+#### width | height | maxWidth | minHeight | maxHeight | max-width
 
-### 基本单位
+#### 基本单位
 
 | Value  | Properties                  |
 | ------ | --------------------------- |
@@ -91,7 +91,7 @@ group:
 | max    | width: max-content;         |
 | fit    | width: fit-content;         |
 
-### 其他常用单位
+#### 其他常用单位
 
 | Value        | Properties         |
 | ------------ | ------------------ |
@@ -115,13 +115,13 @@ group:
 | 8xl          | 90rem /_ 1440px _/ |
 | prose        | 60ch               |
 
-### 如何使用
+#### 如何使用
 
-## Spacing
+## Space
 
-### margin | padding
+#### margin | padding
 
-### 基本单位
+#### 基本单位
 
 | Value | Properties                  |
 | ----- | --------------------------- |
@@ -162,13 +162,11 @@ group:
 | 80    | width: 20rem; /_ 320px _/   |
 | 96    | width: 24rem; /_ 384px _/   |
 
-### 如何使用
+#### 如何使用
 
-## borders
+## Radius
 
-### border-radius
-
-### 基本单位
+#### 基本单位
 
 | Value | Properties |
 | ----- | ---------- |
@@ -182,11 +180,9 @@ group:
 | 3xl   | 1.5rem     |
 | 1/2   | 50%        |
 
-### Border
+## Borders
 
-`
-
-### 基本单位
+#### 基本单位
 
 | Value | Properties |
 | ----- | ---------- |
@@ -196,15 +192,19 @@ group:
 | 4px   | 4px solid  |
 | 8px   | 8px solid  |
 
-### border-color
+## BorderWidth
 
-见颜色基本单位
+| Value    | Properties |
+| -------- | ---------- |
+| none     | 0          |
+| thin     | 1px        |
+| thick    | 2px        |
+| thicker  | 3px        |
+| thickest | 4px        |
 
-## Typography
+## FontSizes
 
-### font-size
-
-### 基本单位
+#### 基本单位
 
 | Value | Properties          |
 | ----- | ------------------- |
@@ -224,9 +224,9 @@ group:
 | 8xl   | 6rem /_ 96px _/     |
 | 9xl   | 8rem /_ 128px _/    |
 
-### font-weight
+## FontWeights
 
-### 基本单位
+#### 基本单位
 
 | Value     | Properties |
 | --------- | ---------- |
@@ -240,9 +240,9 @@ group:
 | extrabold | 800        |
 | black     | 900        |
 
-### font-family
+## FontFamily
 
-### 基本单位
+#### 基本单位
 
 | Value   | Properties                                                                                                                             |
 | ------- | -------------------------------------------------------------------------------------------------------------------------------------- |
@@ -250,9 +250,9 @@ group:
 | body    | -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", |
 | mono    | SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace,                                                        |
 
-### line-height
+## LineHeights
 
-### 基本单位
+#### 基本单位
 
 | Value   | Properties |
 | ------- | ---------- |
@@ -272,9 +272,9 @@ group:
 | 9       | 2.25rem    |
 | 10      | 2.5rem     |
 
-### letter-space
+## LetterSpaces
 
-### 基本单位
+#### 基本单位
 
 | Value   | Properties |
 | ------- | ---------- |
@@ -289,7 +289,7 @@ group:
 
 ### Transition Timing Function
 
-### 基本单位
+#### 基本单位
 
 | Value       | Properties                   |
 | ----------- | ---------------------------- |
@@ -300,7 +300,7 @@ group:
 
 ### Transition Duration
 
-### 基本单位
+#### 基本单位
 
 | Value      | Properties |
 | ---------- | ---------- |
@@ -325,7 +325,7 @@ group:
 
 ## Z-Index
 
-### 基本单位
+#### 基本单位
 
 | Value | Properties |
 | ----- | ---------- |
@@ -344,9 +344,7 @@ group:
 
 ## Shadow
 
-### box-shadow
-
-### 基本单位
+#### 基本单位
 
 | Value   | Properties                                                                                           |
 | ------- | ---------------------------------------------------------------------------------------------------- |

@@ -8,10 +8,27 @@ const getCss = (theme: CSSGlobalTheme, MapProps: any) => {
 
     for (const property in styleProps) {
       if (Reflect.has(MapProps, property)) {
-        curProperty = MapProps[property]; // {p: scale: transform: }
-        let p = curProperty.property; // color
+        curProperty = MapProps[property]; // {property: scale: transform: }
+        let p = curProperty.property; // T | T[]
         let value = styleProps[property]; // red.500
-        value = curProperty.transform(value, theme);
+        if (curProperty === true) {
+          attributes[property] = value;
+          continue;
+        }
+
+        if (curProperty?.transform) {
+          value = curProperty?.transform(value, theme);
+        }
+
+        // !value 说明该属性不是 ocean 系统提供的变量
+        // if (!value) continue;
+
+        if (Array.isArray(p)) {
+          for (const key of p) {
+            attributes[key] = value;
+          }
+          continue;
+        }
         attributes[p] = value;
       }
     }

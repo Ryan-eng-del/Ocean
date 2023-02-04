@@ -1,4 +1,5 @@
 import borders from './borders';
+import borderWidth from './borderWidth';
 import colors from './colors';
 import radius from './radius';
 import shadows from './shadows';
@@ -18,4 +19,5 @@ export const foundations = {
   space: spacing,
   borders,
   transition,
+  borderWidth,
 };

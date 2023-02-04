@@ -8,7 +8,18 @@ const Base = () => {
   console.log(theme, 'theme');
 
   return (
-    <ocean.div bgColor={'red.50'} color={'blue.400'} w={'container.sm'}>
+    <ocean.div
+      mx={10}
+      px={6}
+      overflow="hidden"
+      rounded={'xl'}
+      bg="red.500"
+      fontSize={'25px'}
+      display={'flex'}
+      justify={'center'}
+      border={'1px'}
+      borderColor={'red.500'}
+    >
       Ocean Test
     </ocean.div>
   );

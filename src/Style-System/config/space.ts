@@ -20,6 +20,8 @@ export const space = {
   marginRight: GST.space('marginRight'),
   marginBottom: GST.space('marginBottom'),
   marginLeft: GST.space('marginLeft'),
+  marginX: GST.space(['marginLeft', 'marginRight']),
+  marginY: GST.space(['marginBottom', 'marginTop']),
   marginBlock: GST.space('marginBlock'),
   padding: GST.space('padding'),
   paddingTop: GST.space('paddingTop'),
@@ -27,6 +29,8 @@ export const space = {
   paddingBottom: GST.space('paddingBottom'),
   paddingLeft: GST.space('paddingLeft'),
   paddingBlock: GST.space('paddingBlock'),
+  paddingX: GST.space(['paddingLeft', 'paddingRight']),
+  paddingY: GST.space(['paddingBottom', 'paddingTop']),
 };
 
 Object.assign(space, {
@@ -34,25 +38,37 @@ Object.assign(space, {
   mt: space.marginTop,
   mr: space.marginRight,
   mb: space.marginBottom,
+  my: space.marginY,
+  mx: space.marginX,
   ml: space.marginLeft,
   p: space.padding,
   pt: space.paddingTop,
   pb: space.paddingBottom,
   pl: space.paddingLeft,
   pr: space.paddingRight,
+  px: space.paddingX,
+  py: space.paddingY,
 });
 
 export interface SpaceProps {
-  margin?: Margin;
-  marginTop?: MarginTop;
-  marginRight?: MarginRight;
-  marginBottom?: MarginBottom;
-  marginLeft?: MarginLeft;
-  marginBlock?: MarginBlock;
-  padding?: Padding;
-  paddingTop?: PaddingTop;
-  paddingRight?: PaddingRight;
-  paddingBottom?: PaddingBottom;
-  paddingLeft?: PaddingLeft;
-  paddingBlock?: PaddingBlock;
+  margin?: Margin | number;
+  mx?: Margin | number;
+  my?: Margin | number;
+  px?: Padding | number;
+  py?: Padding | number;
+  marginX?: Margin | number;
+  marginY?: Margin | number;
+  paddingX?: Padding | number;
+  paddingY?: Padding | number;
+  marginTop?: MarginTop | number;
+  marginRight?: MarginRight | number;
+  marginBottom?: MarginBottom | number;
+  marginLeft?: MarginLeft | number;
+  marginBlock?: MarginBlock | number;
+  padding?: Padding | number;
+  paddingTop?: PaddingTop | number;
+  paddingRight?: PaddingRight | number;
+  paddingBottom?: PaddingBottom | number;
+  paddingLeft?: PaddingLeft | number;
+  paddingBlock?: PaddingBlock | number;
 }

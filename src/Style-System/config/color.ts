@@ -3,7 +3,7 @@ import { Background, BackgroundColor, Color as ColorType } from './css.type';
 
 export const Color = {
   color: GST.colors('color'),
-  backgroundColor: GST.colors('background-color'),
+  backgroundColor: GST.colors('backgroundColor'),
   background: GST.colors('background'),
 };
 

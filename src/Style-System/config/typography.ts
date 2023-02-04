@@ -1,4 +1,5 @@
 import { generateStyleToken as GST } from '../utils/index';
+import { transform } from '../utils/transform';
 import {
   FontFamily,
   FontSize,
@@ -8,11 +9,11 @@ import {
 } from './css.type';
 
 export const typography = {
-  fontFamily: GST.prop('fontFamily'),
-  fontSize: GST.prop('fontSize'),
-  fontWeight: GST.prop('fontWeight'),
-  lineHeight: GST.prop('lineHeight'),
-  letterSpacing: GST.prop('letterSpacing'),
+  fontFamily: GST.prop('fontFamily', 'fontWeights'),
+  fontSize: GST.prop('fontSize', 'fontSizes', transform.px),
+  fontWeight: GST.prop('fontWeight', 'fontWeights'),
+  lineHeight: GST.prop('lineHeight', 'lineHeights'),
+  letterSpacing: GST.prop('letterSpacing', 'letterSpacings'),
 };
 
 export interface TypographyProps {

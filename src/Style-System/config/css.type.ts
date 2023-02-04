@@ -8,6 +8,26 @@ export type MinWidth = CSS.Property.MinWidth;
 export type MinHeight = CSS.Property.MinHeight;
 export type MaxWidth = CSS.Property.MaxWidth;
 export type MaxHeight = CSS.Property.MaxHeight;
+export type MinBlockSize = CSS.Property.MinBlockSize;
+export type MinInlineSize = CSS.Property.MinInlineSize;
+export type MaxInlineSize = CSS.Property.MaxInlineSize;
+export type BlockSize = CSS.Property.BlockSize;
+export type MaxBlockSize = CSS.Property.MaxBlockSize;
+export type Overflow = CSS.Property.Overflow;
+export type OverflowX = CSS.Property.OverflowX;
+export type OverflowY = CSS.Property.OverflowY;
+export type VerticalAlign = CSS.Property.VerticalAlign;
+export type BoxSizing = CSS.Property.BoxSizing;
+export type Float = CSS.Property.Float;
+export type ObjectFit = CSS.Property.ObjectFit;
+export type ObjectPosition = CSS.Property.ObjectPosition;
+export type BoxDecorationBreak = CSS.Property.BoxDecorationBreak;
+export type Visibility = CSS.Property.Visibility;
+export type Isolation = CSS.Property.Isolation;
+export type OverscrollBehavior = CSS.Property.OverscrollBehavior;
+export type OverscrollBehaviorX = CSS.Property.OverscrollBehaviorX;
+export type OverscrollBehaviorY = CSS.Property.OverscrollBehaviorY;
+export type InlineSize = CSS.Property.InlineSize;
 
 // ======== Border ==============
 export type Border = CSS.Property.Border;
@@ -34,6 +54,25 @@ export type BorderLeftStyle = CSS.Property.BorderLeftStyle;
 export type BorderRightWidth = CSS.Property.BorderRightWidth;
 export type BorderRightColor = CSS.Property.BorderRightColor;
 export type BorderRightStyle = CSS.Property.BorderRightStyle;
+export type BorderEndEndRadius = CSS.Property.BorderEndEndRadius;
+export type BorderInline = CSS.Property.BorderInline;
+export type BorderBlock = CSS.Property.BorderBlock;
+export type BorderInlineEnd = CSS.Property.BorderInlineEnd;
+export type BorderBlockEnd = CSS.Property.BorderBlockEnd;
+export type BorderInlineStart = CSS.Property.BorderInlineStart;
+export type BorderBlockStartStyle = CSS.Property.BorderBlockStartStyle;
+export type BorderBlockStartColor = CSS.Property.BorderBlockStartColor;
+export type BorderBlockEndStyle = CSS.Property.BorderBlockEndStyle;
+export type BorderInlineEndStyle = CSS.Property.BorderInlineEndStyle;
+export type BorderInlineStartStyle = CSS.Property.BorderInlineStartStyle;
+export type BorderBlockStartWidth = CSS.Property.BorderBlockStartWidth;
+export type BorderBlockEndWidth = CSS.Property.BorderBlockEndWidth;
+export type BorderBlockStart = CSS.Property.BorderBlockStart;
+export type BorderInlineStartWidth = CSS.Property.BorderInlineStartWidth;
+export type BorderInlineEndWidth = CSS.Property.BorderInlineEndWidth;
+export type BorderInlineStartColor = CSS.Property.BorderInlineStartColor;
+export type BorderInlineEndColor = CSS.Property.BorderInlineEndColor;
+export type BorderBlockEndColor = CSS.Property.BorderBlockEndColor;
 
 // ======= Color =========
 export type Color = CSS.Property.Color;
@@ -55,6 +94,12 @@ export type FlexBasis = CSS.Property.FlexBasis;
 export type JustifySelf = CSS.Property.JustifySelf;
 export type AlignSelf = CSS.Property.AlignSelf;
 export type Order = CSS.Property.Order;
+export type PlaceContent = CSS.Property.PlaceContent;
+export type PlaceItems = CSS.Property.PlaceItems;
+export type PlaceSelf = CSS.Property.PlaceSelf;
+export type Gap = CSS.Property.Gap;
+export type RowGap = CSS.Property.RowGap;
+export type ColumnGap = CSS.Property.ColumnGap;
 
 // =========== Grid ===========
 export type GridGap = CSS.Property.GridGap;
@@ -67,6 +112,13 @@ export type GridTemplateColumns = CSS.Property.GridTemplateColumns;
 export type GridTemplateRows = CSS.Property.GridTemplateRows;
 export type GridTemplateAreas = CSS.Property.GridTemplateAreas;
 export type GridArea = CSS.Property.GridArea;
+export type GridColumnStart = CSS.Property.GridColumnStart;
+export type GridColumnEnd = CSS.Property.GridColumnEnd;
+export type GridRowEnd = CSS.Property.GridRowEnd;
+export type GridRowStart = CSS.Property.GridRowStart;
+export type GridAutoFlow = CSS.Property.GridAutoFlow;
+export type GridAutoRows = CSS.Property.GridAutoRows;
+export type GridAutoColumns = CSS.Property.GridAutoColumns;
 
 // =============== Position =============
 export type Position = CSS.Property.Position;
@@ -75,6 +127,13 @@ export type Top = CSS.Property.Top;
 export type Bottom = CSS.Property.Bottom;
 export type Left = CSS.Property.Left;
 export type Right = CSS.Property.Right;
+export type Inset = CSS.Property.Inset;
+export type InsetInlineStart = CSS.Property.InsetInlineStart;
+export type InsetInlineEnd = CSS.Property.InsetInlineEnd;
+export type InsetBlock = CSS.Property.InsetBlock;
+export type InsetBlockEnd = CSS.Property.InsetBlockEnd;
+export type InsetBlockStart = CSS.Property.InsetBlockStart;
+export type InsetInline = CSS.Property.InsetInline;
 
 // ============= Typography ============
 export type FontFamily = CSS.Property.FontFamily;
@@ -96,3 +155,12 @@ export type PaddingRight = CSS.Property.PaddingRight;
 export type PaddingBottom = CSS.Property.PaddingBottom;
 export type PaddingLeft = CSS.Property.PaddingLeft;
 export type PaddingBlock = CSS.Property.PaddingBlock;
+
+// ========= Background ==========
+
+export type BackgroundImage = CSS.Property.BackgroundImage;
+export type BackgroundPosition = CSS.Property.BackgroundPosition;
+export type BackgroundSize = CSS.Property.BackgroundSize;
+export type BackgroundClip = CSS.Property.BackgroundClip;
+export type BackgroundAttachment = CSS.Property.BackgroundAttachment;
+export type BackgroundRepeat = CSS.Property.BackgroundRepeat;
