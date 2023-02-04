@@ -169,3 +169,10 @@ group:
 | bgPosition backgroundPosition     | background-position   | none         |
 | bgRepeat backgroundRepeat         | background-repeat     | none         |
 | bgAttachment backgroundAttachment | background-attachment | none         |
+
+## Shadow
+
+| Prop              | CSS Property | Style System |
+| ----------------- | ------------ | ------------ |
+| textShadow        | text-shadow  | shadows      |
+| shadow, boxShadow | box-shadow   | shadows      |

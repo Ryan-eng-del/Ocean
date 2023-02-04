@@ -19,6 +19,7 @@ const Base = () => {
       justify={'center'}
       border={'1px'}
       borderColor={'red.500'}
+      transitionDuration={'fast'}
     >
       Ocean Test
     </ocean.div>

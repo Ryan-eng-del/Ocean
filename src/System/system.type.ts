@@ -4,11 +4,15 @@ import {
   ColorProps,
   SizeAndLayoutProps,
 } from '../Style-System/config';
+import { BackgroundProps } from '../Style-System/config/background';
+import { EffectProps } from '../Style-System/config/effect';
 import { FlexBoxProps } from '../Style-System/config/flex';
 import { GridProps } from '../Style-System/config/grid';
 import { PositionProps } from '../Style-System/config/position';
 import { SpaceProps } from '../Style-System/config/space';
+import { TransitionProps } from '../Style-System/config/transition';
 import { TypographyProps } from '../Style-System/config/typography';
+
 export type DOMElements = keyof JSX.IntrinsicElements;
 
 export type OceanComponentProps = {
@@ -22,9 +26,11 @@ export interface StyleProps
     FlexBoxProps,
     GridProps,
     PositionProps,
-    SizeAndLayoutProps,
     SpaceProps,
-    TypographyProps {}
+    TypographyProps,
+    EffectProps,
+    BackgroundProps,
+    TransitionProps {}
 
 export type OceanHTMLComponent = {
   [T in DOMElements]: (

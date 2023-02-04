@@ -1,3 +1,4 @@
+import { effect } from '../../Style-System/config/effect';
 import borders from './borders';
 import borderWidth from './borderWidth';
 import colors from './colors';
@@ -20,4 +21,5 @@ export const foundations = {
   borders,
   transition,
   borderWidth,
+  effect,
 };

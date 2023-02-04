@@ -12,7 +12,6 @@ export const createTransform = ({
 }) => {
   return (value: string, theme: CSSGlobalTheme) => {
     const { cssMap } = theme;
-
     if (transform) {
       return transform(value);
     }
@@ -41,7 +40,7 @@ export const generateStyleToken = {
     return {
       property,
       scale,
-      transform: createTransform({ transform }),
+      transform: createTransform({ transform, scale }),
     };
   },
 

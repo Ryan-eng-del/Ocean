@@ -1,22 +1,30 @@
-import { generateStyleToken as GST } from '../utils/index';
-import { Background, BackgroundColor, Color as ColorType } from './css.type';
+import { generateStyleToken as t } from '../utils/index';
+import { Color as ColorType } from './css.type';
 
 export const Color = {
-  color: GST.colors('color'),
-  backgroundColor: GST.colors('backgroundColor'),
-  background: GST.colors('background'),
+  color: t.colors('color'),
+  textColor: t.colors('color'),
+  fill: t.colors('fill'),
+  stroke: t.colors('stroke'),
 };
 
 Object.assign(Color, {
-  bg: Color.backgroundColor,
   c: Color.color,
-  bgColor: Color.backgroundColor,
 });
 
 export interface ColorProps {
   c?: ColorType;
-  backgroundColor?: BackgroundColor;
-  bg?: Background;
+  textColor?: ColorType;
+  /**
+   * The CSS `color` property
+   */
   color?: ColorType;
-  bgColor?: BackgroundColor;
+  /**
+   * The CSS `fill` property for icon svgs and paths
+   */
+  fill?: ColorType;
+  /**
+   * The CSS `stroke` property for icon svgs and paths
+   */
+  stroke?: ColorType;
 }

@@ -141,6 +141,14 @@ export type FontSize = CSS.Property.FontSize;
 export type FontWeight = CSS.Property.FontWeight;
 export type LineHeight = CSS.Property.LineHeight;
 export type LetterSpacing = CSS.Property.LetterSpacing;
+export type TextAlign = CSS.Property.TextAlign;
+export type FontStyle = CSS.Property.FontStyle;
+export type TextIndent = CSS.Property.TextIndent;
+export type WordBreak = CSS.Property.WordBreak;
+export type OverflowWrap = CSS.Property.OverflowWrap;
+export type TextOverflow = CSS.Property.TextOverflow;
+export type WhiteSpace = CSS.Property.WhiteSpace;
+export type TextTransform = CSS.Property.TextTransform;
 
 // ============= Space ===============
 export type Margin = CSS.Property.Margin;
@@ -164,3 +172,19 @@ export type BackgroundSize = CSS.Property.BackgroundSize;
 export type BackgroundClip = CSS.Property.BackgroundClip;
 export type BackgroundAttachment = CSS.Property.BackgroundAttachment;
 export type BackgroundRepeat = CSS.Property.BackgroundRepeat;
+
+// ============  Shadow ===========
+export type BoxShadow = CSS.Property.BoxShadow;
+export type TextShadow = CSS.Property.TextShadow;
+export type MixBlendMode = CSS.Property.MixBlendMode;
+export type BackgroundBlendMode = CSS.Property.BackgroundBlendMode;
+export type Opacity = CSS.Property.Opacity;
+
+// ========== Transition ============
+
+export type Transition = CSS.Property.Transition;
+export type TransitionProperty = CSS.Property.TransitionProperty;
+export type TransitionTimingFunction = CSS.Property.TransitionTimingFunction;
+export type TransitionDelay = CSS.Property.TransitionDelay;
+export type TransitionDuration = CSS.Property.TransitionDuration;
+export type WillChange = CSS.Property.WillChange;
