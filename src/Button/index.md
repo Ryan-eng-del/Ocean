@@ -2,6 +2,7 @@
 group:
   title: Component
   order: 1
+order: -1
 ---
 
 # Button
