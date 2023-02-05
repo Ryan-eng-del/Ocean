@@ -23,6 +23,8 @@ export { default as Option } from './Select/option';
 export { default as Skeleton } from './Skeleton';
 export { default as Steps } from './Steps';
 export { default as Switch } from './Switch';
+export { ocean } from './System/';
+export { default as GlobalThemeProvider } from './System/provider';
 export { default as Tabs } from './Tab';
 export { default as Tag } from './Tag';
 export { default as Tree } from './Tree';
