@@ -1,5 +1,5 @@
 const typography = {
-  letterSpacings: {
+  letterspacings: {
     tighter: '-0.05em',
     tight: '-0.025em',
     normal: '0',
@@ -8,7 +8,7 @@ const typography = {
     widest: '0.1em',
   },
 
-  lineHeights: {
+  lineheights: {
     normal: 'normal',
     none: 1,
     shorter: 1.25,
@@ -26,7 +26,7 @@ const typography = {
     '10': '2.5rem',
   },
 
-  fontWeights: {
+  fontweights: {
     hairline: 100,
     thin: 200,
     light: 300,
@@ -44,7 +44,7 @@ const typography = {
     mono: `SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace`,
   },
 
-  fontSizes: {
+  fontsizes: {
     '3xs': '0.45rem',
     '2xs': '0.625rem',
     xs: '0.75rem',

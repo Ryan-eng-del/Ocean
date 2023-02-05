@@ -2,10 +2,12 @@ import React, { useContext, useRef } from 'react';
 import ButtonGroupContext from '../ButtonGroup/ButtonGroupContext';
 import { BaseButtonProps, ButtonProps } from './index';
 
+import { ocean } from 'Ocean';
 import TouchRipple from 'Ocean/TouchRipple/TouchRipple';
 import { tuple } from '../util/type';
-import { ButtonBaseStyle, ButtonLoading } from './style';
-
+import { ButtonBaseStyle } from './style';
+import { ButtonLoading } from './style/index';
+import { baseStyle } from './theme/index';
 const ButtonPropsTuple = tuple(
   'size',
   'type',
@@ -75,8 +77,8 @@ const ButtonBase = React.forwardRef(function (props: ButtonProps) {
 
   return (
     <ButtonBaseStyle ownState={ownState}>
-      <button
-        type={'button'}
+      <ocean.button
+        __css={{ ...baseStyle }}
         onMouseDown={handleOnMouseDown}
         className={props.className}
         onClick={(e) => props.onClick && props.onClick(e)}
@@ -88,7 +90,7 @@ const ButtonBase = React.forwardRef(function (props: ButtonProps) {
           type={type}
           animationColor={animationColor}
         ></TouchRipple>
-      </button>
+      </ocean.button>
     </ButtonBaseStyle>
   );
 });

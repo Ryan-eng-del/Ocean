@@ -17,7 +17,7 @@ import {
 
 export const position = {
   position: true,
-  zIndex: t.prop('zIndex', 'zIndices'),
+  zIndex: t.prop('zIndex', 'zindex'),
   insetX: t.space(['left', 'right']),
   insetInline: t.space('insetInline'),
   insetY: t.space(['top', 'bottom']),

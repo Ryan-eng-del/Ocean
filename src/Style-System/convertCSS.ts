@@ -7,6 +7,7 @@ const getCss = (theme: CSSGlobalTheme, MapProps: any) => {
     let curProperty;
 
     for (const property in styleProps) {
+      // debugger;
       if (Reflect.has(MapProps, property)) {
         curProperty = MapProps[property]; // {property: scale: transform: }
         let p = curProperty.property; // T | T[]

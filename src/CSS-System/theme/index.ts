@@ -8,10 +8,10 @@ import sizes from './sizes';
 import { spacing } from './space';
 import transition from './transition';
 import typography from './typography';
-import zIndex from './z-index';
+import zindex from './z-index';
 
 export const foundations = {
-  zIndex,
+  zindex,
   radius,
   colors,
   ...typography,

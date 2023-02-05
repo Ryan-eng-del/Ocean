@@ -21,11 +21,13 @@ export function styledComponents(tagName: DOMElements) {
       const theme = useTheme();
       const { __css, ...restProps } = props;
       const filterRestProps = filterProps(restProps);
-      const cssObject = convertCSS(theme)(props);
+      const transformCssObject = convertCSS(theme);
+      const cssObject = transformCssObject(props);
 
+      const baseCss = transformCssObject(__css);
       return createElement(
         styled(tagName)`
-          ${__css}
+          ${baseCss}
           ${cssObject}
         `,
         { ref, ...filterRestProps },

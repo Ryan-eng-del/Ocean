@@ -17,11 +17,11 @@ import {
 } from './css.type';
 
 export const typography = {
-  fontFamily: GST.prop('fontFamily', 'fontWeights'),
-  fontSize: GST.prop('fontSize', 'fontSizes', transform.px),
-  fontWeight: GST.prop('fontWeight', 'fontWeights'),
-  lineHeight: GST.prop('lineHeight', 'lineHeights'),
-  letterSpacing: GST.prop('letterSpacing', 'letterSpacings'),
+  fontFamily: GST.prop('fontFamily', 'fontweights'),
+  fontSize: GST.prop('fontSize', 'fontsizes', transform.px),
+  fontWeight: GST.prop('fontWeight', 'fontweights'),
+  lineHeight: GST.prop('lineHeight', 'lineheights'),
+  letterSpacing: GST.prop('letterSpacing', 'letterspacings'),
   textAlign: true,
   fontStyle: true,
   textIndent: true,

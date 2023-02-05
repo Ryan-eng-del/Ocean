@@ -53,11 +53,6 @@ export const ButtonBaseStyle = styled.div.attrs<{ ownState: BaseButtonProps }>(
   isText?: boolean;
 }>`
   button {
-    position: relative;
-    z-index: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     width: ${(props) => {
       let width = props.ownState.width;
       if (typeof width === 'number') {
@@ -88,8 +83,6 @@ export const ButtonBaseStyle = styled.div.attrs<{ ownState: BaseButtonProps }>(
       return `${p1}px ${p2}px`;
     }};
 
-    overflow: hidden;
-
     color: ${(props) => {
       let color = '#fff';
       color = props.isText ? GlobalColor.OceanPrimaryColor : color;
@@ -97,19 +90,18 @@ export const ButtonBaseStyle = styled.div.attrs<{ ownState: BaseButtonProps }>(
       return color;
     }};
 
-    font-weight: 530;
-    font-size: 0.875rem;
-    letter-spacing: 0.02857em;
     background-color: ${(props) => {
       let color = '#fff';
       color = props.type === 'primary' ? GlobalColor.OceanPrimaryColor : color;
       return color;
     }};
+
     background-image: ${(props) =>
       props.type === 'gradual'
         ? 'linear-gradient(140deg, #6cc7ff 0%, #5a33ff 100%)'
         : undefined};
     border: none;
+
     border: ${(props) => {
       let border = 'none';
       border =
@@ -118,12 +110,7 @@ export const ButtonBaseStyle = styled.div.attrs<{ ownState: BaseButtonProps }>(
         props.type === 'danger' ? '1px solid rgba(211, 47, 47, 0.5)' : border;
       return border;
     }};
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
-      box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
-      border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
-      color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+
     &:hover {
       ${(props) =>
         props.type === 'primary'
