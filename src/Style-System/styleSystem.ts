@@ -12,6 +12,7 @@ import {
   transition,
   typography,
 } from './config';
+import interact from './config/interact';
 
 export const MapOfSystemConfig = mergeWith(
   {},
@@ -20,6 +21,7 @@ export const MapOfSystemConfig = mergeWith(
   flexBox,
   grid,
   border,
+  interact,
   space,
   typography,
   position,

@@ -8,14 +8,7 @@ import React, {
 import { tuple } from '../util/type';
 import ButtonBase from './ButtonBase';
 
-const ButtonType = tuple(
-  'primary',
-  'danger',
-  'outline',
-  'warning',
-  'gradual',
-  'text',
-);
+const ButtonType = tuple('primary', 'danger', 'outline', 'gradual', 'text');
 
 export type ButtonType = (typeof ButtonType)[number];
 

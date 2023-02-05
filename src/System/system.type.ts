@@ -8,6 +8,7 @@ import { BackgroundProps } from '../Style-System/config/background';
 import { EffectProps } from '../Style-System/config/effect';
 import { FlexBoxProps } from '../Style-System/config/flex';
 import { GridProps } from '../Style-System/config/grid';
+import { InteractProps } from '../Style-System/config/interact';
 import { PositionProps } from '../Style-System/config/position';
 import { SpaceProps } from '../Style-System/config/space';
 import { TransitionProps } from '../Style-System/config/transition';
@@ -30,7 +31,8 @@ export interface StyleProps
     TypographyProps,
     EffectProps,
     BackgroundProps,
-    TransitionProps {}
+    TransitionProps,
+    InteractProps {}
 
 export type OceanHTMLComponent = {
   [T in DOMElements]: (

@@ -10,6 +10,7 @@ export const ButtonLoading = styled.span<{
   height: 17px;
   margin-right: 10px;
   border: 2px solid white;
+
   border-color: ${(props) => {
     let borderColor = 'white';
     if (
@@ -24,7 +25,6 @@ export const ButtonLoading = styled.span<{
   display: inline-block;
   border-radius: 50%;
   cursor: alias;
-  -webkit-animation: 1s button-loading infinite linear;
   animation: 1s button-loading infinite linear;
   z-index: 4;
   pointer-events: none;
@@ -53,64 +53,6 @@ export const ButtonBaseStyle = styled.div.attrs<{ ownState: BaseButtonProps }>(
   isText?: boolean;
 }>`
   button {
-    width: ${(props) => {
-      let width = props.ownState.width;
-      if (typeof width === 'number') {
-        width = width + 'px';
-      }
-      return width ? width : '100%';
-    }};
-
-    height: ${(props) => {
-      let height = props.ownState.height;
-      if (typeof height === 'number') {
-        height = height + 'px';
-      }
-      return height ? height : '43px';
-    }};
-
-    padding: ${(props) => {
-      let p1 = 5;
-      let p2 = 15;
-      if (props.ownState.size === 'small') {
-        p1 = 0;
-        p2 = 5;
-      }
-      if (props.ownState.size === 'large') {
-        p1 = 10;
-        p2 = 30;
-      }
-      return `${p1}px ${p2}px`;
-    }};
-
-    color: ${(props) => {
-      let color = '#fff';
-      color = props.isText ? GlobalColor.OceanPrimaryColor : color;
-      color = props.type === 'danger' ? 'rgb(211, 47, 47)' : color;
-      return color;
-    }};
-
-    background-color: ${(props) => {
-      let color = '#fff';
-      color = props.type === 'primary' ? GlobalColor.OceanPrimaryColor : color;
-      return color;
-    }};
-
-    background-image: ${(props) =>
-      props.type === 'gradual'
-        ? 'linear-gradient(140deg, #6cc7ff 0%, #5a33ff 100%)'
-        : undefined};
-    border: none;
-
-    border: ${(props) => {
-      let border = 'none';
-      border =
-        props.type === 'outline' ? `1px solid rgba(25, 118, 210, 0.5)` : border;
-      border =
-        props.type === 'danger' ? '1px solid rgba(211, 47, 47, 0.5)' : border;
-      return border;
-    }};
-
     &:hover {
       ${(props) =>
         props.type === 'primary'

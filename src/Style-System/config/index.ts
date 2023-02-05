@@ -4,6 +4,7 @@ export * from './color';
 export * from './effect';
 export * from './flex';
 export * from './grid';
+export * from './interact';
 export * from './position';
 export * from './sizeAndLayout';
 export * from './space';

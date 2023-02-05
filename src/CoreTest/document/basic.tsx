@@ -7,7 +7,11 @@ const Base = () => {
   const theme = useTheme();
   console.log(theme, 'theme');
 
-  return <ocean.div letterSpacing={'normal'}>Ocean Test</ocean.div>;
+  return (
+    <ocean.div letterSpacing={'normal'} cursor="pointer">
+      Ocean Test
+    </ocean.div>
+  );
 };
 
 const Basic = () => {

@@ -7,7 +7,7 @@ import TouchRipple from 'Ocean/TouchRipple/TouchRipple';
 import { tuple } from '../util/type';
 import { ButtonBaseStyle } from './style';
 import { ButtonLoading } from './style/index';
-import { baseStyle } from './theme/index';
+import { baseStyle, size as sizeMap, variant } from './theme/index';
 const ButtonPropsTuple = tuple(
   'size',
   'type',
@@ -21,9 +21,16 @@ const ButtonPropsTuple = tuple(
 type ButtonPropsTupleType = typeof ButtonPropsTuple;
 
 const ButtonBase = React.forwardRef(function (props: ButtonProps) {
-  const { children } = props;
+  const {
+    children,
+    size = 'medium',
+    type = 'text',
+    loading = false,
+    animationColor,
+  } = props;
   const rippleRef = useRef<any>(null);
   const buttonGroupContext = useContext(ButtonGroupContext);
+
   const defaultPropsValue = (propsKey: keyof BaseButtonProps | string) => {
     let propsValue = undefined;
     propsValue = propsKey === 'size' ? 'medium' : undefined;
@@ -57,9 +64,12 @@ const ButtonBase = React.forwardRef(function (props: ButtonProps) {
     'animationColor',
     'loading',
   ]);
-  const type = ownState['type'];
-  const animationColor = ownState['animationColor'];
-  const loading = ownState['loading'];
+
+  const buttonBaseStyle = {
+    ...baseStyle,
+    ...sizeMap[size],
+    ...variant[type],
+  };
 
   function useHandleRipper(
     action: 'stopRipple' | 'startRipple',
@@ -78,7 +88,7 @@ const ButtonBase = React.forwardRef(function (props: ButtonProps) {
   return (
     <ButtonBaseStyle ownState={ownState}>
       <ocean.button
-        __css={{ ...baseStyle }}
+        __css={{ ...buttonBaseStyle }}
         onMouseDown={handleOnMouseDown}
         className={props.className}
         onClick={(e) => props.onClick && props.onClick(e)}

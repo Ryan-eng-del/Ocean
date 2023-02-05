@@ -188,3 +188,5 @@ export type TransitionTimingFunction = CSS.Property.TransitionTimingFunction;
 export type TransitionDelay = CSS.Property.TransitionDelay;
 export type TransitionDuration = CSS.Property.TransitionDuration;
 export type WillChange = CSS.Property.WillChange;
+
+export type Cursor = CSS.Property.Cursor;
