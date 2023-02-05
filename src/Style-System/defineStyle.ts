@@ -1,5 +1,5 @@
-import { SystemProps } from 'Ocean/System/system.type';
+import { StyleProps } from '../System/system.type';
 
-export const defineStyle = <T extends SystemProps>(styles: T): T => {
+export const defineStyle = (styles: StyleProps): StyleProps => {
   return styles;
 };

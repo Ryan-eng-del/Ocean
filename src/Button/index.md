@@ -6,33 +6,25 @@ group:
 
 # Button
 
-### 按钮类别 type
+按钮用于开始一个即时操作。
+
+## 基本使用 - Usage
+
+<code src="./document/Basic.tsx"></code>
+
+### 按钮类别 - Type
 
 基础的按钮，共有五种状态。
 
 <code src="./document/BasicButton.tsx"></code>
 
-### 按钮组 ButtonGroup
-
-#### 类别不同的同一组按钮
-
-为 ButtonGroup 设置 `types = ["primary", "outline", "text"]`, 即第一个按钮类别是 `primary`, 第二个按钮类别是 `outline`, 第三个按钮类别是 `text`。
-
-<code src="./document/ButtonGroup.tsx"></code>
-
-#### 类别相同的同一组按钮
-
-为 `ButtonGroup` 设置 `type="primary"`, 其下包含的所有 按钮的类别都是 `"primary"`。
-
-<code src="./document/ButtonGroup2.tsx"></code>
-
-### Button 尺寸
+### 按钮尺寸 - Size
 
 支持小 中 大 三种尺寸按钮 `medium` 就是默认按钮
 
 <code src="./document/SizeButton.tsx"></code>
 
-### Button 波浪动画颜色
+### 自定义波浪颜色
 
 <code src="./document/Animation.tsx"></code>
 
@@ -40,10 +32,14 @@ group:
 
 <code src="./document/LoadingButton.tsx"></code>
 
-### 定制宽度
+### 加载文本
 
-<code src="./document/Width.tsx"></code>
+<code src="./document/loadingText.tsx"></code>
 
-### 定制高度
+### 按钮图标
 
-<code src="./document/Height.tsx"></code>
+<code src="./document/iconButton.tsx"></code>
+
+### 自定义按钮
+
+<code src="./document/custom.tsx"></code>

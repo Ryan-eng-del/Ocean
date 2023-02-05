@@ -8,7 +8,11 @@ const Base = () => {
   console.log(theme, 'theme');
 
   return (
-    <ocean.div letterSpacing={'normal'} cursor="pointer">
+    <ocean.div
+      letterSpacing={'normal'}
+      cursor="pointer"
+      _hover={{ background: 'red.500' }}
+    >
       Ocean Test
     </ocean.div>
   );

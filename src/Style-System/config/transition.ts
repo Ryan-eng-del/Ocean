@@ -1,5 +1,6 @@
 import { generateStyleToken as t } from '../utils/index';
 import {
+  Animation,
   Transition,
   TransitionDelay,
   TransitionDuration,
@@ -45,7 +46,7 @@ export interface TransitionProps {
   /**
    * The CSS `animation` property
    */
-  animation?: Animation;
+  animation?: Animation | string;
   /**
    * The CSS `will-change` property
    */

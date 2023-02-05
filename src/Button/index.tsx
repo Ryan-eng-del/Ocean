@@ -5,6 +5,7 @@ import React, {
   CSSProperties,
   ReactNode,
 } from 'react';
+import { StyleProps } from '../System/system.type';
 import { tuple } from '../util/type';
 import ButtonBase from './ButtonBase';
 
@@ -17,10 +18,11 @@ export interface BaseButtonProps {
   type: ButtonType;
   children: ReactNode;
   style?: CSSProperties;
-  width?: number | string;
-  height?: number | string;
   animationColor?: string;
   loading?: boolean;
+  leftIcon?: ReactNode;
+  loadingText?: string;
+  rightIcon?: ReactNode;
   onClick?: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
 }
 
@@ -29,7 +31,8 @@ type NativeButtonProps = BaseButtonProps &
 type AnchorButtonProps = BaseButtonProps &
   Omit<AnchorHTMLAttributes<HTMLElement>, 'type'>;
 
-export type ButtonProps = Partial<NativeButtonProps & AnchorButtonProps>;
+export type ButtonProps = Partial<NativeButtonProps & AnchorButtonProps> &
+  StyleProps;
 
 const Button: React.FC<ButtonProps> = (props) => {
   return <ButtonBase {...props}>{props.children}</ButtonBase>;

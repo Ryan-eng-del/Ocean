@@ -16,9 +16,8 @@ export const isNoPass = <T>(value: undefined | T): value is undefined => {
 
 export function isObject(value: any): value is Record<string, any> {
   const type = typeof value;
-  return (
-    value !== null &&
-    (type === 'object' || type === 'function') &&
-    !Array.isArray(value)
-  );
+  return value !== null && type === 'object' && !Array.isArray(value);
 }
+
+export const className = (...classNames: any[]) =>
+  classNames.filter(Boolean).join(' ');

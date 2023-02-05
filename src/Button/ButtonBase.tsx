@@ -1,24 +1,17 @@
-import React, { useContext, useRef } from 'react';
-import ButtonGroupContext from '../ButtonGroup/ButtonGroupContext';
-import { BaseButtonProps, ButtonProps } from './index';
-
 import { ocean } from 'Ocean';
+import { StyleProps } from 'Ocean/System/system.type';
 import TouchRipple from 'Ocean/TouchRipple/TouchRipple';
-import { tuple } from '../util/type';
-import { ButtonBaseStyle } from './style';
-import { ButtonLoading } from './style/index';
-import { baseStyle, size as sizeMap, variant } from './theme/index';
-const ButtonPropsTuple = tuple(
-  'size',
-  'type',
-  'style',
-  'width',
-  'height',
-  'animationColor',
-  'loading',
-);
-
-type ButtonPropsTupleType = typeof ButtonPropsTuple;
+import { className } from 'Ocean/util/common';
+import React, { useRef } from 'react';
+import { ButtonContent } from './ButtonContent';
+import { ButtonLoadingCpn } from './ButtonLoading';
+import { ButtonProps } from './index';
+import {
+  baseStyle,
+  loadingStyle,
+  size as sizeMap,
+  variant,
+} from './theme/index';
 
 const ButtonBase = React.forwardRef(function (props: ButtonProps) {
   const {
@@ -27,48 +20,21 @@ const ButtonBase = React.forwardRef(function (props: ButtonProps) {
     type = 'text',
     loading = false,
     animationColor,
+    style,
+    onClick,
+    loadingText,
+    leftIcon,
+    rightIcon,
+    ...restProps
   } = props;
+
   const rippleRef = useRef<any>(null);
-  const buttonGroupContext = useContext(ButtonGroupContext);
 
-  const defaultPropsValue = (propsKey: keyof BaseButtonProps | string) => {
-    let propsValue = undefined;
-    propsValue = propsKey === 'size' ? 'medium' : undefined;
-    propsValue = propsKey === 'type' ? 'text' : undefined;
-    return propsValue;
-  };
-
-  const generateOwnState = (key: ButtonPropsTupleType) => {
-    const ownState: BaseButtonProps = key.reduce<any>((pre, cur) => {
-      pre[cur] =
-        props[cur as keyof BaseButtonProps] ||
-        buttonGroupContext![cur as keyof BaseButtonProps] ||
-        defaultPropsValue(cur);
-      return pre;
-    }, {});
-
-    for (const key in ownState) {
-      if (!ownState[key as keyof BaseButtonProps])
-        delete ownState[key as keyof BaseButtonProps];
-    }
-
-    return ownState;
-  };
-
-  const ownState = generateOwnState([
-    'size',
-    'type',
-    'style',
-    'width',
-    'height',
-    'animationColor',
-    'loading',
-  ]);
-
-  const buttonBaseStyle = {
+  const buttonBaseStyle: StyleProps = {
     ...baseStyle,
     ...sizeMap[size],
     ...variant[type],
+    ...loadingStyle(loading),
   };
 
   function useHandleRipper(
@@ -76,6 +42,7 @@ const ButtonBase = React.forwardRef(function (props: ButtonProps) {
     eventCallback: any,
   ) {
     return (event: any) => {
+      if (loading) return;
       if (eventCallback) eventCallback(event);
       if (rippleRef.current) {
         rippleRef.current[action](event);
@@ -84,24 +51,38 @@ const ButtonBase = React.forwardRef(function (props: ButtonProps) {
   }
 
   const handleOnMouseDown = useHandleRipper('startRipple', props.onMouseDown);
+  const contentProps = { leftIcon, rightIcon, children };
 
   return (
-    <ButtonBaseStyle ownState={ownState}>
-      <ocean.button
-        __css={{ ...buttonBaseStyle }}
-        onMouseDown={handleOnMouseDown}
-        className={props.className}
-        onClick={(e) => props.onClick && props.onClick(e)}
-      >
-        {loading ? <ButtonLoading type={type} /> : ''}
-        {children}
-        <TouchRipple
-          ref={rippleRef}
-          type={type}
-          animationColor={animationColor}
-        ></TouchRipple>
-      </ocean.button>
-    </ButtonBaseStyle>
+    <ocean.button
+      __css={buttonBaseStyle}
+      onMouseDown={handleOnMouseDown}
+      className={className('ocean-button', props.className)}
+      onClick={(e) => {
+        if (loading) return;
+        onClick && onClick(e);
+      }}
+      style={style}
+      {...restProps}
+    >
+      {loading && <ButtonLoadingCpn type={type} loadingText={!!loadingText} />}
+
+      {loading ? (
+        loadingText || (
+          <ocean.div opacity={0} pointerEvents="none">
+            {children}
+          </ocean.div>
+        )
+      ) : (
+        <ButtonContent {...contentProps} />
+      )}
+
+      <TouchRipple
+        ref={rippleRef}
+        type={type}
+        animationColor={animationColor}
+      />
+    </ocean.button>
   );
 });
 

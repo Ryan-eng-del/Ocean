@@ -1,17 +1,28 @@
+import { isObject } from '../util/common';
+import { pseudoSelectors } from './pseudos';
 import { MapOfSystemConfig as MapProps } from './styleSystem';
 import { CSSGlobalTheme } from './styleSystem.type';
 
-const getCss = (theme: CSSGlobalTheme, MapProps: any) => {
-  return (styleProps: Record<string, any>) => {
+const getCss = (theme: CSSGlobalTheme, MapProps: any, pseudos: any) => {
+  const css = (styleProps: Record<string, any>) => {
     const attributes: Record<string, any> = {};
     let curProperty;
+    for (let property in styleProps) {
+      let value = styleProps[property]; // red.500
 
-    for (const property in styleProps) {
-      // debugger;
+      if (Reflect.has(pseudos, property)) {
+        property = pseudos[property];
+      }
+
+      if (isObject(value)) {
+        attributes[property] = css(value);
+        continue;
+      }
+
       if (Reflect.has(MapProps, property)) {
         curProperty = MapProps[property]; // {property: scale: transform: }
         let p = curProperty.property; // T | T[]
-        let value = styleProps[property]; // red.500
+
         if (curProperty === true) {
           attributes[property] = value;
           continue;
@@ -36,8 +47,9 @@ const getCss = (theme: CSSGlobalTheme, MapProps: any) => {
 
     return attributes;
   };
+  return css;
 };
 
 export const convertCSS = (theme: CSSGlobalTheme) => {
-  return getCss(theme, MapProps);
+  return getCss(theme, MapProps, pseudoSelectors);
 };

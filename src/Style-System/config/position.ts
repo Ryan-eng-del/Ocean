@@ -16,7 +16,7 @@ import {
 } from './css.type';
 
 export const position = {
-  position: true,
+  position: t.prop('position'),
   zIndex: t.prop('zIndex', 'zindex'),
   insetX: t.space(['left', 'right']),
   insetInline: t.space('insetInline'),

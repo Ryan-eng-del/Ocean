@@ -1,4 +1,4 @@
-import { CSSObject, FlattenSimpleInterpolation } from 'styled-components';
+import { Pseudos } from 'Ocean/Style-System/pseudos';
 import {
   BorderProps,
   ColorProps,
@@ -17,7 +17,7 @@ import { TypographyProps } from '../Style-System/config/typography';
 export type DOMElements = keyof JSX.IntrinsicElements;
 
 export type OceanComponentProps = {
-  __css?: FlattenSimpleInterpolation | CSSObject;
+  __css?: StyleProps;
 };
 
 export interface StyleProps
@@ -32,7 +32,8 @@ export interface StyleProps
     EffectProps,
     BackgroundProps,
     TransitionProps,
-    InteractProps {}
+    InteractProps,
+    Pseudos {}
 
 export type OceanHTMLComponent = {
   [T in DOMElements]: (

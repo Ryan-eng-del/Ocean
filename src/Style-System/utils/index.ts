@@ -13,9 +13,8 @@ export const createTransform = ({
   return (value: string, theme: CSSGlobalTheme) => {
     const { cssMap } = theme;
     if (transform) {
-      return transform(value);
+      if (transform(value)) return;
     }
-
     const varRef = cssMap[`${scale}.${value}`]?.varRef;
     return varRef ? varRef : value;
   };

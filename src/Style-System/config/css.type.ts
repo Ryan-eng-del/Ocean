@@ -190,3 +190,6 @@ export type TransitionDuration = CSS.Property.TransitionDuration;
 export type WillChange = CSS.Property.WillChange;
 
 export type Cursor = CSS.Property.Cursor;
+export type PointerEvents = CSS.Property.PointerEvents;
+export type Transform = CSS.Property.Transform;
+export type Animation = CSS.Property.Animation;

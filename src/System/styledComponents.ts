@@ -1,17 +1,21 @@
 import { createElement, forwardRef } from 'react';
 import styled, { useTheme } from 'styled-components';
-import { MapOfSystemConfig } from '../Style-System/styleSystem';
+import { systemProps } from './system';
 import { DOMElements, SystemProps } from './system.type';
 
 const filterProps = (restProps: Record<string, any>) => {
-  let resultProps = <Record<string, any>>{};
+  let restCssProps = <Record<string, any>>{};
+  let elementProps = <Record<string, any>>{};
+
   for (const k in restProps) {
-    if (!Reflect.has(MapOfSystemConfig, k)) {
-      resultProps[k] = restProps[k];
+    if (Reflect.has(systemProps, k)) {
+      restCssProps[k] = restProps[k];
+    } else {
+      elementProps[k] = restProps[k];
     }
   }
 
-  return resultProps;
+  return [restCssProps, elementProps];
 };
 
 export function styledComponents(tagName: DOMElements) {
@@ -20,18 +24,17 @@ export function styledComponents(tagName: DOMElements) {
     return forwardRef((props: SystemProps, ref) => {
       const theme = useTheme();
       const { __css, ...restProps } = props;
-      const filterRestProps = filterProps(restProps);
+      const [restCssProps, elementProps] = filterProps(restProps);
       const transformCssObject = convertCSS(theme);
-      const cssObject = transformCssObject(props);
-
+      const cssObject = transformCssObject(restCssProps);
       const baseCss = transformCssObject(__css);
-      return createElement(
-        styled(tagName)`
-          ${baseCss}
-          ${cssObject}
-        `,
-        { ref, ...filterRestProps },
-      );
+
+      const element = styled(tagName)`
+        ${baseCss}
+        ${cssObject}
+      `;
+
+      return createElement(element, { ref, ...elementProps });
     });
   };
 }

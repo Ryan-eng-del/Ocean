@@ -4,7 +4,7 @@ import React from 'react';
 const BasicButton = () => {
   return (
     <GlobalThemeProvider>
-      <Button type="primary" marginX={5} loading={true}>
+      <Button type="primary" w={24} marginX={5}>
         Button
       </Button>
     </GlobalThemeProvider>

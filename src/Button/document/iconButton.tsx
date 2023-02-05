@@ -1,3 +1,4 @@
+import { FacebookFilled, TwitterCircleFilled } from '@ant-design/icons';
 import { Button, GlobalThemeProvider, ocean } from 'Ocean';
 import React from 'react';
 
@@ -5,17 +6,20 @@ const BasicButton = () => {
   return (
     <GlobalThemeProvider>
       <ocean.div display="flex">
-        <Button type="text">Button</Button>
-        <Button type="outline" marginX={5}>
+        <Button
+          type="primary"
+          w={24}
+          marginX={5}
+          leftIcon={<TwitterCircleFilled />}
+        >
           Button
         </Button>
-        <Button type="primary" marginX={5}>
-          Button
-        </Button>
-        <Button type="gradual" marginX={5}>
-          Button
-        </Button>
-        <Button type="danger" marginX={5}>
+        <Button
+          type="primary"
+          w={24}
+          marginX={5}
+          rightIcon={<FacebookFilled />}
+        >
           Button
         </Button>
       </ocean.div>
