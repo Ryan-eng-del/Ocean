@@ -10,11 +10,11 @@ const typography = {
 
   lineheights: {
     normal: 'normal',
-    none: 1,
-    shorter: 1.25,
-    short: 1.375,
-    base: 1.5,
-    tall: 1.625,
+    none: '1',
+    shorter: '1.25',
+    short: '1.375',
+    base: '1.5',
+    tall: '1.625',
     taller: '2',
     '3': '.75rem',
     '4': '1rem',
@@ -27,15 +27,15 @@ const typography = {
   },
 
   fontweights: {
-    hairline: 100,
-    thin: 200,
-    light: 300,
-    normal: 400,
-    medium: 500,
-    semibold: 600,
-    bold: 700,
-    extrabold: 800,
-    black: 900,
+    hairline: '100',
+    thin: '200',
+    light: '300',
+    normal: '400',
+    medium: '500',
+    semibold: '600',
+    bold: '700',
+    extrabold: '800',
+    black: '900',
   },
 
   fonts: {
