@@ -1,8 +1,8 @@
+import styled from '@emotion/styled';
 import { ButtonType } from 'Ocean/Button';
 import { GlobalColor } from 'Ocean/common/variable';
 import { ocean } from 'Ocean/System';
 import React from 'react';
-import styled from 'styled-components';
 import { StyleProps } from '../System/system.type';
 
 export const ButtonLoading = styled.div<{

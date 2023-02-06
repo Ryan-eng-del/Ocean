@@ -9,7 +9,7 @@ const ButtonType = tuple('primary', 'danger', 'outline', 'gradual', 'text');
 export type ButtonType = (typeof ButtonType)[number];
 export interface BaseButtonProps {
   size?: SizeType;
-  type: ButtonType;
+  type?: ButtonType;
   style?: CSSProperties;
   animationColor?: string;
   loading?: boolean;

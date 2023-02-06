@@ -50,33 +50,30 @@ const ButtonBase = React.forwardRef(function (props: ButtonProps) {
     };
   }
 
-  const handleOnMouseDown = useHandleRipper('startRipple', props.onMouseDown);
   const contentProps = { leftIcon, rightIcon, children };
+
+  const handleOnClick = useHandleRipper('startRipple', onClick);
 
   return (
     <ocean.button
       __css={buttonBaseStyle}
-      onMouseDown={handleOnMouseDown}
       className={cx('ocean-button', props.className)}
       onClick={(e) => {
-        if (loading) return;
-        onClick && onClick(e);
+        handleOnClick(e);
       }}
       style={style}
       {...restProps}
     >
       {loading && <ButtonLoadingCpn type={type} loadingText={!!loadingText} />}
-
       {loading ? (
         loadingText || (
-          <ocean.div opacity={0} pointerEvents="none">
+          <ocean.div opacity={'0'} pointerEvents="none">
             {children}
           </ocean.div>
         )
       ) : (
         <ButtonContent {...contentProps} />
       )}
-
       <TouchRipple
         ref={rippleRef}
         type={type}

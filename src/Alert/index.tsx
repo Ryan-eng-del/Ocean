@@ -1,10 +1,10 @@
+import styled from '@emotion/styled';
 import { opacityTransition } from 'Ocean/Drawer/style/animation';
 import { ocean } from 'Ocean/System';
 import { OceanComponent } from 'Ocean/System/system.type';
 import { cx } from 'Ocean/util/common';
 import React, { useEffect, useState } from 'react';
 import { CSSTransition } from 'react-transition-group';
-import styled from 'styled-components';
 import { isNoPass } from '../util/common';
 import { AlertProvider, Status } from './context';
 import { baseStyle, statusStyle, variantStyle } from './theme';

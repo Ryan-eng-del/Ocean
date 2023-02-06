@@ -9,6 +9,7 @@ interface AlertCloseIconProps extends OceanComponent<'div', AlertCloseIcon> {}
 
 const AlertCloseIcon = (props: AlertCloseIconProps) => {
   const { setVisible } = useAlertContext();
+
   return (
     <ocean.div
       className="close-icon"

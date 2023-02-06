@@ -1,5 +1,4 @@
 import { defineStyle } from '../../Style-System/defineStyle';
-import { part } from './part';
 import { statusStyle } from './status';
 import { variantStyle } from './variant';
 
@@ -12,4 +11,4 @@ const baseStyle = defineStyle({
   transition: 'all 110ms ease',
 });
 
-export { statusStyle, baseStyle, part, variantStyle };
+export { statusStyle, baseStyle, variantStyle };

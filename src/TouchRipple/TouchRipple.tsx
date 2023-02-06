@@ -21,11 +21,13 @@ const TouchRipple = React.forwardRef(function (
   ref: ForwardedRef<TouchRippleRef>,
 ) {
   const [ripples, setRipples] = useState<React.ReactNode[]>([]);
-  const [start, setStart] = useState(false);
+
   const startCommit = useCallback(
     (params: params) => {
       const { rippleSize, rippleX, rippleY } = params;
+
       setRipples((oldRipples) => {
+        // debugger;
         return [
           ...oldRipples,
           <Ripple
@@ -45,13 +47,13 @@ const TouchRipple = React.forwardRef(function (
   const useTimer = () => {
     let timer: any = null;
     useEffect(() => {
-      if (start) {
+      if (ripples.length > 0) {
         timer = setTimeout(() => {
           setRipples([]);
         }, 1500);
       }
       return () => timer && clearTimeout(timer);
-    });
+    }, [ripples]);
   };
 
   useTimer();
@@ -63,7 +65,6 @@ const TouchRipple = React.forwardRef(function (
     const element = event.target;
     // 获得点击点的位置
     // https://developer.mozilla.org/zh-CN/docs/Web/API/Element/getBoundingClientRect
-    setStart(true);
     const rect = element?.getBoundingClientRect();
     const { clientX, clientY } = event;
     rippleX = Math.round(clientX - rect.left);
@@ -75,6 +76,7 @@ const TouchRipple = React.forwardRef(function (
       Math.max(Math.abs(element.clientHeight - rippleY), rippleY) * 2 + 2;
 
     rippleSize = Math.sqrt(sizeX ** 2 + sizeY ** 2);
+    // debugger;
     startCommit({ rippleSize, rippleX, rippleY });
   };
 
