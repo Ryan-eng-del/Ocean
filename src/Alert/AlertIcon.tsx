@@ -8,12 +8,16 @@ interface AlertIcon {}
 interface AlertIconProps extends OceanComponent<'div', AlertIcon> {}
 
 const AlertIcon = (props: AlertIconProps) => {
-  const { status } = useAlertContext();
+  const { status, variant } = useAlertContext();
   const IconStyle = part.icon[status];
   const AlertIcon = Status[status].icon;
 
   return (
-    <ocean.div __css={IconStyle} {...props}>
+    <ocean.div
+      __css={IconStyle}
+      {...props}
+      c={variant === 'solid' ? '#fff' : undefined}
+    >
       {AlertIcon}
     </ocean.div>
   );

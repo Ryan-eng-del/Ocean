@@ -1,23 +1,27 @@
-import { Alert, AlertContent, GlobalThemeProvider } from 'Ocean';
+import { Alert, AlertContent, AlertIcon, GlobalThemeProvider } from 'Ocean';
 import React from 'react';
-import AlertIcon from '../AlertIcon';
 
 const Basic = () => {
   return (
     <GlobalThemeProvider>
-      <Alert>
+      <Alert marginY={3}>
         <AlertIcon />
         <AlertContent>This is an Alert!</AlertContent>
       </Alert>
-      <Alert status="info" marginY={4}>
+      <Alert marginY={3} variant="solid">
         <AlertIcon />
         <AlertContent>This is an Alert!</AlertContent>
       </Alert>
-      <Alert status="warning" marginY={4}>
+      <Alert marginY={3} variant="top-line" status="info">
         <AlertIcon />
         <AlertContent>This is an Alert!</AlertContent>
       </Alert>
-      <Alert status="error">
+      <Alert marginY={3} variant="left-line" status="error">
+        <AlertIcon />
+        <AlertContent>This is an Alert!</AlertContent>
+      </Alert>
+
+      <Alert marginY={3} variant="bottom-line" status="warning">
         <AlertIcon />
         <AlertContent>This is an Alert!</AlertContent>
       </Alert>

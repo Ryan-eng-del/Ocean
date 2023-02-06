@@ -18,6 +18,11 @@ export type DOMElements = keyof JSX.IntrinsicElements;
 
 export type OceanComponentProps = {
   __css?: StyleProps;
+  css?: StyleProps;
+};
+
+export type OceanPublicComponentProps = {
+  css?: StyleProps;
 };
 
 export interface StyleProps
@@ -37,7 +42,9 @@ export interface StyleProps
 
 export type OceanHTMLComponent = {
   [T in DOMElements]: (
-    props: StyleProps & { children?: any } & OceanComponentProps &
+    props: StyleProps &
+      React.ComponentPropsWithoutRef<T> &
+      OceanComponentProps &
       JSX.IntrinsicElements[T],
   ) => JSX.Element;
 };
@@ -52,6 +59,7 @@ export type OceanComponent<T extends DOMElements, K> = Omit<
   keyof K
 > &
   StyleProps &
-  K;
+  K &
+  OceanPublicComponentProps;
 
 export type SystemProps = StyleProps & OceanComponentProps;

@@ -2,11 +2,12 @@ import { opacityTransition } from 'Ocean/Drawer/style/animation';
 import { ocean } from 'Ocean/System';
 import { OceanComponent } from 'Ocean/System/system.type';
 import { cx } from 'Ocean/util/common';
-import React, { ReactNode, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { CSSTransition } from 'react-transition-group';
 import styled from 'styled-components';
-import { AlertProvider } from './context';
-import { baseStyle, variant } from './theme';
+import { isNoPass } from '../util/common';
+import { AlertProvider, Status } from './context';
+import { baseStyle, statusStyle, variantStyle } from './theme';
 
 const AlertWrapper = styled.div`
   ${opacityTransition('alert-model')}
@@ -14,31 +15,41 @@ const AlertWrapper = styled.div`
 
 type AlertStatus = 'info' | 'success' | 'warning' | 'error';
 
+export type AlertVariant = 'solid' | 'left-line' | 'bottom-line' | 'top-line';
+
 interface Alert {
-  type?: AlertStatus;
-  title?: string;
-  content?: string;
-  showClear?: boolean;
+  status?: AlertStatus;
   onClose?: () => void;
-  showIcon?: boolean;
-  closeElement?: ReactNode;
   visible?: boolean;
+  variant?: AlertVariant;
 }
 
 interface AlertProps extends OceanComponent<'div', Alert> {}
 
 const Alert = (props: AlertProps) => {
-  const { type = 'success', visible, className, ...restProps } = props;
+  const {
+    status = 'success',
+    visible,
+    className,
+    variant,
+    ...restProps
+  } = props;
 
   const [innerVisible, setVisible] = useState(visible ?? true);
+  const colorSchema = Status[status].colorSchema;
 
   const AlertBaseStyle = {
-    ...variant[type],
+    ...statusStyle(colorSchema),
     ...baseStyle,
+    ...(variant && variantStyle[variant](colorSchema)),
   };
 
+  useEffect(() => {
+    !isNoPass(visible) && setVisible(visible);
+  }, [visible]);
+
   return (
-    <AlertProvider value={{ status: type, setVisible }}>
+    <AlertProvider value={{ status, setVisible, variant }}>
       <AlertWrapper>
         <CSSTransition
           in={innerVisible}

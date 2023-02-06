@@ -1,4 +1,10 @@
-import { Alert, Button, GlobalThemeProvider } from 'Ocean';
+import {
+  Alert,
+  AlertContent,
+  AlertIcon,
+  Button,
+  GlobalThemeProvider,
+} from 'Ocean';
 import React, { useState } from 'react';
 
 const Basic = () => {
@@ -6,22 +12,23 @@ const Basic = () => {
 
   return (
     <GlobalThemeProvider>
-      <Alert
-        content="This is a Alert!!"
-        closeElement="知道了"
-        showIcon={false}
-        visible={visible}
-        style={{ marginBottom: '12px' }}
-      />
+      <Alert visible={visible}>
+        <AlertIcon />
+        <AlertContent>This is an Alert!</AlertContent>
+      </Alert>
 
-      <Button
-        width={32}
-        height={12}
-        type="primary"
-        onClick={() => setVisible(false)}
-      >
-        关闭
-      </Button>
+      <div>
+        <Button
+          width={32}
+          height={10}
+          type="primary"
+          marginY={3}
+          marginX="auto"
+          onClick={() => setVisible(false)}
+        >
+          关闭
+        </Button>
+      </div>
     </GlobalThemeProvider>
   );
 };

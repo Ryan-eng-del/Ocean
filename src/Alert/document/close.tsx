@@ -1,8 +1,8 @@
 import {
   Alert,
   AlertCloseIcon,
+  AlertContent,
   AlertIcon,
-  AlertTitle,
   GlobalThemeProvider,
 } from 'Ocean';
 import React from 'react';
@@ -12,17 +12,19 @@ const Basic = () => {
     <GlobalThemeProvider>
       <Alert>
         <AlertIcon />
-        <AlertTitle>This is an Alert!</AlertTitle>
+        <AlertContent>This is an Alert!</AlertContent>
         <AlertCloseIcon />
       </Alert>
-      <Alert type="info" marginY={4}>
+
+      <Alert status="info" marginY={4}>
         <AlertIcon />
-        <AlertTitle>This is an Alert!</AlertTitle>
+        <AlertContent>This is an Alert!</AlertContent>
         <AlertCloseIcon />
       </Alert>
-      <Alert type="warning" marginY={4}>
+
+      <Alert status="warning" marginY={4}>
         <AlertIcon />
-        <AlertTitle>This is an Alert!</AlertTitle>
+        <AlertContent>This is an Alert!</AlertContent>
         <AlertCloseIcon />
       </Alert>
     </GlobalThemeProvider>

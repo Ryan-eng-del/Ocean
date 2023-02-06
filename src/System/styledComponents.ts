@@ -23,15 +23,17 @@ export function styledComponents(tagName: DOMElements) {
     const { convertCSS } = props;
     return forwardRef((props: SystemProps, ref) => {
       const theme = useTheme();
-      const { __css, ...restProps } = props;
+      const { __css, css, ...restProps } = props;
       const [restCssProps, elementProps] = filterProps(restProps);
       const transformCssObject = convertCSS(theme);
       const cssObject = transformCssObject(restCssProps);
       const baseCss = transformCssObject(__css);
+      const userCss = transformCssObject(css);
 
       const element = styled(tagName)`
         ${baseCss}
         ${cssObject}
+        ${userCss}
       `;
 
       return createElement(element, { ref, ...elementProps });
