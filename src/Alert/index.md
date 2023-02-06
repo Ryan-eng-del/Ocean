@@ -6,15 +6,15 @@ group:
 
 # Alert
 
-## 基本使用
+## 基本使用 - Usage
 
 <code src="./document/basic.tsx"></code>
 
-## 不同 type
+## 不同类型 - Type
 
 <code src="./document/type.tsx"></code>
 
-## 可删除按钮
+## 关闭按钮
 
 <code src="./document/close.tsx"></code>
 

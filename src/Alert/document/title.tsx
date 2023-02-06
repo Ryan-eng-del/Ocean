@@ -1,10 +1,10 @@
-import { Alert } from 'Ocean';
+import { Alert, GlobalThemeProvider } from 'Ocean';
 import React from 'react';
 
 const Basic = () => {
   const style = { marginBottom: '15px' };
   return (
-    <>
+    <GlobalThemeProvider>
       <Alert content="This is a Alert!!" title="Alert" style={style}></Alert>
       <Alert
         content="This is a Alert!!"
@@ -18,7 +18,7 @@ const Basic = () => {
         type="warning"
         style={style}
       ></Alert>
-    </>
+    </GlobalThemeProvider>
   );
 };
 

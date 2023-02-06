@@ -1,7 +1,7 @@
 import { ocean } from 'Ocean';
 import { StyleProps } from 'Ocean/System/system.type';
 import TouchRipple from 'Ocean/TouchRipple/TouchRipple';
-import { className } from 'Ocean/util/common';
+import { cx } from 'Ocean/util/common';
 import React, { useRef } from 'react';
 import { ButtonContent } from './ButtonContent';
 import { ButtonLoadingCpn } from './ButtonLoading';
@@ -57,7 +57,7 @@ const ButtonBase = React.forwardRef(function (props: ButtonProps) {
     <ocean.button
       __css={buttonBaseStyle}
       onMouseDown={handleOnMouseDown}
-      className={className('ocean-button', props.className)}
+      className={cx('ocean-button', props.className)}
       onClick={(e) => {
         if (loading) return;
         onClick && onClick(e);

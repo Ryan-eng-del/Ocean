@@ -1,4 +1,9 @@
+// ========= Alert ===========
 export { default as Alert } from './Alert';
+export { default as AlertCloseIcon } from './Alert/AlertCloseIcon';
+export { default as AlertIcon } from './Alert/AlertIcon';
+export { default as AlertTitle } from './Alert/AlertTitle';
+// ========= Alert ===========
 export { default as Breadcrumb } from './Breadcrumb';
 export { default as BreadcrumbItem } from './Breadcrumb/BreadcrumbItem';
 export { default as Button } from './Button';

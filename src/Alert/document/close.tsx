@@ -1,26 +1,31 @@
-import { Alert } from 'Ocean';
+import {
+  Alert,
+  AlertCloseIcon,
+  AlertIcon,
+  AlertTitle,
+  GlobalThemeProvider,
+} from 'Ocean';
 import React from 'react';
 
 const Basic = () => {
-  const style = { marginBottom: '15px' };
   return (
-    <>
-      <Alert content="This is a Alert!!" showClear style={style}></Alert>
-
-      <Alert
-        content="This is a Alert!!"
-        showClear
-        style={style}
-        type="success"
-      />
-
-      <Alert
-        content="This is a Alert!!"
-        showClear
-        style={style}
-        type="warning"
-      ></Alert>
-    </>
+    <GlobalThemeProvider>
+      <Alert>
+        <AlertIcon />
+        <AlertTitle>This is an Alert!</AlertTitle>
+        <AlertCloseIcon />
+      </Alert>
+      <Alert type="info" marginY={4}>
+        <AlertIcon />
+        <AlertTitle>This is an Alert!</AlertTitle>
+        <AlertCloseIcon />
+      </Alert>
+      <Alert type="warning" marginY={4}>
+        <AlertIcon />
+        <AlertTitle>This is an Alert!</AlertTitle>
+        <AlertCloseIcon />
+      </Alert>
+    </GlobalThemeProvider>
   );
 };
 

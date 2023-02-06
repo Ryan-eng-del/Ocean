@@ -42,6 +42,16 @@ export type OceanHTMLComponent = {
   ) => JSX.Element;
 };
 
-export type SystemProps = StyleProps & { children?: any } & OceanComponentProps;
+export type HTMLOceanProps<T extends DOMElements> = Omit<
+  React.ComponentPropsWithoutRef<T>,
+  'ref' | keyof StyleProps
+>;
 
-// const a: SystemProps;
+export type OceanComponent<T extends DOMElements, K> = Omit<
+  HTMLOceanProps<T>,
+  keyof K
+> &
+  StyleProps &
+  K;
+
+export type SystemProps = StyleProps & OceanComponentProps;

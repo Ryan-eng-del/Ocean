@@ -9,7 +9,7 @@ order: -1
 
 按钮用于开始一个即时操作。
 
-## 基本使用 - Usage
+### 基本使用 - Usage
 
 <code src="./document/Basic.tsx"></code>
 

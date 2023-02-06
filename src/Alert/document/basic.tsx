@@ -1,8 +1,15 @@
-import { Alert } from 'Ocean';
+import { Alert, AlertIcon, AlertTitle, GlobalThemeProvider } from 'Ocean';
 import React from 'react';
 
 const Basic = () => {
-  return <Alert content="This is a Alert!!"></Alert>;
+  return (
+    <GlobalThemeProvider>
+      <Alert>
+        <AlertIcon />
+        <AlertTitle>This is an Alert!</AlertTitle>
+      </Alert>
+    </GlobalThemeProvider>
+  );
 };
 
 export default Basic;

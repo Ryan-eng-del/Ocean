@@ -19,5 +19,5 @@ export function isObject(value: any): value is Record<string, any> {
   return value !== null && type === 'object' && !Array.isArray(value);
 }
 
-export const className = (...classNames: any[]) =>
+export const cx = (...classNames: any[]) =>
   classNames.filter(Boolean).join(' ');
