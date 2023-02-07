@@ -5,13 +5,13 @@ const BasicButton = () => {
   return (
     <GlobalThemeProvider>
       <div style={{ display: 'flex', flexWrap: 'wrap' }}>
-        <Button type="primary" marginX={5} size={'small'}>
+        <Button type="primary" mr={7} mb={7} size={'small'}>
           Button
         </Button>
-        <Button type="gradual" marginX={5} size={'medium'}>
+        <Button type="gradual" mr={7} mb={7} size={'medium'}>
           Button
         </Button>
-        <Button type="outline" marginX={5} size={'large'}>
+        <Button type="outline" mr={7} mb={7} size={'large'}>
           Button
         </Button>
       </div>

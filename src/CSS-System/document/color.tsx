@@ -1,6 +1,5 @@
-import { Message } from 'Ocean';
+import styled from '@emotion/styled';
 import React from 'react';
-import styled from 'styled-components';
 import colors from '../theme/colors';
 
 const ColorContainer = styled.div`
@@ -42,9 +41,8 @@ const ColorBlock = styled.div<{ bg: string }>`
 
 const Color = () => {
   const clickColorBlock = (colorValue: string) => {
-    navigator.clipboard
-      .writeText(colorValue)
-      .then(() => Message.open({ content: 'Copy Successful!' }));
+    navigator.clipboard.writeText(colorValue);
+    // .then(() => Message.open({ content: 'Copy Successful!' }));
   };
 
   const UI = Object.entries(colors).map(([colorName, colorValue], index) => {

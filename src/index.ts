@@ -4,34 +4,9 @@ export { default as AlertCloseIcon } from './Alert/AlertCloseIcon';
 export { default as AlertContent } from './Alert/AlertContent';
 export { default as AlertIcon } from './Alert/AlertIcon';
 export { default as AlertTitle } from './Alert/AlertTitle';
-// ========= Alert ===========
-export { default as Breadcrumb } from './Breadcrumb';
-export { default as BreadcrumbItem } from './Breadcrumb/BreadcrumbItem';
+// =========== Button =============
 export { default as Button } from './Button';
-export { default as ButtonGroup } from './ButtonGroup';
-export { default as CheckBoxGroup } from './CheckBoxGroup';
-export { default as CoreTest } from './CoreTest';
-export { default as CountDown } from './CountDown';
-export { default as Divider } from './Divider';
-export { default as Drawer } from './Drawer';
-export { default as DropMenu } from './DropMenu';
-export { default as Empty } from './Empty';
-export { default as Input } from './Input';
-export { default as Link } from './Link';
-export { default as Menu } from './Menu';
-export { default as Message } from './Message';
-export { default as Modal } from './Modal';
-export { default as Notification } from './Notification';
-export { default as Radio } from './Radio';
-export { default as RadioGroup } from './RadioGroup';
-export { default as Select } from './Select';
-export { default as Option } from './Select/option';
-export { default as Skeleton } from './Skeleton';
-export { default as Steps } from './Steps';
-export { default as Switch } from './Switch';
+// ========== Core System ================
 export { ocean } from './System/';
 export { default as GlobalThemeProvider } from './System/provider';
-export { default as Tabs } from './Tab';
-export { default as Tag } from './Tag';
-export { default as Tree } from './Tree';
-export { default as TreeItem } from './TreeItem';
+// ========= Other ==============

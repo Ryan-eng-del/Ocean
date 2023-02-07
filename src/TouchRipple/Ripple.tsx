@@ -1,5 +1,5 @@
+import styled from '@emotion/styled';
 import React from 'react';
-import styled from 'styled-components';
 import { ButtonType } from '../Button';
 
 interface Ripple {
@@ -21,7 +21,7 @@ const RippleStyle = styled.span<{
   animation-duration: 550ms;
   animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   border-radius: 50%;
-  z-index: 13;
+  z-index: -1;
   background-color: ${(props) => {
     if (props.animationColor) return props.animationColor;
 
@@ -34,6 +34,7 @@ const RippleStyle = styled.span<{
     color = props.type === 'danger' ? 'rgb(241, 187, 187)' : color;
     return color;
   }};
+
   display: block;
   pointer-events: none;
 
@@ -44,12 +45,12 @@ const RippleStyle = styled.span<{
   @keyframes enter {
     0% {
       transform: scale(0);
-      opacity: 0.1;
+      opacity: 0.8;
     }
 
     100% {
       transform: scale(1);
-      opacity: 0.15;
+      opacity: 0;
     }
   }
 `;

@@ -52,8 +52,18 @@ Object.assign(space, {
 
 export interface SpaceProps {
   margin?: Margin | number;
-  mx?: Margin | number;
+  m?: Margin | number;
+  mt?: Margin | number;
+  mr?: Margin | number;
+  mb?: Margin | number;
   my?: Margin | number;
+  mx?: Margin | number;
+  ml?: Margin | number;
+  p?: Padding | number;
+  pt?: Padding | number;
+  pb?: Padding | number;
+  pl?: Padding | number;
+  pr?: Padding | number;
   px?: Padding | number;
   py?: Padding | number;
   marginX?: Margin | number;

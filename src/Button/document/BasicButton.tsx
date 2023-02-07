@@ -4,20 +4,20 @@ import React from 'react';
 const BasicButton = () => {
   return (
     <GlobalThemeProvider>
-      <ocean.div display="flex">
-        <Button type="text">Button</Button>
-        <Button type="outline" marginX={5}>
+      <ocean.div display="flex" flexWrap="wrap">
+        <Button type="text" mr={7} mb={7}>
           Button
         </Button>
-        <Button type="primary" marginX={5}>
+        <Button type="outline" mr={7} mb={7}>
           Button
         </Button>
-        <Button type="gradual" marginX={5}>
+        <Button type="primary" mr={7} mb={7}>
           Button
         </Button>
-        <Button type="danger" marginX={5}>
+        <Button type="gradual" mr={7} mb={7}>
           Button
         </Button>
+        <Button type="danger">Button</Button>
       </ocean.div>
     </GlobalThemeProvider>
   );

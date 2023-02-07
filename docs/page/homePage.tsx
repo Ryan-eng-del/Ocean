@@ -1,6 +1,6 @@
 import { ArrowRightOutlined, GithubOutlined } from '@ant-design/icons';
+import styled from '@emotion/styled';
 import React, { useEffect } from 'react';
-import styled from 'styled-components';
 
 const HomePageHeader = styled.div`
   display: flex;
@@ -69,27 +69,22 @@ const GithubButton = styled(StartButton)`
 const HomePageTitle = styled.h1``;
 const HomePageContainer = styled.div`
   padding: 20px;
-
   @media (max-width: 1030px) {
-    ${HomePageHeader} {
+    .HomePageHeader {
       flex-direction: column;
       justify-content: center;
     }
-
-    ${HomePageHeaderLeft} {
+    .HomePageHeaderLeft {
       margin-right: 0;
       font-size: 120px;
     }
-
-    ${HomePageSubTitle} {
+    .HomePageSubTitle {
       padding: 0 50px;
     }
-
-    ${StartButton} {
+    .StartButton {
       padding: 0 20px;
     }
-
-    ${GithubButton} {
+    .GithubButton {
       padding: 0 10px;
     }
   }
@@ -125,8 +120,10 @@ const HomePage = () => {
 
   return (
     <HomePageContainer>
-      <HomePageHeader>
-        <HomePageHeaderLeft>Ocean</HomePageHeaderLeft>
+      <HomePageHeader className="HomePageHeader">
+        <HomePageHeaderLeft className="HomePageHeaderLeft">
+          Ocean
+        </HomePageHeaderLeft>
 
         <HomePageHeaderRight>
           <HomePageTitle>
@@ -134,7 +131,7 @@ const HomePage = () => {
             <KeyWords>原子化</KeyWords>的 React apps
           </HomePageTitle>
 
-          <HomePageSubTitle>
+          <HomePageSubTitle className="HomePageSubTitle">
             Ocean UI 是一个现代的 CSS 原子化组件库，提供了
             <span style={{ color: '#1976d2', padding: '0 4px' }}>
               tailwind-css
@@ -145,14 +142,14 @@ const HomePage = () => {
       </HomePageHeader>
 
       <ButtonWrapper>
-        <StartButton onClick={clickStart}>
+        <StartButton onClick={clickStart} className="HomePageSubTitle">
           Get Started
           <ArrowRightOutlined
             style={{ fontSize: '18px', paddingLeft: '12px' }}
           />
         </StartButton>
 
-        <GithubButton onClick={clickGithub}>
+        <GithubButton onClick={clickGithub} className="GithubButton">
           Github
           <GithubOutlined style={{ fontSize: '18px', paddingLeft: '12px' }} />
         </GithubButton>
