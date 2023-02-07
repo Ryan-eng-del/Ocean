@@ -4,6 +4,7 @@ import React from 'react';
 import { foundations as theme } from '../CSS-System/theme/index';
 import { getCssVar } from '../Style-System/getCSSVar';
 
+/* 这里通过 emotion 提供的  Global 组件，将变量放到全局 */
 export function CSSVars(): JSX.Element {
   const selector = [':host, :root', `[data-theme]`].join(',');
 

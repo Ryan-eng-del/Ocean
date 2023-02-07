@@ -11,7 +11,7 @@ export function generateBaseCpn(tagName: DOMElements) {
   const Element = createStyled(tagName, { shouldForwardProp })(Component);
 
   const OceanComponent = React.forwardRef((props, ref) => {
-    return React.createElement(Element, {
+    return React.createElement(Element as any, {
       ref,
       ...props,
     });

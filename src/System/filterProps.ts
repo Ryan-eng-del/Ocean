@@ -17,10 +17,6 @@ export const filterProps = (restProps: Record<string, any>) => {
   return { restCssProps, elementProps };
 };
 
-/**
- * List of props for emotion to omit from DOM.
- * It mostly consists of Chakra props
- */
 export const propNames = [
   ...Object.keys(MapOfSystemConfig),
   ...Object.keys(pseudoSelectors),
@@ -34,10 +30,8 @@ const allPropNames = new Set([
   'noOfLines',
   'focusBorderColor',
   'errorBorderColor',
-  'as',
   '__css',
   'css',
-  'sx',
 ]);
 
 export function shouldForwardProp(prop: string): boolean {
