@@ -25,8 +25,8 @@ const RippleStyle = styled.span<{
   background-color: ${(props) => {
     if (props.animationColor) return props.animationColor;
 
-    let color = '#fff';
-    color = props.type === 'primary' ? '#fff' : color;
+    let color = '#f9fafb';
+    color = props.type === 'primary' ? '#f9fafb' : color;
     color =
       props.type === 'outline' || props.type === 'text'
         ? 'rgb(180, 210, 241)'

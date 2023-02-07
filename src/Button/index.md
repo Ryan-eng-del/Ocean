@@ -8,7 +8,20 @@ group:
 
 按钮用于开始一个即时操作。
 
+## 何时使用
+
+标记了一个（或封装一组）操作命令，响应用户点击行为，触发相应的业务逻辑。
+
 ### 基本使用 - Usage
+
+**Ocean UI** 导出了一个 **Button** 组件。
+
+- 提供了 **Mui** 式的波浪按钮动画,支持波浪颜色自定义。
+- 支持五种不同的 **type**。
+- 支持受控 **Loading**、以及自定义 **Loading Text**。
+- 支持按钮左右 **Icon**。
+
+Click and enjoy it! It's extremely interesting!
 
 <code src="./document/Basic.tsx"></code>
 
