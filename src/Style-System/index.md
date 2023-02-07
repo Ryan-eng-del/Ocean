@@ -1,8 +1,7 @@
 ---
 order: 1
 group:
-  title: ''
-  order: 0
+  title: 'Core System'
 ---
 
 # Style Props

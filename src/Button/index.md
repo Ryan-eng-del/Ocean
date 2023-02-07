@@ -39,20 +39,30 @@ Click and enjoy it! It's extremely interesting!
 
 ### 自定义波浪颜色
 
+通过 `animationColor` 可以对波浪动画颜色进行覆盖。
+
 <code src="./document/Animation.tsx"></code>
 
 ### 加载中按钮
+
+`Ocean UI` 提供 加载按钮，来消费异步逻辑
 
 <code src="./document/LoadingButton.tsx"></code>
 
 ### 加载文本
 
+通过 `loadingText` 可以提供按钮加载文本，如果不提供，则默认无加载文本，也不用担心宽度突变的问题，按钮宽度还是根据按钮内容进行占位。
+
 <code src="./document/loadingText.tsx"></code>
 
 ### 按钮图标
 
+通过 `leftIcon`、`rightIcon` 可以提供按钮左、右图标。
+
 <code src="./document/iconButton.tsx"></code>
 
 ### 自定义按钮
+
+`Ocean UI` 的 Core System， 可以非常方便的对 Button 进行样式调整。 It's easy to Ocean UI.
 
 <code src="./document/custom.tsx"></code>

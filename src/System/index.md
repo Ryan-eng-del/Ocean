@@ -1,8 +1,7 @@
 ---
 order: 2
 group:
-  title: ''
-  order: 0
+  title: 'Core System'
 ---
 
 # System

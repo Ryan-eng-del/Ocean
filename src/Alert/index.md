@@ -39,16 +39,21 @@ group:
 
 ## 关闭按钮
 
+`Alert` 支持关闭按钮，平滑关闭 Alert。
 <code src="./document/close.tsx"></code>
 
 ## 组合 Alert
+
+`Alert` 支持四种组件自由组合，`Ocean UI` 的 Core System， 可以非常方便的对 `Alert` 进行样式调整。 It's easy to Ocean UI.
 
 <code src="./document/title.tsx"></code>
 
 ## 无图标
 
+`Alert` 支持无状态图标。
 <code src="./document/icon.tsx"></code>
 
 ## 受控 Alert
 
+`Alert` 支持传入状态受控组件。
 <code src="./document/control.tsx"></code>

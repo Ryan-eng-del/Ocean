@@ -8,7 +8,7 @@ export const opacityTransition = (className: string) => {
 .${className}-enter-active,
 .${className}-appear-active {
   opacity: 1;
-  transition: opacity 100ms linear;
+  transition: opacity 330ms linear;
 }
 
 .${className}-exit {
@@ -17,7 +17,7 @@ export const opacityTransition = (className: string) => {
 
 .${className}-exit-active {
   opacity: 0;
-  transition: opacity 100ms linear;
+  transition: opacity 330ms linear;
 }
 
 

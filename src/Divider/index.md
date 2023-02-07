@@ -25,12 +25,17 @@ group:
 
 ### 无文字自定义
 
+`Ocean UI`
 <code src="./document/basicNoContent.tsx"></code>
 
 ### 对齐方式
 
+`Ocean UI` 提供了三种文字的对齐方式，分别是 `left`、`right`、`center`。
+
 <code src="./document/basicSize.tsx"></code>
 
 ### 尺寸
+
+`Ocean UI` 的 Core System， 可以非常方便的对 Divider 进行样式调整。 It's easy to Ocean UI.
 
 <code src="./document/size.tsx"></code>
