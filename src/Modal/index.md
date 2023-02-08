@@ -27,12 +27,16 @@ group:
 
 ## 异步调用 - Async
 
+Ocean UI 提供了异步抽屉，结合 Loading 和 async/await 可以消费异步逻辑。
 <code src="./document/async.tsx"></code>
 
 ## 滚动条行为
+
+针对于 `Modal Body` 内容溢出，Ocean UI 提供了两种方式，一种是 inside，inside 就是在 `Modal` 中产生滚动条来解决溢出，outside 是在 `Body` 中产生滚动条来解决溢出。
 
 <code src="./document/behavior.tsx"></code>
 
 ## 不同尺寸
 
+`Ocean UI` 的 Core System， 可以非常方便的对 Drawer 进行样式调整。 It's easy to Ocean UI.
 <code src="./document/size.tsx"></code>

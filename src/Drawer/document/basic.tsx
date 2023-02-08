@@ -16,6 +16,7 @@ const DialogBasic = () => {
   const onCancel = () => {
     setVisible(false);
   };
+
   const onOk = () => {
     setVisible(false);
   };
