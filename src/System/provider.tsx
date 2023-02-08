@@ -1,5 +1,6 @@
 import { Global, ThemeProvider } from '@emotion/react';
 import { mergeWith } from 'lodash';
+import { MessageProvider } from 'Ocean/Message/prvider';
 import React from 'react';
 import { foundations as theme } from '../CSS-System/theme/index';
 import { getCssVar } from '../Style-System/getCSSVar';
@@ -24,6 +25,7 @@ const GlobalThemeProvider = (props: any) => {
     <ThemeProvider theme={mergeWith({}, { cssMap, cssVar: globalCssVar })}>
       <CSSVars />
       {children}
+      <MessageProvider />
     </ThemeProvider>
   );
 };
