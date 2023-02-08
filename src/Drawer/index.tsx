@@ -60,9 +60,7 @@ const Drawer = (props: DrawerProps) => {
     display: 'flex',
     flexDirection: 'column',
     boxSizing: 'border-box',
-    padding: 5,
     w: 96,
-
     ...position[align],
   };
 

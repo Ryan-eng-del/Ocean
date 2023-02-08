@@ -28,7 +28,7 @@ const DialogBasic = () => {
           <DrawerCloseButton />
         </DrawerHead>
 
-        <DrawerBody>Drawer Body</DrawerBody>
+        <DrawerBody>This is a Drawer.</DrawerBody>
 
         <DrawerFooter>
           <Button type="outline" onClick={onCancel}>

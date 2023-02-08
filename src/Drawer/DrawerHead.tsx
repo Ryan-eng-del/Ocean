@@ -12,6 +12,7 @@ const DrawerHead = (props: DrawerHeadProps) => {
     display: 'flex',
     justify: 'space-between',
     align: 'center',
+    p: 3,
   };
   return (
     <ocean.div

@@ -10,7 +10,8 @@ interface DrawerBodyProps extends OceanComponent<'div', DrawerBody> {}
 const DrawerBody = (props: DrawerBodyProps) => {
   const baseStyle: StyleProps = {
     flex: '1',
-    pt: 5,
+    p: 3,
+    overflow: 'auto',
   };
 
   return (

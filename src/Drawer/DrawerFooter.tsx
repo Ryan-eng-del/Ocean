@@ -12,6 +12,7 @@ const DrawerFooter = (props: DrawerFooterProps) => {
   const baseStyle: StyleProps = {
     display: 'flex',
     justify: 'flex-end',
+    p: 3,
   };
   return (
     <ocean.div
