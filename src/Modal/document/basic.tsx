@@ -1,10 +1,14 @@
-import { Button, GlobalThemeProvider, Modal } from 'Ocean';
+import {
+  Button,
+  GlobalThemeProvider,
+  Modal,
+  ModalBody,
+  ModalCloseButton,
+  ModalFooter,
+  ModalHead,
+  ModalHeadTitle,
+} from 'Ocean';
 import React, { useState } from 'react';
-import ModalBody from '../ModalBody';
-import ModalCloseButton from '../ModalCloseButton';
-import ModalFooter from '../ModalFooter';
-import ModalHead from '../ModalHead';
-import ModalHeadTitle from '../ModalHeadTitle';
 
 const Basic = () => {
   const [visible, setVisible] = useState(false);

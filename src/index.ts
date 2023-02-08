@@ -20,6 +20,12 @@ export { default as DrawerHeadTitle } from './Drawer/DrawerHeadTitle';
 export { default as DrawerMask } from './Drawer/DrawerMask';
 // =======  Modal ========
 export { default as Modal } from './Modal';
+export { default as ModalBody } from './Modal/ModalBody';
+export { default as ModalCloseButton } from './Modal/ModalCloseButton';
+export { default as ModalFooter } from './Modal/ModalFooter';
+export { default as ModalHead } from './Modal/ModalHead';
+export { default as ModalHeadTitle } from './Modal/ModalHeadTitle';
+export { default as ModalMask } from './Modal/ModalMask';
 // ============ Radio ==========
 export { default as Radio } from './Radio';
 export { default as RadioGroup } from './RadioGroup';

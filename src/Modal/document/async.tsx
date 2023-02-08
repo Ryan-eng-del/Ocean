@@ -1,11 +1,15 @@
-import { Button, Modal, ocean } from 'Ocean';
+import {
+  Button,
+  Modal,
+  ModalBody,
+  ModalCloseButton,
+  ModalFooter,
+  ModalHead,
+  ModalHeadTitle,
+  ocean,
+} from 'Ocean';
 import GlobalThemeProvider from 'Ocean/System/provider';
 import React, { useState } from 'react';
-import ModalBody from '../ModalBody';
-import ModalCloseButton from '../ModalCloseButton';
-import ModalFooter from '../ModalFooter';
-import ModalHead from '../ModalHead';
-import ModalHeadTitle from '../ModalHeadTitle';
 
 const DialogBasic = () => {
   const [visible, setVisible] = useState(false);
