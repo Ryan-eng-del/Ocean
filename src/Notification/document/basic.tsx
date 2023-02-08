@@ -1,12 +1,10 @@
-import { Button, Notification } from 'Ocean';
+import { Button, GlobalThemeProvider, Notification } from 'Ocean';
 import React from 'react';
 
 const Basic = () => {
   return (
-    <>
+    <GlobalThemeProvider>
       <Button
-        width={100}
-        height={40}
         onClick={() => {
           Notification.open({
             type: 'success',
@@ -18,7 +16,7 @@ const Basic = () => {
       >
         Notification
       </Button>
-    </>
+    </GlobalThemeProvider>
   );
 };
 

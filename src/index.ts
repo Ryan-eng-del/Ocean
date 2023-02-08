@@ -18,6 +18,8 @@ export { default as DrawerFooter } from './Drawer/DrawerFooter';
 export { default as DrawerHead } from './Drawer/DrawerHead';
 export { default as DrawerHeadTitle } from './Drawer/DrawerHeadTitle';
 export { default as DrawerMask } from './Drawer/DrawerMask';
+// ========= Message =========
+// export { default as Message } from './Message';
 // =======  Modal ========
 export { default as Modal } from './Modal';
 export { default as ModalBody } from './Modal/ModalBody';
@@ -26,6 +28,7 @@ export { default as ModalFooter } from './Modal/ModalFooter';
 export { default as ModalHead } from './Modal/ModalHead';
 export { default as ModalHeadTitle } from './Modal/ModalHeadTitle';
 export { default as ModalMask } from './Modal/ModalMask';
+export { default as Notification } from './Notification';
 // ============ Radio ==========
 export { default as Radio } from './Radio';
 export { default as RadioGroup } from './RadioGroup';

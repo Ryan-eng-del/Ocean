@@ -136,6 +136,7 @@ const Notification = (props: Notification) => {
       }px`;
     }
   }, [topMessage]);
+
   const messageIcon = useMemo(() => {
     if (type === 'info') {
       return (
@@ -151,9 +152,7 @@ const Notification = (props: Notification) => {
         />
       );
     }
-    if (type === 'normal') {
-      return <></>;
-    }
+
     if (type === 'success') {
       return (
         <CheckCircleFilled

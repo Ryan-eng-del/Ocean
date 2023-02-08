@@ -12,13 +12,7 @@ export type PxType = string | number;
 
 export type IsType = boolean | undefined;
 
-export type MessageType =
-  | 'info'
-  | 'success'
-  | 'warning'
-  | 'error'
-  | 'normal'
-  | 'loading';
+export type MessageType = 'info' | 'success' | 'warning' | 'error';
 
 export type MessagePosition =
   | 'topLeft'

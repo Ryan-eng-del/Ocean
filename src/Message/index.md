@@ -8,8 +8,9 @@ group:
 
 ## 基本使用
 
-<code src="./document/basic.tsx"></code>
+<code src="./document/test.tsx"></code>
 
+<!--
 ## 定制宽度
 
 <code src="./document/width.tsx"></code>
@@ -32,4 +33,4 @@ group:
 
 组件库中，默认 time 是 1000s
 
-<code src="./document/time.tsx"></code>
+<code src="./document/time.tsx"></code> -->

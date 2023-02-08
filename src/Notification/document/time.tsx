@@ -1,4 +1,10 @@
-import { Button, Notification, Radio, RadioGroup } from 'Ocean';
+import {
+  Button,
+  GlobalThemeProvider,
+  Notification,
+  Radio,
+  RadioGroup,
+} from 'Ocean';
 import React, { useState } from 'react';
 
 const Basic = () => {
@@ -8,7 +14,7 @@ const Basic = () => {
     setValue(d);
   };
   return (
-    <>
+    <GlobalThemeProvider>
       <RadioGroup
         value={value}
         onChange={(d: any) => changeSize(d)}
@@ -23,8 +29,6 @@ const Basic = () => {
         <Radio value={1000}>1000</Radio>
       </RadioGroup>
       <Button
-        width={120}
-        height={40}
         onClick={() => {
           Notification.open({
             type: 'success',
@@ -37,7 +41,7 @@ const Basic = () => {
       >
         Notification
       </Button>
-    </>
+    </GlobalThemeProvider>
   );
 };
 
