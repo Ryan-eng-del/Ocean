@@ -27,12 +27,13 @@ const DialogBasic = () => {
       }, 1500);
     });
     setVisible(false);
+    setLoading(false);
   };
 
   return (
     <>
       <GlobalThemeProvider>
-        <Drawer visible={visible} onCancel={onCancel} onOk={onOk}>
+        <Drawer visible={visible} onCancel={onCancel}>
           <DrawerHead>
             <DrawerHeadTitle>Create a Drawer</DrawerHeadTitle>
             <DrawerCloseButton />

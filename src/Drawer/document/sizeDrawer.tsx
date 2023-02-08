@@ -44,7 +44,7 @@ const DialogBasic = () => {
         <Radio value={'screenW'}>全屏</Radio>
       </RadioGroup>
 
-      <Drawer w={value} visible={visible} onCancel={onCancel} onOk={onOk}>
+      <Drawer w={value} visible={visible} onCancel={onCancel}>
         <DrawerHead>
           <DrawerHeadTitle>Create a Drawer</DrawerHeadTitle>
           <DrawerCloseButton />

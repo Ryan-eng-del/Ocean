@@ -18,6 +18,8 @@ export { default as DrawerFooter } from './Drawer/DrawerFooter';
 export { default as DrawerHead } from './Drawer/DrawerHead';
 export { default as DrawerHeadTitle } from './Drawer/DrawerHeadTitle';
 export { default as DrawerMask } from './Drawer/DrawerMask';
+// =======  Modal ========
+export { default as Modal } from './Modal';
 // ============ Radio ==========
 export { default as Radio } from './Radio';
 export { default as RadioGroup } from './RadioGroup';

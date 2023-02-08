@@ -15,7 +15,6 @@ import { position } from './theme';
 interface Drawer {
   visible: boolean;
   onCancel: () => void;
-  onOk: () => void | Promise<any>;
   align?: AlignType;
 }
 

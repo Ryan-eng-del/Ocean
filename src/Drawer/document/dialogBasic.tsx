@@ -48,7 +48,6 @@ const DialogBasic = () => {
       <Drawer
         visible={visible}
         onCancel={() => setVisible(false)}
-        onOk={() => setVisible(false)}
         align={value}
       >
         <DrawerHead>
