@@ -1,7 +1,6 @@
 import React, { Fragment, useSyncExternalStore } from 'react';
 import { createPortal } from 'react-dom';
 import MessageStore from './store';
-import { positionStyle } from './theme';
 
 export const MessageProvider = () => {
   const store = useSyncExternalStore(
@@ -9,11 +8,13 @@ export const MessageProvider = () => {
     MessageStore.getState,
     MessageStore.getState,
   );
+
   const position = MessageStore.getPosition();
+
   // const unit = store[position].length;
 
   const baseStyle = (unit: number) => ({
-    ...positionStyle[position],
+    // ...positionStyle[position],
     top: position.includes('top') ? unit * 60 + 'px' : undefined,
     bottom: position.includes('bottom') ? unit * 80 + 'px' : undefined,
   });
@@ -22,7 +23,7 @@ export const MessageProvider = () => {
     return store[k as keyof typeof store].map((Msg, index) => {
       return (
         <Fragment key={index}>
-          <Msg.messageCpn {...baseStyle(index)} />
+          <Msg.messageCpn {...baseStyle(index)} store={store} />
         </Fragment>
       );
     });

@@ -26,7 +26,7 @@ function createMessage(message: (props: Message) => JSX.Element, opt: Message) {
   return { message, id, ...opt };
 }
 
-interface MessageStore {
+export interface MessageStore {
   getState: () => State;
   subscribe: (listener: () => void) => () => void;
   notify: (
@@ -35,6 +35,7 @@ interface MessageStore {
   ) => string | number;
   getPosition: () => MessagePosition;
   close: (id: React.Key) => void;
+  closeId: (position: MessagePosition, id: React.Key) => void;
 }
 
 export const findById = (arr: any[], id: React.Key) =>
@@ -61,8 +62,20 @@ function createStore(): MessageStore {
   };
 
   return {
+    closeId: (position, id) => {
+      setStore((prevState) => ({
+        ...prevState,
+
+        [position]: prevState[position as keyof State].filter(
+          (toast) => toast.id !== id,
+        ),
+      }));
+    },
+
     getPosition: () => curPosition,
+
     getState: () => state,
+
     subscribe(listener: any) {
       listeners.add(listener);
       return () => {

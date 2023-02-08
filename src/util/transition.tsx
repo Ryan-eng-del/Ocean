@@ -26,3 +26,28 @@ export const opacityTransition = (className: string) => {
 }
 `;
 };
+
+export const heightTransition = (className: string) => {
+  return `
+.${className}-enter,
+.${className}-appear {
+  height: 0;
+}
+
+.${className}-enter-active,
+.${className}-appear-active {
+  height: 30px;
+  transition: all 330ms linear;
+}
+
+.${className}-exit {
+  height: 30px;
+}
+
+.${className}-exit-active {
+  height: 0;
+  transition: all 330ms linear;
+}
+
+`;
+};

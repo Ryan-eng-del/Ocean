@@ -22,6 +22,7 @@ interface Alert {
   onClose?: () => void;
   visible?: boolean;
   variant?: AlertVariant;
+  reuse?: boolean;
 }
 
 interface AlertProps extends OceanComponent<'div', Alert> {}
@@ -32,6 +33,8 @@ const Alert = (props: AlertProps) => {
     visible,
     className,
     variant,
+
+    reuse = false,
     ...restProps
   } = props;
 
@@ -51,13 +54,23 @@ const Alert = (props: AlertProps) => {
   return (
     <AlertProvider value={{ status, setVisible, variant }}>
       <AlertWrapper>
-        <CSSTransition
-          in={innerVisible}
-          timeout={330}
-          appear
-          classNames={'alert-model'}
-          unmountOnExit
-        >
+        {!reuse ? (
+          <CSSTransition
+            in={innerVisible}
+            timeout={330}
+            appear
+            classNames={'alert-model'}
+            unmountOnExit
+          >
+            <div>
+              <ocean.div
+                __css={AlertBaseStyle}
+                className={cx('ocean-alert-wrapper', className)}
+                {...restProps}
+              />
+            </div>
+          </CSSTransition>
+        ) : (
           <div>
             <ocean.div
               __css={AlertBaseStyle}
@@ -65,7 +78,7 @@ const Alert = (props: AlertProps) => {
               {...restProps}
             />
           </div>
-        </CSSTransition>
+        )}
       </AlertWrapper>
     </AlertProvider>
   );
