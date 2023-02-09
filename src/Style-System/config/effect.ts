@@ -4,6 +4,7 @@ import {
   BoxShadow,
   MixBlendMode,
   Opacity,
+  Outline,
   TextShadow,
 } from './css.type';
 
@@ -15,6 +16,7 @@ export const effect = {
   bgBlendMode: t.prop('backgroundBlendMode'),
   opacity: true,
   textShadow: t.shadows('textShadow'),
+  outline: true,
 };
 
 Object.assign(effect, {
@@ -25,6 +27,7 @@ Object.assign(effect, {
  * Types for box and text shadow properties
  */
 export interface EffectProps {
+  outline?: Outline | undefined;
   /**
    * The `box-shadow` property
    */

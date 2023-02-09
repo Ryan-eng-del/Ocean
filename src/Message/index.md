@@ -58,6 +58,6 @@ group:
 
 `Message` 有四种 `variant` 可以使用，你可以将 `variant` 和 `status` 进行组合，也可以就其中一个，进行单独使用。
 
-四种分格，分别是 `solid`、`left-line`、 `top-line` or `bottom-line`。
+四种风格，分别是 `solid`、`left-line`、 `top-line` or `bottom-line`。
 
 <code src="./document/variant.tsx"></code>
