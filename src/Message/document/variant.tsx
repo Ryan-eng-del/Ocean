@@ -1,9 +1,9 @@
-import { Button, GlobalThemeProvider, ocean } from 'Ocean';
+import { Button, GlobalThemeProvider, ocean, useMessage } from 'Ocean';
 import React from 'react';
 import { AlertVariant } from '../../Alert/index';
-import { message } from '../message';
 
 const Basic = () => {
+  const { message } = useMessage();
   const types: Array<AlertVariant> = [
     'bottom-line',
     'left-line',

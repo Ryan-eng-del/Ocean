@@ -1,13 +1,18 @@
-import { Button, GlobalThemeProvider } from 'Ocean';
+import { Button, GlobalThemeProvider, useMessage } from 'Ocean';
 import React from 'react';
-import { message } from '../message';
 
 const Basic = () => {
+  const { message } = useMessage();
+
   return (
     <GlobalThemeProvider>
       <Button
         onClick={() => {
-          message({ content: 'This a message!', position: 'top' });
+          message({
+            content: 'This a message!',
+            title: 'Title',
+            variant: 'solid',
+          });
         }}
         type="primary"
       >

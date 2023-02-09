@@ -1,8 +1,9 @@
-import { Button, GlobalThemeProvider, ocean } from 'Ocean';
+import { Button, GlobalThemeProvider, ocean, useMessage } from 'Ocean';
 import React from 'react';
-import { message, MessagePosition } from '../message';
+import { MessagePosition } from '../message';
 
 const Basic = () => {
+  const { message } = useMessage();
   const positions: Array<MessagePosition> = [
     'top',
     'bottom',

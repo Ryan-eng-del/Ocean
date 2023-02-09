@@ -13,12 +13,12 @@ const AlertIcon = (props: AlertIconProps) => {
 
   return (
     <ocean.div
-      {...props}
       __css={{
         c: variant === 'solid' ? '#fff' : `${colorSchema}.600`,
         fontSize: 'xl',
         paddingRight: 3,
       }}
+      {...props}
     >
       {AlertIcon}
     </ocean.div>

@@ -19,7 +19,7 @@ export { default as DrawerHead } from './Drawer/DrawerHead';
 export { default as DrawerHeadTitle } from './Drawer/DrawerHeadTitle';
 export { default as DrawerMask } from './Drawer/DrawerMask';
 // ========= Message =========
-// export { default as Message } from './Message';
+export { useMessage } from './Message/message';
 // =======  Modal ========
 export { default as Modal } from './Modal';
 export { default as ModalBody } from './Modal/ModalBody';

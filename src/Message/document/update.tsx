@@ -1,9 +1,10 @@
-import { Button, GlobalThemeProvider, ocean } from 'Ocean';
+import { Button, GlobalThemeProvider, ocean, useMessage } from 'Ocean';
 import React, { useRef } from 'react';
-import { message, update } from '../message';
+import { update } from '../message';
 
 const Basic = () => {
   let newId = useRef<React.Key>('');
+  const { message } = useMessage();
   return (
     <GlobalThemeProvider>
       <ocean.div display={'flex'}>

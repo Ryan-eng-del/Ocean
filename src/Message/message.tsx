@@ -5,6 +5,7 @@ import {
   AlertContent,
   AlertIcon,
   AlertTitle,
+  ocean,
 } from 'Ocean';
 import { MessageType, PxType } from 'Ocean/common/type';
 import React, { useEffect } from 'react';
@@ -22,6 +23,7 @@ export type MessagePosition =
 
 const motionVariants: Variants = {
   initial: (props) => {
+    /* 初始动画，也就是layout中，第一个元素的动画 */
     const { position } = props;
     const dir = ['top', 'bottom'].includes(position) ? 'y' : 'x';
 
@@ -76,6 +78,7 @@ export const MessageComponent = React.memo((props: Message & { id: any }) => {
     title,
     duration = 1500,
     position = 'top',
+    variant = 'solid',
     id,
     closeable = false,
     ...restProps
@@ -92,7 +95,9 @@ export const MessageComponent = React.memo((props: Message & { id: any }) => {
   const baseStyle: StyleProps = {
     minWidth: '300px',
     minHeight: '30px',
-    mb: '13px',
+    display: 'flex',
+    maxWidth: '560px',
+    align: title ? 'start' : 'center',
   };
 
   return (
@@ -104,18 +109,21 @@ export const MessageComponent = React.memo((props: Message & { id: any }) => {
       animate="animate"
       exit="exit"
       custom={{ position }}
-      style={{ display: 'flex' }}
+      style={{ display: 'flex', padding: '6px' }}
     >
       <Alert
         reuse={true}
         status={type}
         css={baseStyle}
+        variant={variant}
         {...restProps}
         className="message-ocean"
       >
-        <AlertIcon></AlertIcon>
-        {title && <AlertTitle>{title}</AlertTitle>}
-        {content && <AlertContent>{content}</AlertContent>}
+        <AlertIcon fontSize={title ? '2xl' : 'xl'}></AlertIcon>
+        <ocean.div flex="1" maxWidth="100%">
+          {title && <AlertTitle mb={1}>{title}</AlertTitle>}
+          {content && <AlertContent>{content}</AlertContent>}
+        </ocean.div>
         {closeable && (
           <AlertCloseIcon
             pointerEvents="all"
@@ -147,4 +155,12 @@ export function message(opt: Message) {
 export function update(id: React.Key, opt: Message) {
   const message = createRenderMessage(opt);
   return MessageStore.update(message, opt, id);
+}
+
+export function close(id: React.Key) {
+  return MessageStore.close(id);
+}
+
+export function useMessage() {
+  return { message, update, close };
 }

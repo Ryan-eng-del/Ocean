@@ -1,11 +1,10 @@
-import { Button, GlobalThemeProvider, ocean } from 'Ocean';
+import { Button, GlobalThemeProvider, ocean, useMessage } from 'Ocean';
 import { MessageType } from 'Ocean/common/type';
 import React from 'react';
-import { message } from '../message';
 
 const Basic = () => {
   const types: Array<MessageType> = ['error', 'info', 'success', 'warning'];
-
+  const { message } = useMessage();
   return (
     <GlobalThemeProvider>
       <ocean.div display={'flex'}>

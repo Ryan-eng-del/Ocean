@@ -34,7 +34,8 @@ group:
 
 ## 不同状态 - Status
 
-`Alert` 有四种 `Status` 可以使用，分别是 `info` `success` `warning` `error`。
+`Alert` 有四种 `Status` 可以使用，分别是 `info` `success` `warning` `error`。你可以将 `variant` 和 `status` 进行组合，也可以就其中一个，进行单独使用。
+
 <code src="./document/type.tsx"></code>
 
 ## 关闭按钮
