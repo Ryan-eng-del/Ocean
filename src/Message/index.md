@@ -6,18 +6,40 @@ group:
 
 # Message
 
-## 基本使用
+## 基本使用 - Usage
 
-<code src="./document/test.tsx"></code>
+<code src="./document/basic.tsx"></code>
+
+## 不同方向 - Direction
+
+<code src="./document/direction.tsx"></code>
+
+## 可关闭弹窗
+
+<code src="./document/close.tsx"></code>
+
+## 更新弹窗
+
+<code src="./document/update.tsx"></code>
+
+## 弹窗标题
+
+<code src="./document/title.tsx"></code>
+
+## 不同状态
+
+<code src="./document/type.tsx"></code>
+
+## 不同类别
+
+<code src="./document/variant.tsx"></code>
 
 <!--
 ## 定制宽度
 
 <code src="./document/width.tsx"></code>
 
-## 不同类别
 
-<code src="./document/type.tsx"></code>
 
 ## 不同位置动画
 

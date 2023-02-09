@@ -7,7 +7,11 @@ const Basic = () => {
     <GlobalThemeProvider>
       <Button
         onClick={() => {
-          message({ content: 'msg', position: 'top' });
+          message({
+            content: 'This a message!',
+            position: 'top',
+            title: 'Title',
+          });
         }}
         type="primary"
       >

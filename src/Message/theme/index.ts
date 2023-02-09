@@ -6,21 +6,22 @@ const topLeft = defineStyle({
 });
 
 const bottomLeft = defineStyle({
-  top: 0,
+  bottom: 0,
   left: 0,
 });
 
 const topRight = defineStyle({
   top: 0,
-  left: 0,
+  right: 0,
 });
 
 const bottomRight = defineStyle({
-  top: 0,
-  left: 0,
+  bottom: 0,
+  right: 0,
 });
 
 const top = defineStyle({
+  top: 0,
   left: '50%',
   transform: 'translateX(-50%)',
 });

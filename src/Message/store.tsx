@@ -29,12 +29,13 @@ function createMessage(message: (props: Message) => JSX.Element, opt: Message) {
 export interface MessageStore {
   getState: () => State;
   subscribe: (listener: () => void) => () => void;
-  notify: (
+  notify: (message: (props: Message) => JSX.Element, opt: Message) => React.Key;
+  close: (id: React.Key) => void;
+  update: (
     message: (props: Message) => JSX.Element,
     opt: Message,
-  ) => string | number;
-  getPosition: () => MessagePosition;
-  close: (id: React.Key) => void;
+    id: React.Key,
+  ) => void;
   closeId: (position: MessagePosition, id: React.Key) => void;
 }
 
@@ -51,7 +52,6 @@ export function getToastPosition(toasts: State, id: React.Key) {
 
 function createStore(): MessageStore {
   let state = initialState;
-  let curPosition: MessagePosition = 'bottom';
   const listeners = new Set<any>();
 
   const setStore = (updateStore: (oldStore: State) => State) => {
@@ -65,14 +65,11 @@ function createStore(): MessageStore {
     closeId: (position, id) => {
       setStore((prevState) => ({
         ...prevState,
-
         [position]: prevState[position as keyof State].filter(
           (toast) => toast.id !== id,
         ),
       }));
     },
-
-    getPosition: () => curPosition,
 
     getState: () => state,
 
@@ -86,19 +83,43 @@ function createStore(): MessageStore {
       };
     },
 
+    update(
+      message: (props: Message) => JSX.Element,
+      opt: Message,
+      id: React.Key,
+    ) {
+      const { message: messageCpn, id: newId } = createMessage(message, opt);
+
+      setStore((prevState) => {
+        const newState = { ...prevState };
+        const position = getToastPosition(prevState, id);
+        if (!position) return prevState;
+
+        const oldIndex = prevState[position].findIndex((p) => {
+          return p.id === id;
+        });
+
+        newState[position][oldIndex] = { messageCpn, id: newId };
+        return newState;
+      });
+    },
+
     notify(message: (props: Message) => JSX.Element, opt: Message) {
       const {
         message: messageCpn,
         id,
-        position = 'bottom',
+        position = 'top',
       } = createMessage(message, opt);
-      curPosition = position;
-      setStore((oldStore) => {
+
+      setStore((preStore) => {
+        const msg = { messageCpn, id };
+        const msgs = position.includes('top')
+          ? [msg, ...(preStore[position] ?? [])]
+          : [...(preStore[position] ?? []), msg];
+
         return {
-          ...oldStore,
-          [position as keyof State]: [
-            ...oldStore![position as keyof State]?.concat({ messageCpn, id }),
-          ],
+          ...preStore,
+          [position]: msgs,
         };
       });
       return id;

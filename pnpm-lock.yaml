@@ -17,6 +17,7 @@ specifiers:
   dumi: ^2.0.2
   eslint: ^8.23.0
   father: ^4.1.0
+  framer-motion: ^9.0.2
   husky: ^8.0.1
   immer: ^9.0.17
   lint-staged: ^13.0.3
@@ -36,6 +37,7 @@ dependencies:
   '@emotion/styled': registry.npmmirror.com/@emotion/styled/11.10.5_jrh5enlbqfbnumycmktdqgd6se
   antd: registry.npmmirror.com/antd/5.1.7_biqbaboplfbrettd7655fr4n2y
   dayjs: registry.npmmirror.com/dayjs/1.11.7
+  framer-motion: registry.npmmirror.com/framer-motion/9.0.2_biqbaboplfbrettd7655fr4n2y
   immer: registry.npmmirror.com/immer/9.0.19
   lodash: registry.npmmirror.com/lodash/4.17.21
   react-transition-group: registry.npmmirror.com/react-transition-group/4.4.5_biqbaboplfbrettd7655fr4n2y
@@ -1221,6 +1223,16 @@ packages:
     version: 0.9.0
     dev: false
 
+  registry.npmmirror.com/@emotion/is-prop-valid/0.8.8:
+    resolution: {integrity: sha512-u5WtneEAr5IDG2Wv65yhunPSMLIpuKsbuOktRojfrEiEvRyC85LgPMZI63cr7NUqT8ZIGdSVg8ZKGxIug4lXcA==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@emotion/is-prop-valid/-/is-prop-valid-0.8.8.tgz}
+    name: '@emotion/is-prop-valid'
+    version: 0.8.8
+    requiresBuild: true
+    dependencies:
+      '@emotion/memoize': registry.npmmirror.com/@emotion/memoize/0.7.4
+    dev: false
+    optional: true
+
   registry.npmmirror.com/@emotion/is-prop-valid/1.2.0:
     resolution: {integrity: sha512-3aDpDprjM0AwaxGE09bOPkNxHpBd+kA6jty3RnaEXdweX1DF1U3VQpPYb0g1IStAuK7SVQ1cy+bNBBKp4W3Fjg==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@emotion/is-prop-valid/-/is-prop-valid-1.2.0.tgz}
     name: '@emotion/is-prop-valid'
@@ -1228,6 +1240,13 @@ packages:
     dependencies:
       '@emotion/memoize': registry.npmmirror.com/@emotion/memoize/0.8.0
     dev: false
+
+  registry.npmmirror.com/@emotion/memoize/0.7.4:
+    resolution: {integrity: sha512-Ja/Vfqe3HpuzRsG1oBtWTHk2PGZ7GR+2Vz5iYGelAw8dx32K0y7PjVuxK6z1nMpZOqAFsRUPCkK1YjJ56qJlgw==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@emotion/memoize/-/memoize-0.7.4.tgz}
+    name: '@emotion/memoize'
+    version: 0.7.4
+    dev: false
+    optional: true
 
   registry.npmmirror.com/@emotion/memoize/0.8.0:
     resolution: {integrity: sha512-G/YwXTkv7Den9mXDO7AhLWkE3q+I92B+VqAE+dYG4NGPaHZGvt3G8Q0p9vmE+sq7rTGphUbAvmQ9YpbfMQGGlA==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@emotion/memoize/-/memoize-0.8.0.tgz}
@@ -2073,6 +2092,65 @@ packages:
     name: '@microsoft/tsdoc'
     version: 0.14.2
     dev: true
+
+  registry.npmmirror.com/@motionone/animation/10.15.1:
+    resolution: {integrity: sha512-mZcJxLjHor+bhcPuIFErMDNyrdb2vJur8lSfMCsuCB4UyV8ILZLvK+t+pg56erv8ud9xQGK/1OGPt10agPrCyQ==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@motionone/animation/-/animation-10.15.1.tgz}
+    name: '@motionone/animation'
+    version: 10.15.1
+    dependencies:
+      '@motionone/easing': registry.npmmirror.com/@motionone/easing/10.15.1
+      '@motionone/types': registry.npmmirror.com/@motionone/types/10.15.1
+      '@motionone/utils': registry.npmmirror.com/@motionone/utils/10.15.1
+      tslib: registry.npmmirror.com/tslib/2.5.0
+    dev: false
+
+  registry.npmmirror.com/@motionone/dom/10.15.5:
+    resolution: {integrity: sha512-Xc5avlgyh3xukU9tydh9+8mB8+2zAq+WlLsC3eEIp7Ax7DnXgY7Bj/iv0a4X2R9z9ZFZiaXK3BO0xMYHKbAAdA==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@motionone/dom/-/dom-10.15.5.tgz}
+    name: '@motionone/dom'
+    version: 10.15.5
+    dependencies:
+      '@motionone/animation': registry.npmmirror.com/@motionone/animation/10.15.1
+      '@motionone/generators': registry.npmmirror.com/@motionone/generators/10.15.1
+      '@motionone/types': registry.npmmirror.com/@motionone/types/10.15.1
+      '@motionone/utils': registry.npmmirror.com/@motionone/utils/10.15.1
+      hey-listen: registry.npmmirror.com/hey-listen/1.0.8
+      tslib: registry.npmmirror.com/tslib/2.5.0
+    dev: false
+
+  registry.npmmirror.com/@motionone/easing/10.15.1:
+    resolution: {integrity: sha512-6hIHBSV+ZVehf9dcKZLT7p5PEKHGhDwky2k8RKkmOvUoYP3S+dXsKupyZpqx5apjd9f+php4vXk4LuS+ADsrWw==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@motionone/easing/-/easing-10.15.1.tgz}
+    name: '@motionone/easing'
+    version: 10.15.1
+    dependencies:
+      '@motionone/utils': registry.npmmirror.com/@motionone/utils/10.15.1
+      tslib: registry.npmmirror.com/tslib/2.5.0
+    dev: false
+
+  registry.npmmirror.com/@motionone/generators/10.15.1:
+    resolution: {integrity: sha512-67HLsvHJbw6cIbLA/o+gsm7h+6D4Sn7AUrB/GPxvujse1cGZ38F5H7DzoH7PhX+sjvtDnt2IhFYF2Zp1QTMKWQ==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@motionone/generators/-/generators-10.15.1.tgz}
+    name: '@motionone/generators'
+    version: 10.15.1
+    dependencies:
+      '@motionone/types': registry.npmmirror.com/@motionone/types/10.15.1
+      '@motionone/utils': registry.npmmirror.com/@motionone/utils/10.15.1
+      tslib: registry.npmmirror.com/tslib/2.5.0
+    dev: false
+
+  registry.npmmirror.com/@motionone/types/10.15.1:
+    resolution: {integrity: sha512-iIUd/EgUsRZGrvW0jqdst8st7zKTzS9EsKkP+6c6n4MPZoQHwiHuVtTQLD6Kp0bsBLhNzKIBlHXponn/SDT4hA==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@motionone/types/-/types-10.15.1.tgz}
+    name: '@motionone/types'
+    version: 10.15.1
+    dev: false
+
+  registry.npmmirror.com/@motionone/utils/10.15.1:
+    resolution: {integrity: sha512-p0YncgU+iklvYr/Dq4NobTRdAPv9PveRDUXabPEeOjBLSO/1FNB2phNTZxOxpi1/GZwYpAoECEa0Wam+nsmhSw==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@motionone/utils/-/utils-10.15.1.tgz}
+    name: '@motionone/utils'
+    version: 10.15.1
+    dependencies:
+      '@motionone/types': registry.npmmirror.com/@motionone/types/10.15.1
+      hey-listen: registry.npmmirror.com/hey-listen/1.0.8
+      tslib: registry.npmmirror.com/tslib/2.5.0
+    dev: false
 
   registry.npmmirror.com/@nicolo-ribaudo/eslint-scope-5-internals/5.1.1-v1:
     resolution: {integrity: sha512-54/JRvkLIzzDWshCWfuhadfrfZVPiElY8Fcgmg1HroEly/EDSszzhBAsarCux+D/kOslTRquNzuyGSmUSTTHGg==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@nicolo-ribaudo/eslint-scope-5-internals/-/eslint-scope-5-internals-5.1.1-v1.tgz}
@@ -7244,6 +7322,24 @@ packages:
     version: 4.2.0
     dev: true
 
+  registry.npmmirror.com/framer-motion/9.0.2_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-n7ZdIUBrT1xklowQNRQ6/h54+3ysmz422CP0rrhjE1X2tshiJy0WWQ7tv6y/fcOSQd23htNA9vvbUFLYMQ5lEQ==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/framer-motion/-/framer-motion-9.0.2.tgz}
+    id: registry.npmmirror.com/framer-motion/9.0.2
+    name: framer-motion
+    version: 9.0.2
+    peerDependencies:
+      react: ^18.0.0
+      react-dom: ^18.0.0
+    dependencies:
+      '@motionone/dom': registry.npmmirror.com/@motionone/dom/10.15.5
+      hey-listen: registry.npmmirror.com/hey-listen/1.0.8
+      react: registry.npmmirror.com/react/18.2.0
+      react-dom: registry.npmmirror.com/react-dom/18.2.0_react@18.2.0
+      tslib: registry.npmmirror.com/tslib/2.5.0
+    optionalDependencies:
+      '@emotion/is-prop-valid': registry.npmmirror.com/@emotion/is-prop-valid/0.8.8
+    dev: false
+
   registry.npmmirror.com/from2/2.3.0:
     resolution: {integrity: sha512-OMcX/4IC/uqEPVgGeyfN22LJk6AZrMkRZHxcHBMBvHScDGgwTm2GT2Wkgtocyd3JfZffjj2kYUDXXII0Fk9W0g==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/from2/-/from2-2.3.0.tgz}
     name: from2
@@ -7981,6 +8077,12 @@ packages:
     dependencies:
       heti-findandreplacedomtext: registry.npmmirror.com/heti-findandreplacedomtext/0.5.0
     dev: true
+
+  registry.npmmirror.com/hey-listen/1.0.8:
+    resolution: {integrity: sha512-COpmrF2NOg4TBWUJ5UVyaCU2A88wEMkUPK4hNqyCkqHbxT92BbvfjoSozkAIIm6XhicGlJHhFdullInrdhwU8Q==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/hey-listen/-/hey-listen-1.0.8.tgz}
+    name: hey-listen
+    version: 1.0.8
+    dev: false
 
   registry.npmmirror.com/history/5.3.0:
     resolution: {integrity: sha512-ZqaKwjjrAYUYfLG+htGaIIZ4nioX2L70ZUMIFysS3xvBsSG4x/n1V6TXV3N8ZYNuFGlDirFg32T7B6WOUPDYcQ==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/history/-/history-5.3.0.tgz}
@@ -15210,7 +15312,6 @@ packages:
     resolution: {integrity: sha512-336iVw3rtn2BUK7ORdIAHTyxHGRIHVReokCR3XjbckJMK7ms8FysBfhLR8IXnAgy7T0PTPNBWKiH514FOW/WSg==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/tslib/-/tslib-2.5.0.tgz}
     name: tslib
     version: 2.5.0
-    dev: true
 
   registry.npmmirror.com/tsutils/3.21.0:
     resolution: {integrity: sha512-mHKK3iUXL+3UF6xL5k0PEhKRUBKPBCv/+RkEOpjRWxxx27KKRBmmA60A9pgOUvMi8GKhRMPEmjBRPzs2W7O1OA==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/tsutils/-/tsutils-3.21.0.tgz}

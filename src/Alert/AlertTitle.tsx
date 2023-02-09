@@ -11,7 +11,7 @@ const AlertTitle = (props: AlertTitleProps) => {
     <ocean.div
       {...props}
       className={cx('ocean-alert-title')}
-      __css={{ flex: 1, fontWeight: 'semibold' }}
+      __css={{ fontWeight: 'semibold', mr: 3 }}
     />
   );
 };

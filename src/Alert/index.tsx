@@ -15,7 +15,12 @@ const AlertWrapper = styled.div`
 
 type AlertStatus = 'info' | 'success' | 'warning' | 'error';
 
-export type AlertVariant = 'solid' | 'left-line' | 'bottom-line' | 'top-line';
+export type AlertVariant =
+  | 'solid'
+  | 'left-line'
+  | 'bottom-line'
+  | 'top-line'
+  | 'normal';
 
 interface Alert {
   status?: AlertStatus;
@@ -32,8 +37,7 @@ const Alert = (props: AlertProps) => {
     status = 'success',
     visible,
     className,
-    variant,
-
+    variant = 'normal',
     reuse = false,
     ...restProps
   } = props;
@@ -44,7 +48,7 @@ const Alert = (props: AlertProps) => {
   const AlertBaseStyle = {
     ...statusStyle(colorSchema),
     ...baseStyle,
-    ...(variant && variantStyle[variant](colorSchema)),
+    ...(variant !== 'normal' && variant && variantStyle[variant](colorSchema)),
   };
 
   useEffect(() => {
@@ -56,9 +60,9 @@ const Alert = (props: AlertProps) => {
       <AlertWrapper>
         {!reuse ? (
           <CSSTransition
-            in={innerVisible}
             timeout={330}
             appear
+            in={innerVisible}
             classNames={'alert-model'}
             unmountOnExit
           >

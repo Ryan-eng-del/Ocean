@@ -1,14 +1,15 @@
-import styled from '@emotion/styled';
-import AlertCloseIcon from 'Ocean/Alert/AlertCloseIcon';
-import AlertContent from 'Ocean/Alert/AlertContent';
-import AlertIcon from 'Ocean/Alert/AlertIcon';
-import AlertTitle from 'Ocean/Alert/AlertTitle';
-import { AlertProvider } from 'Ocean/Alert/context';
+import { motion, Variants } from 'framer-motion';
+import {
+  Alert,
+  AlertCloseIcon,
+  AlertContent,
+  AlertIcon,
+  AlertTitle,
+} from 'Ocean';
 import { MessageType, PxType } from 'Ocean/common/type';
 import React, { useEffect } from 'react';
-import Alert, { AlertVariant } from '../Alert/index';
+import { AlertVariant } from '../Alert/index';
 import { StyleProps } from '../System/system.type';
-import type { MessageStore as MessageProps } from './store';
 import MessageStore from './store';
 
 export type MessagePosition =
@@ -18,6 +19,40 @@ export type MessagePosition =
   | 'bottom-left'
   | 'bottom-right'
   | 'bottom';
+
+const motionVariants: Variants = {
+  initial: (props) => {
+    const { position } = props;
+    const dir = ['top', 'bottom'].includes(position) ? 'y' : 'x';
+
+    let factor = ['top-right', 'bottom-right'].includes(position) ? 1 : -1;
+    if (position === 'bottom') factor = 1;
+    return {
+      opacity: 0,
+      [dir]: factor * 24,
+    };
+  },
+
+  animate: {
+    opacity: 1,
+    y: 0,
+    x: 0,
+    scale: 1,
+    transition: {
+      duration: 0.4,
+      ease: [0.4, 0, 0.2, 1],
+    },
+  },
+
+  exit: {
+    opacity: 0,
+    scale: 0.85,
+    transition: {
+      duration: 0.4,
+      ease: [0.4, 0, 1, 1],
+    },
+  },
+};
 
 export interface Message {
   content: string;
@@ -29,74 +64,70 @@ export interface Message {
   type?: MessageType;
   title?: string;
   width?: PxType;
-  id?: string;
+  id?: React.Key;
   variant?: AlertVariant;
   position?: MessagePosition;
 }
 
-const MessageWrapper = styled.div`
-  @keyframes down {
-    0% {
-      opacity: 0;
-      transform: translateY(-100%);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-`;
-
-export const MessageComponent = (
-  props: Message & { store: MessageProps; id: any },
-) => {
+export const MessageComponent = React.memo((props: Message & { id: any }) => {
   const {
     type = 'success',
-    variant = 'solid',
     content,
     title,
     duration = 1500,
-    position = 'bottom',
+    position = 'top',
     id,
+    closeable = false,
     ...restProps
   } = props;
 
   useEffect(() => {
     const timer = setTimeout(() => {
       MessageStore.closeId(position, id);
-    }, duration + 330);
+    }, duration);
 
     return () => clearTimeout(timer);
   }, []);
 
   const baseStyle: StyleProps = {
-    maxWidth: '560px',
     minWidth: '300px',
-    zIndex: 20,
-    position: 'fixed',
-    minH: 10,
-    animation: 'down 330ms ease',
+    minHeight: '30px',
+    mb: '13px',
   };
 
   return (
-    <AlertProvider value={{ status: type, variant, setVisible: () => {} }}>
-      <MessageWrapper className="message-wrapper">
-        <Alert
-          reuse={true}
-          status={type}
-          css={baseStyle}
-          {...restProps}
-          className="message-ocean"
-        >
-          <AlertIcon></AlertIcon>
-          <AlertTitle>{title}</AlertTitle>
-          <AlertContent>{content}</AlertContent>
-          <AlertCloseIcon></AlertCloseIcon>
-        </Alert>
-      </MessageWrapper>
-    </AlertProvider>
+    <motion.li
+      layout
+      className="ocean-msg"
+      variants={motionVariants}
+      initial="initial"
+      animate="animate"
+      exit="exit"
+      custom={{ position }}
+      style={{ display: 'flex' }}
+    >
+      <Alert
+        reuse={true}
+        status={type}
+        css={baseStyle}
+        {...restProps}
+        className="message-ocean"
+      >
+        <AlertIcon></AlertIcon>
+        {title && <AlertTitle>{title}</AlertTitle>}
+        {content && <AlertContent>{content}</AlertContent>}
+        {closeable && (
+          <AlertCloseIcon
+            pointerEvents="all"
+            onClick={() => {
+              MessageStore.closeId(position, id);
+            }}
+          ></AlertCloseIcon>
+        )}
+      </Alert>
+    </motion.li>
   );
-};
+});
 
 let counter = 0;
 
@@ -111,4 +142,9 @@ function createRenderMessage(opt: Message) {
 export function message(opt: Message) {
   const message = createRenderMessage(opt);
   return MessageStore.notify(message, opt);
+}
+
+export function update(id: React.Key, opt: Message) {
+  const message = createRenderMessage(opt);
+  return MessageStore.update(message, opt, id);
 }
