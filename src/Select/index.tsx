@@ -19,6 +19,7 @@ const Select = forwardRef<any, SelectProps>((props, ref) => {
     ...restProps
   } = props;
 
+  //toDo 抽象封装成 Hook useMultiplyStyle
   const baseInputStyle: StyleProps = {
     flex: '1',
     ...baseStyle,

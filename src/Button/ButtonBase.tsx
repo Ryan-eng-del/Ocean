@@ -30,6 +30,7 @@ const ButtonBase = React.forwardRef(function (props: ButtonProps) {
 
   const rippleRef = useRef<any>(null);
 
+  //toDo 抽象封装成 Hook useMultiplyStyle（props, theme）
   const buttonBaseStyle: StyleProps = {
     ...baseStyle,
     ...sizeMap[size],

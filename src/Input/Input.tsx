@@ -17,6 +17,7 @@ export interface InputProps
 const Input = forwardRef<any, InputProps>((props: InputProps, ref) => {
   const { size = 'md', variant = 'outline', ...restProps } = props;
 
+  //toDo 抽象封装成 Hook useMultiplyStyle
   const baseInputStyle: StyleProps = {
     flex: '1',
     ...baseStyle,

@@ -39,6 +39,8 @@ export { default as RadioGroup } from './RadioGroup';
 // ========== Option ==========
 export { default as Select } from './Select';
 export { default as Option } from './Select/option';
+// ========== Switch ==========
+export { default as Switch } from './Switch';
 // ========== Core System ================
 export { ocean } from './System/';
 export { default as GlobalThemeProvider } from './System/provider';

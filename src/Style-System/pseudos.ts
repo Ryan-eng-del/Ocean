@@ -194,22 +194,6 @@ export const pseudoSelectors = {
    * It is used when the user has requested the system to reduce the amount of animations.
    */
   _mediaReduceMotion: '@media (prefers-reduced-motion: reduce)',
-  /**
-   * Styles for when `data-theme` is applied to any parent of
-   * this component or element.
-   */
-  _dark:
-    '.chakra-ui-dark &:not([data-theme]),' +
-    '[data-theme=dark] &:not([data-theme]),' +
-    '&[data-theme=dark]',
-  /**
-   * Styles for when `data-theme` is applied to any parent of
-   * this component or element.
-   */
-  _light:
-    '.chakra-ui-light &:not([data-theme]),' +
-    '[data-theme=light] &:not([data-theme]),' +
-    '&[data-theme=light]',
 };
 
 export type Pseudos<T = StyleProps> = {
