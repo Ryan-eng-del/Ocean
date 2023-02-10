@@ -13,7 +13,7 @@ interface InputProps extends Omit<OceanComponent<'input', Input>, 'size'> {
   size?: InputType;
 }
 
-const Input = forwardRef((props: InputProps) => {
+const Input = forwardRef<any, InputProps>((props: InputProps, ref) => {
   const { size = 'md', variant = 'outline', ...restProps } = props;
 
   const baseInputStyle: StyleProps = {
@@ -25,6 +25,7 @@ const Input = forwardRef((props: InputProps) => {
 
   return (
     <ocean.input
+      ref={ref}
       {...restProps}
       __css={baseInputStyle}
       className={cx('ocean-divider-text', props.className)}

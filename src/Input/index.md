@@ -47,7 +47,3 @@ group:
 ## 表单默认值
 
 <code src="./document/defaultValue.tsx"></code>
-
-## 自动聚焦
-
-<code src="./document/autoFocus.tsx"></code>

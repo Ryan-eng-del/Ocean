@@ -1,13 +1,18 @@
 import { ocean } from 'Ocean/System';
 import { OceanComponent, StyleProps } from 'Ocean/System/system.type';
 import { cx } from 'Ocean/util/common';
-import React, { Children, cloneElement, isValidElement } from 'react';
+import React, {
+  Children,
+  cloneElement,
+  forwardRef,
+  isValidElement,
+} from 'react';
 import { filterProps } from '../System/filterProps';
 
 interface InputGroup {}
 interface InputGroupProps extends OceanComponent<'input', InputGroup> {}
 
-const InputGroup = (props: InputGroupProps) => {
+const InputGroup = forwardRef<any, InputGroupProps>((props, ref) => {
   const { children, ...restProps } = props;
   const { restCssProps, elementProps } = filterProps(restProps);
   console.log(restCssProps, elementProps);
@@ -55,12 +60,13 @@ const InputGroup = (props: InputGroupProps) => {
   return (
     <ocean.div
       {...restCssProps}
+      ref={ref}
       __css={baseStyle}
       className={cx('ocean-input-group', props.className)}
     >
       {clones}
     </ocean.div>
   );
-};
+});
 
 export default InputGroup;

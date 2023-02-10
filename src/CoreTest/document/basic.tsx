@@ -11,9 +11,9 @@ const Base = () => {
 
 const Basic = () => {
   return (
-    // <GlobalThemeProvider>
-    <Base />
-    // </GlobalThemeProvider>
+    <GlobalThemeProvider>
+      <Base />
+    </GlobalThemeProvider>
   );
 };
 
