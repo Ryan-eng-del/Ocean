@@ -36,6 +36,9 @@ export { default as ModalMask } from './Modal/ModalMask';
 // ============ Radio ==========
 export { default as Radio } from './Radio';
 export { default as RadioGroup } from './RadioGroup';
+// ========== Option ==========
+export { default as Select } from './Select';
+export { default as Option } from './Select/option';
 // ========== Core System ================
 export { ocean } from './System/';
 export { default as GlobalThemeProvider } from './System/provider';

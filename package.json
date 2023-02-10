@@ -50,10 +50,8 @@
     "antd": "^5.1.2",
     "dayjs": "^1.11.7",
     "framer-motion": "^9.0.2",
-    "immer": "^9.0.17",
     "lodash": "^4.17.21",
-    "react-transition-group": "^4.4.5",
-    "use-immer": "^0.8.1"
+    "react-transition-group": "^4.4.5"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.1.2",

@@ -3,13 +3,14 @@ import { OceanComponent, StyleProps } from 'Ocean/System/system.type';
 import { cx } from 'Ocean/util/common';
 import React, { forwardRef } from 'react';
 import { baseStyle, dimensions, variantStyle } from './theme';
-type InputType = 'lg' | 'md' | 'sm' | 'xs';
+export type InputType = 'lg' | 'md' | 'sm' | 'xs';
 
 interface Input {
   variant?: 'unstyle' | 'outline' | 'underline';
 }
 
-interface InputProps extends Omit<OceanComponent<'input', Input>, 'size'> {
+export interface InputProps
+  extends Omit<OceanComponent<'input', Input>, 'size'> {
   size?: InputType;
 }
 
