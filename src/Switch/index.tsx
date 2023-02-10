@@ -1,67 +1,9 @@
 import styled from '@emotion/styled';
-import { GlobalColor } from 'Ocean/common/variable';
 import React, { CSSProperties, ReactNode, useEffect, useState } from 'react';
 import { SwitchType } from '../common/type';
+import { dot, getBackground, rightSwitch, track } from './theme';
 
-const customBackground = 'rgb(170, 180, 190)';
-const iosBackground = 'rgb(101, 196, 102)';
-const primaryBackground = GlobalColor.OceanPrimaryColor;
-const primaryLightBackground = 'rgb(136, 185, 232)';
 const customDotBackground = 'rgb(0, 30, 60)';
-const unCheckedBackground = 'rgb(191, 191, 191)';
-
-const getBackground = (type: SwitchType, switchStatus: boolean) => {
-  let backGround = primaryBackground;
-  if (switchStatus) {
-    if (type === 'custom') {
-      backGround = customBackground;
-    } else if (type === 'ios') {
-      backGround = iosBackground;
-    } else if (type === 'light') {
-      backGround = primaryLightBackground;
-    }
-  } else {
-    backGround = unCheckedBackground;
-  }
-
-  return backGround;
-};
-
-const height = {
-  small: '17px',
-  medium: '23px',
-  large: '26px',
-};
-
-const minWidth = {
-  small: '44px',
-  medium: '50px',
-  large: '56px',
-};
-
-const dotRightSwitch = {
-  small: '-14px',
-  medium: '-20px',
-  large: '-26px',
-};
-
-const dotRightSwitchNone = {
-  small: '14px',
-  medium: '20px',
-  large: '26px',
-};
-
-const sizeDotWrapper = {
-  small: '42px',
-  medium: '50px',
-  large: '53px',
-};
-
-const sizeDot = {
-  small: '24px',
-  medium: '30px',
-  large: '36px',
-};
 
 const SwitchContainer = styled.div<{
   switchStatus: boolean;
@@ -71,13 +13,13 @@ const SwitchContainer = styled.div<{
   position: relative;
   display: inline-block;
   box-sizing: border-box;
-  line-height: ${(props) => height[props.size]};
+  line-height: ${(props) => track().height[props.size]};
   vertical-align: middle;
   border: none;
   border-radius: 12px;
   transition: 110ms linear;
-  min-width: ${(props) => minWidth[props.size]};
-  height: ${(props) => height[props.size]};
+  min-width: ${(props) => track().minWidth[props.size]};
+  height: ${(props) => track().height[props.size]};
   background: ${(props) => getBackground(props.type, props.switchStatus)};
   cursor: pointer;
   opacity: 1;
@@ -88,12 +30,12 @@ const SwitchContainer = styled.div<{
   }
 
   .dot-wrapper {
-    width: ${(props) => sizeDotWrapper[props.size]};
-    height: ${(props) => sizeDotWrapper[props.size]};
+    width: ${(props) => dot().sizeDotWrapper[props.size]};
+    height: ${(props) => dot().sizeDotWrapper[props.size]};
     right: ${(props) =>
       props.switchStatus
-        ? dotRightSwitch[props.size]
-        : dotRightSwitchNone[props.size]};
+        ? rightSwitch().dotRightSwitch[props.size]
+        : rightSwitch().dotRightSwitch[props.size]};
   }
 
   .ocean-switch-context {
@@ -121,8 +63,8 @@ const SwitchDot = styled.div<{ size: 'small' | 'large' | 'medium' }>`
   top: 50%;
   text-align: center;
   transform: translate(-50%, -50%);
-  width: ${(props) => sizeDot[props.size]};
-  height: ${(props) => sizeDot[props.size]};
+  width: ${(props) => dot().sizeDot[props.size]};
+  height: ${(props) => dot().sizeDot[props.size]};
   display: flex;
   justify-content: center;
   align-items: center;
