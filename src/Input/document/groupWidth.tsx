@@ -1,34 +1,39 @@
 import { FacebookOutlined, GithubOutlined } from '@ant-design/icons';
-import { GlobalThemeProvider, Input, InputGroup } from 'Ocean';
+import {
+  GlobalThemeProvider,
+  Input,
+  InputGroup,
+  InputLeftElement,
+  InputRightElement,
+} from 'Ocean';
 import React from 'react';
-import { InputLeftIcon, InputRightIcon } from '../InputIcon';
 
 const Basic = () => {
   return (
     <GlobalThemeProvider>
       <InputGroup w="80%">
-        <InputLeftIcon fontSize={'lg'}>
+        <InputLeftElement fontSize={'lg'}>
           <GithubOutlined />
-        </InputLeftIcon>
+        </InputLeftElement>
         <Input placeholder={'A Input'} />
 
-        <InputRightIcon fontSize={'lg'}>
+        <InputRightElement fontSize={'lg'}>
           <FacebookOutlined />
-        </InputRightIcon>
+        </InputRightElement>
       </InputGroup>
 
       <InputGroup my={3} w="60%">
-        <InputLeftIcon fontSize={'lg'}>
+        <InputLeftElement fontSize={'lg'}>
           <GithubOutlined />
-        </InputLeftIcon>
+        </InputLeftElement>
         <Input placeholder={'A Input'} />
       </InputGroup>
 
       <InputGroup w="50%">
         <Input placeholder={'A Input'} />
-        <InputRightIcon fontSize={'lg'}>
+        <InputRightElement fontSize={'lg'}>
           <FacebookOutlined />
-        </InputRightIcon>
+        </InputRightElement>
       </InputGroup>
     </GlobalThemeProvider>
   );

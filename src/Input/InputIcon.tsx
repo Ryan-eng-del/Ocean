@@ -67,4 +67,7 @@ const InputRightIcon = forwardRef<any, Omit<InputIconProps, 'placement'>>(
 
 InputRightIcon.displayName = 'InputRightIcon';
 
-export { InputLeftIcon, InputRightIcon };
+export {
+  InputLeftIcon as InputLeftElement,
+  InputRightIcon as InputRightElement,
+};

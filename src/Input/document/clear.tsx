@@ -1,7 +1,11 @@
 import { DeleteOutlined } from '@ant-design/icons';
-import { GlobalThemeProvider, Input, InputGroup } from 'Ocean';
+import {
+  GlobalThemeProvider,
+  Input,
+  InputGroup,
+  InputRightElement,
+} from 'Ocean';
 import React, { useState } from 'react';
-import { InputRightIcon } from '../InputIcon';
 
 const Basic = () => {
   const [value, setValue] = useState('');
@@ -23,9 +27,9 @@ const Basic = () => {
         onChange={(e) => change(e.target.value)}
       >
         <Input />
-        <InputRightIcon fontSize={'lg'}>
+        <InputRightElement fontSize={'lg'}>
           <DeleteOutlined onClick={clear} style={{ cursor: 'pointer' }} />
-        </InputRightIcon>
+        </InputRightElement>
       </InputGroup>
     </GlobalThemeProvider>
   );

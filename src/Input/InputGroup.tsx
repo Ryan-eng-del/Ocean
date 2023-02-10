@@ -15,7 +15,7 @@ interface InputGroupProps extends OceanComponent<'input', InputGroup> {}
 const InputGroup = forwardRef<any, InputGroupProps>((props, ref) => {
   const { children, ...restProps } = props;
   const { restCssProps, elementProps } = filterProps(restProps);
-  console.log(restCssProps, elementProps);
+
   const getValidChildren = (children: any) => {
     return Children.toArray(children).filter((child: any) =>
       isValidElement(child),

@@ -1,6 +1,11 @@
-import { Button, GlobalThemeProvider, Input, InputGroup } from 'Ocean';
+import {
+  Button,
+  GlobalThemeProvider,
+  Input,
+  InputGroup,
+  InputRightElement,
+} from 'Ocean';
 import React, { useState } from 'react';
-import { InputRightIcon } from '../InputIcon';
 
 const Basic = () => {
   const [show, setShow] = useState(false);
@@ -9,7 +14,7 @@ const Basic = () => {
     <GlobalThemeProvider>
       <InputGroup>
         <Input type={show ? 'text' : 'password'} />
-        <InputRightIcon w={24}>
+        <InputRightElement w={24}>
           <Button
             size="small"
             h={8}
@@ -18,7 +23,7 @@ const Basic = () => {
           >
             {show ? 'hidden' : 'show'}
           </Button>
-        </InputRightIcon>
+        </InputRightElement>
       </InputGroup>
     </GlobalThemeProvider>
   );

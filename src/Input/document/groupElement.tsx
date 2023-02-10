@@ -3,8 +3,8 @@ import {
   GlobalThemeProvider,
   Input,
   InputGroup,
-  InputLeftAddon,
-  InputRightAddon,
+  InputLeftElement,
+  InputRightElement,
 } from 'Ocean';
 import React from 'react';
 
@@ -12,27 +12,27 @@ const Basic = () => {
   return (
     <GlobalThemeProvider>
       <InputGroup>
-        <InputLeftAddon fontSize={'lg'}>
+        <InputLeftElement fontSize={'lg'}>
           <GithubOutlined />
-        </InputLeftAddon>
+        </InputLeftElement>
         <Input placeholder={'A Input'} />
-        <InputRightAddon fontSize={'lg'}>
+        <InputRightElement fontSize={'lg'}>
           <FacebookOutlined />
-        </InputRightAddon>
+        </InputRightElement>
       </InputGroup>
 
       <InputGroup my={3}>
-        <InputLeftAddon fontSize={'lg'}>
+        <InputLeftElement fontSize={'lg'}>
           <GithubOutlined />
-        </InputLeftAddon>
+        </InputLeftElement>
         <Input placeholder={'A Input'} />
       </InputGroup>
 
       <InputGroup>
         <Input placeholder={'A Input'} />
-        <InputRightAddon fontSize={'lg'}>
+        <InputRightElement fontSize={'lg'}>
           <FacebookOutlined />
-        </InputRightAddon>
+        </InputRightElement>
       </InputGroup>
     </GlobalThemeProvider>
   );

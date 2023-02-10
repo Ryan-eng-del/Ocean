@@ -22,7 +22,7 @@ export { default as DrawerMask } from './Drawer/DrawerMask';
 export { default as Input } from './Input/Input';
 export { InputLeftAddon, InputRightAddon } from './Input/InputAddon';
 export { default as InputGroup } from './Input/InputGroup';
-export { default as InputIcon } from './Input/InputIcon';
+export { InputLeftElement, InputRightElement } from './Input/InputIcon';
 // ========= Message =========
 export { useMessage } from './Message/message';
 // =======  Modal ========
