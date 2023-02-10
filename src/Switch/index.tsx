@@ -35,7 +35,7 @@ const SwitchContainer = styled.div<{
     right: ${(props) =>
       props.switchStatus
         ? rightSwitch().dotRightSwitch[props.size]
-        : rightSwitch().dotRightSwitch[props.size]};
+        : rightSwitch().dotRightSwitchNone[props.size]};
   }
 
   .ocean-switch-context {
