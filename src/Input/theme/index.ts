@@ -14,7 +14,6 @@ const baseStyle = defineStyle({
     borderColor: 'blue.500',
   },
 
-  boxSizing: 'border-box',
   border: '1px',
   borderColor: 'gray.300',
 });

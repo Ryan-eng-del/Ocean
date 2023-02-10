@@ -1,12 +1,25 @@
-import { GlobalThemeProvider, Input } from 'Ocean';
+import { Button, GlobalThemeProvider, Input, InputGroup } from 'Ocean';
 import React, { useState } from 'react';
+import { InputRightIcon } from '../InputIcon';
 
 const Basic = () => {
-  const [type] = useState('password');
+  const [show, setShow] = useState(false);
 
   return (
     <GlobalThemeProvider>
-      <Input type={type} />
+      <InputGroup>
+        <Input type={show ? 'text' : 'password'} />
+        <InputRightIcon w={24}>
+          <Button
+            size="small"
+            h={8}
+            type="primary"
+            onClick={() => setShow(!show)}
+          >
+            {show ? 'hidden' : 'show'}
+          </Button>
+        </InputRightIcon>
+      </InputGroup>
     </GlobalThemeProvider>
   );
 };

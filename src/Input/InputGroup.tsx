@@ -1,20 +1,65 @@
 import { ocean } from 'Ocean/System';
 import { OceanComponent, StyleProps } from 'Ocean/System/system.type';
 import { cx } from 'Ocean/util/common';
-import React from 'react';
+import React, { Children, cloneElement, isValidElement } from 'react';
+import { filterProps } from '../System/filterProps';
 
 interface InputGroup {}
-interface InputGroupProps extends OceanComponent<'div', InputGroup> {}
+interface InputGroupProps extends OceanComponent<'input', InputGroup> {}
 
 const InputGroup = (props: InputGroupProps) => {
-  const {} = props;
-  const baseStyle: StyleProps = {};
+  const { children, ...restProps } = props;
+  const { restCssProps, elementProps } = filterProps(restProps);
+  console.log(restCssProps, elementProps);
+  const getValidChildren = (children: any) => {
+    return Children.toArray(children).filter((child: any) =>
+      isValidElement(child),
+    );
+  };
+
+  const validChildren = getValidChildren(children);
+
+  const baseInputStyle: StyleProps = {};
+
+  const baseStyle: StyleProps = {
+    display: 'flex',
+    position: 'relative',
+  };
+
+  validChildren.forEach((child: any) => {
+    if (child.type.displayName === 'InputLeftAddon') {
+      baseInputStyle.borderLeftRadius = 0;
+    }
+    if (child.type.displayName === 'InputRightAddon') {
+      baseInputStyle.borderRightRadius = 0;
+    }
+
+    if (child.type.displayName === 'InputRightIcon') {
+      baseInputStyle.paddingRight = 12;
+    }
+
+    if (child.type.displayName === 'InputLeftIcon') {
+      baseInputStyle.paddingLeft = 12;
+    }
+  });
+
+  const clones = validChildren.map((child: any) => {
+    return child.type.displayName === 'Input'
+      ? cloneElement(
+          child,
+          Object.assign({}, baseInputStyle, child.props, elementProps),
+        )
+      : child;
+  });
+
   return (
     <ocean.div
-      {...props}
+      {...restCssProps}
       __css={baseStyle}
-      className={cx('ocean-divider-text', props.className)}
-    ></ocean.div>
+      className={cx('ocean-input-group', props.className)}
+    >
+      {clones}
+    </ocean.div>
   );
 };
 

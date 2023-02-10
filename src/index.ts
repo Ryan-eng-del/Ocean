@@ -20,7 +20,7 @@ export { default as DrawerHeadTitle } from './Drawer/DrawerHeadTitle';
 export { default as DrawerMask } from './Drawer/DrawerMask';
 // ========== Input ========
 export { default as Input } from './Input/Input';
-export { default as InputAddon } from './Input/InputAddon';
+export { InputLeftAddon, InputRightAddon } from './Input/InputAddon';
 export { default as InputGroup } from './Input/InputGroup';
 export { default as InputIcon } from './Input/InputIcon';
 // ========= Message =========

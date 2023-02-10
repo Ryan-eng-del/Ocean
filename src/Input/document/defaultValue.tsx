@@ -1,8 +1,12 @@
-import { Input } from 'Ocean';
+import { GlobalThemeProvider, Input } from 'Ocean';
 import React from 'react';
 
 const Basic = () => {
-  return <Input defaultValue={'defaultValue'} />;
+  return (
+    <GlobalThemeProvider>
+      <Input defaultValue={'defaultValue'} />
+    </GlobalThemeProvider>
+  );
 };
 
 export default Basic;

@@ -24,31 +24,30 @@ group:
 
 <code src="./document/control.tsx"></code>
 
-<!-- ## 可清除
+## 表单插件 - Addon
 
-<code src="./document/clear.tsx"></code> -->
+<code src="./document/groupAddon.tsx"></code>
 
-<!--
+## 表单元素 - Element
 
+<code src="./document/groupIcon.tsx"></code>
 
-## icon
+## Input 定制宽度
 
-<code src="./document/icon.tsx"></code>
+<code src="./document/width.tsx"></code>
 
+## InputGroup 定制宽度
 
+<code src="./document/groupWidth.tsx"></code>
 
+## 可清除
 
+<code src="./document/clear.tsx"></code>
 
 ## 表单默认值
 
 <code src="./document/defaultValue.tsx"></code>
 
-
-
 ## 自动聚焦
 
 <code src="./document/autoFocus.tsx"></code>
-
-## 定制宽度
-
-<code src="./document/width.tsx"></code> -->
