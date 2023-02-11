@@ -63,7 +63,7 @@ const Radio = (props: Radio) => {
 
   const getRadioType = (): ButtonType => {
     let type;
-    type = isSelect && isSolid ? RadioContext?.type || 'primary' : 'outline';
+    type = isSelect && isSolid ? RadioContext?.type || 'primary' : 'text';
     return type as ButtonType;
   };
 
