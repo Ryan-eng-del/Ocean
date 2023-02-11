@@ -1,4 +1,4 @@
-import { Radio, RadioGroup } from 'Ocean';
+import { GlobalThemeProvider, Radio, RadioGroup } from 'Ocean';
 import React, { useState } from 'react';
 
 const RadioDemo1 = () => {
@@ -9,47 +9,49 @@ const RadioDemo1 = () => {
   };
 
   return (
-    <div style={{ display: 'flex', marginRight: '17px' }}>
-      <RadioGroup
-        onChange={onChange}
-        value={value}
-        type={'gradual'}
-        style={{ marginRight: '20px' }}
-      >
-        <Radio value={1}>A</Radio>
-        <Radio value={2}>B</Radio>
-        <Radio value={3}>C</Radio>
-        <Radio value={4}>D</Radio>
-      </RadioGroup>
+    <GlobalThemeProvider>
+      <div style={{ display: 'flex', marginRight: '17px' }}>
+        <RadioGroup
+          onChange={onChange}
+          value={value}
+          type={'gradual'}
+          style={{ marginRight: '20px' }}
+        >
+          <Radio value={1}>A</Radio>
+          <Radio value={2}>B</Radio>
+          <Radio value={3}>C</Radio>
+          <Radio value={4}>D</Radio>
+        </RadioGroup>
 
-      <RadioGroup
-        onChange={onChange}
-        value={value}
-        style={{ marginRight: '20px' }}
-      >
-        <Radio value={1}>A</Radio>
-        <Radio value={2}>B</Radio>
-        <Radio value={3}>C</Radio>
-        <Radio value={4}>D</Radio>
-      </RadioGroup>
-      <RadioGroup
-        onChange={onChange}
-        value={value}
-        type="text"
-        style={{ marginRight: '20px' }}
-      >
-        <Radio value={1}>A</Radio>
-        <Radio value={2}>B</Radio>
-        <Radio value={3}>C</Radio>
-        <Radio value={4}>D</Radio>
-      </RadioGroup>
-      <RadioGroup onChange={onChange} value={value} type="danger">
-        <Radio value={1}>A</Radio>
-        <Radio value={2}>B</Radio>
-        <Radio value={3}>C</Radio>
-        <Radio value={4}>D</Radio>
-      </RadioGroup>
-    </div>
+        <RadioGroup
+          onChange={onChange}
+          value={value}
+          style={{ marginRight: '20px' }}
+        >
+          <Radio value={1}>A</Radio>
+          <Radio value={2}>B</Radio>
+          <Radio value={3}>C</Radio>
+          <Radio value={4}>D</Radio>
+        </RadioGroup>
+        <RadioGroup
+          onChange={onChange}
+          value={value}
+          type="text"
+          style={{ marginRight: '20px' }}
+        >
+          <Radio value={1}>A</Radio>
+          <Radio value={2}>B</Radio>
+          <Radio value={3}>C</Radio>
+          <Radio value={4}>D</Radio>
+        </RadioGroup>
+        <RadioGroup onChange={onChange} value={value} type="danger">
+          <Radio value={1}>A</Radio>
+          <Radio value={2}>B</Radio>
+          <Radio value={3}>C</Radio>
+          <Radio value={4}>D</Radio>
+        </RadioGroup>
+      </div>
+    </GlobalThemeProvider>
   );
 };
 

@@ -1,10 +1,10 @@
-import styled from '@emotion/styled';
-import { GlobalColor, TypeButtonColor } from 'Ocean/common/variable';
+import { TypeButtonColor } from 'Ocean/common/variable';
 import React, { ReactNode } from 'react';
 import ButtonBase from '../Button/ButtonBase';
 import { ButtonType } from '../Button/index';
 import { GlobalFontSize, GlobalRadioSize } from '../common/variable';
 import { useRadioContext } from '../RadioGroup/RadioContext';
+import { RadioContainer, RadioContentWrapper, RadioWrapper } from './style';
 
 interface Radio {
   value: React.Key;
@@ -14,89 +14,7 @@ interface Radio {
   curSelect?: React.Key[];
 }
 
-type RadioWrapper = {
-  isSelect: boolean;
-  size: { size: string; fontSize: string };
-  isText: boolean;
-  isDanger: boolean;
-  isSolid: boolean;
-};
-
-export const RadioWrapper = styled.div<RadioWrapper>`
-  ${(props) => ({
-    width: `${props.size.size}`,
-    height: `${props.size.size}`,
-    lineHeight: `${props.size.size}`,
-  })};
-
-  border-radius: 50%;
-  text-align: center;
-
-  overflow: hidden;
-  display: flex;
-  cursor: pointer;
-
-  border: ${`1.5px solid ${GlobalColor.OceanBorderLightColor}`};
-
-  & button {
-    border: none;
-    font-size: ${(props) => props.size.fontSize};
-    padding: 0;
-    border-radius: 50%;
-
-    background-color: ${(props) => {
-      let re;
-      re =
-        props.isText && props.isSelect
-          ? GlobalColor.OceanHoverLight
-          : undefined;
-      if (re) return re;
-
-      re =
-        props.isDanger && props.isSelect
-          ? TypeButtonColor.ganderColor
-          : undefined;
-      return re;
-    }};
-
-    background-color: ${(props) => (!props.isSolid ? '#fff' : undefined)};
-
-    border: ${(props) => {
-      return !props.isSolid && props.isSelect
-        ? `5px solid ${GlobalColor.OceanPrimaryColor}`
-        : undefined;
-    }};
-
-    &:hover {
-      background-color: ${(props) => {
-        let re;
-        re =
-          props.isText && props.isSelect
-            ? GlobalColor.OceanHoverLight
-            : undefined;
-        if (re) return re;
-        re = props.isDanger ? TypeButtonColor.ganderColor : undefined;
-        return re;
-      }};
-
-      color: ${(props) => {
-        return props.isDanger ? GlobalColor.OceanRedColor : undefined;
-      }};
-    }
-  }
-`;
-const RadioContentWrapper = styled.div`
-  margin-left: 7px;
-  font-size: ${GlobalFontSize.small};
-`;
-
-const RadioContainer = styled.div`
-  display: flex;
-  align-items: center;
-  margin-bottom: 14px;
-  margin-right: 17px;
-`;
-
+//toDo switch 暂不整合新架构，因为 switch 本身提供的功能比较单一，后续有 issue 可以考虑重构
 const Radio = (props: Radio) => {
   const RadioContext = useRadioContext();
 
@@ -110,6 +28,7 @@ const Radio = (props: Radio) => {
   };
 
   const isSelect = getIsSelect(props.value);
+
   const isText = RadioContext?.type === 'text';
   const isSolid = RadioContext?.solid === false ? false : true;
 

@@ -1,5 +1,5 @@
 import { ButtonType } from 'Ocean/Button';
-import { createContext, useContext } from 'react';
+import { createContext } from 'Ocean/hooks/useContext';
 import { SizeType } from '../common/type';
 interface RadioContext {
   value: any | any[];
@@ -13,10 +13,4 @@ interface RadioContext {
   noExam?: boolean;
   solid?: boolean;
 }
-const RadioContext = createContext<RadioContext | null>(null);
-
-export const useRadioContext = () => {
-  return useContext(RadioContext);
-};
-
-export default RadioContext;
+export const [RadioProvider, useRadioContext] = createContext<RadioContext>();

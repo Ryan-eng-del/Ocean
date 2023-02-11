@@ -1,12 +1,12 @@
-import styled from '@emotion/styled';
 import { ButtonType } from 'Ocean/Button';
 import { SizeType } from 'Ocean/common/type';
-import React, { CSSProperties, ReactNode } from 'react';
+import { ocean } from 'Ocean/System';
+import React, { CSSProperties, Fragment } from 'react';
 import { DirectionType } from '../common/type';
-import RadioContext from './RadioContext';
+import { OceanComponent, StyleProps } from '../System/system.type';
+import { RadioProvider } from './RadioContext';
 
 interface RadioGroup {
-  children: ReactNode[] | ReactNode;
   value: any;
   onChange: (
     e: React.MouseEvent<HTMLElement, MouseEvent>,
@@ -21,12 +21,9 @@ interface RadioGroup {
   noExam?: boolean;
   solid?: boolean;
 }
+interface RadioGroupProps extends OceanComponent<'div', RadioGroup> {}
 
-const RadioGroupWrapper = styled.div<{ mode: DirectionType }>`
-  display: ${(props) => (props.mode === 'horizontal' ? 'flex' : undefined)};
-`;
-
-const RadioGroup = (props: RadioGroup) => {
+const RadioGroup = (props: RadioGroupProps) => {
   const {
     children,
     mode = 'vertical',
@@ -46,8 +43,12 @@ const RadioGroup = (props: RadioGroup) => {
     props.onChange(value, e, cur);
   };
 
+  const baseStyle: StyleProps = {
+    display: mode === 'horizontal' ? 'flex' : undefined,
+  };
+
   return (
-    <RadioContext.Provider
+    <RadioProvider
       value={{
         value,
         onChange,
@@ -57,16 +58,14 @@ const RadioGroup = (props: RadioGroup) => {
         solid,
       }}
     >
-      <>
-        {[children].map((radio, i) => {
-          return (
-            <RadioGroupWrapper key={i} mode={mode} style={props.style}>
-              {radio}
-            </RadioGroupWrapper>
-          );
-        })}
-      </>
-    </RadioContext.Provider>
+      <ocean.div __css={baseStyle}>
+        <>
+          {[children].map((radio, i) => {
+            return <Fragment key={i}>{radio}</Fragment>;
+          })}
+        </>
+      </ocean.div>
+    </RadioProvider>
   );
 };
 

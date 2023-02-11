@@ -1,4 +1,4 @@
-import { Radio, RadioGroup } from 'Ocean';
+import { GlobalThemeProvider, Radio, RadioGroup } from 'Ocean';
 import React, { useState } from 'react';
 
 const RadioDemo1 = () => {
@@ -9,7 +9,7 @@ const RadioDemo1 = () => {
   };
 
   return (
-    <>
+    <GlobalThemeProvider>
       <div style={{ display: 'flex', marginRight: '17px' }}>
         <RadioGroup
           onChange={onChange}
@@ -42,7 +42,7 @@ const RadioDemo1 = () => {
           <Radio value={4}>D</Radio>
         </RadioGroup>
       </div>
-    </>
+    </GlobalThemeProvider>
   );
 };
 
