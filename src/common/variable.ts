@@ -12,6 +12,8 @@ export const GlobalColor = {
   OceanDisableGrey: 'rgba(0,0,0,.25)',
   OceanFontGrey: 'rgba(0, 0, 0, 0.6)',
   OceanPrimaryDeepBlue: '#e6f4ff',
+  OceanStepGray: 'rgb(240, 240, 240)',
+  OceanStepFontGray: 'rgba(0,0,0,.65)',
 };
 
 export const TypeButtonColor = {

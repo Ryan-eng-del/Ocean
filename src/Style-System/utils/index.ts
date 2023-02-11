@@ -15,6 +15,7 @@ export const createTransform = ({
     if (transform) {
       if (transform(value)) return;
     }
+    if (!cssMap) return;
     const varRef = cssMap[`${scale}.${value}`]?.varRef;
     return varRef ? varRef : value;
   };
