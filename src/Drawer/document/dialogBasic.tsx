@@ -33,7 +33,7 @@ const DialogBasic = () => {
       <RadioGroup
         value={value}
         onChange={(d: any) => changeDirection(d)}
-        noExam={true}
+        exam={false}
         type="primary"
         mode="horizontal"
         size="small"

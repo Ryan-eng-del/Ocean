@@ -10,7 +10,7 @@ interface RadioContext {
   ) => void;
   size?: SizeType;
   type?: ButtonType;
-  noExam?: boolean;
+  exam?: boolean;
   solid?: boolean;
 }
 export const [RadioProvider, useRadioContext] = createContext<RadioContext>();

@@ -15,9 +15,9 @@ const RadioDemo1 = () => {
           onChange={onChange}
           value={value}
           type={'gradual'}
-          style={{ marginRight: '20px' }}
+          mr={5}
           solid={false}
-          noExam={true}
+          exam={false}
         >
           <Radio value={1}>A</Radio>
           <Radio value={2}>B</Radio>
@@ -31,9 +31,9 @@ const RadioDemo1 = () => {
           onChange={onChange}
           value={value}
           type={'gradual'}
-          style={{ marginRight: '20px' }}
+          mr={5}
           solid={false}
-          noExam={true}
+          exam={false}
           mode="horizontal"
         >
           <Radio value={1}>A</Radio>

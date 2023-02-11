@@ -18,16 +18,16 @@ interface RadioGroup {
   mode?: DirectionType;
   type?: ButtonType;
   style?: CSSProperties;
-  noExam?: boolean;
+  exam?: boolean;
   solid?: boolean;
 }
-interface RadioGroupProps extends OceanComponent<'div', RadioGroup> {}
+export interface RadioGroupProps extends OceanComponent<'div', RadioGroup> {}
 
 const RadioGroup = (props: RadioGroupProps) => {
   const {
     children,
     mode = 'vertical',
-    noExam = false,
+    exam = true,
     size,
     type,
     value,
@@ -54,7 +54,7 @@ const RadioGroup = (props: RadioGroupProps) => {
         onChange,
         size,
         type,
-        noExam,
+        exam,
         solid,
       }}
     >

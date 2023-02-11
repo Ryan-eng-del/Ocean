@@ -31,7 +31,7 @@ const Basic = () => {
       <RadioGroup
         value={value}
         onChange={(d: any) => changeSize(d)}
-        noExam={true}
+        exam={false}
         type="primary"
         mode="horizontal"
         size="small"

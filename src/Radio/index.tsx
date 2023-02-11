@@ -1,5 +1,5 @@
 import { TypeButtonColor } from 'Ocean/common/variable';
-import React, { ReactNode } from 'react';
+import React, { forwardRef, ReactNode } from 'react';
 import ButtonBase from '../Button/ButtonBase';
 import { ButtonType } from '../Button/index';
 import { GlobalFontSize, GlobalRadioSize } from '../common/variable';
@@ -15,7 +15,7 @@ interface Radio {
 }
 
 //toDo switch 暂不整合新架构，因为 switch 本身提供的功能比较单一，后续有 issue 可以考虑重构
-const Radio = (props: Radio) => {
+const Radio = forwardRef<any, Radio>((props, ref) => {
   const RadioContext = useRadioContext();
 
   const getIsSelect = (value: any) => {
@@ -33,7 +33,7 @@ const Radio = (props: Radio) => {
   const isSolid = RadioContext?.solid === false ? false : true;
 
   const isDanger = RadioContext?.type === 'danger';
-  const isNoExam = RadioContext?.noExam;
+  const isNoExam = !RadioContext?.exam;
 
   const computedSize = (size = 'medium'): [string, string] => {
     let dimension = '35px';
@@ -68,7 +68,7 @@ const Radio = (props: Radio) => {
   };
 
   return (
-    <RadioContainer className="ocean-radio-container">
+    <RadioContainer className="ocean-radio-container" ref={ref}>
       <RadioWrapper
         isSelect={isSelect}
         onClick={(e) => radioClick(e, props.value)}
@@ -96,6 +96,6 @@ const Radio = (props: Radio) => {
       )}
     </RadioContainer>
   );
-};
+});
 
 export default Radio;

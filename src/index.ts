@@ -6,6 +6,8 @@ export { default as AlertIcon } from './Alert/AlertIcon';
 export { default as AlertTitle } from './Alert/AlertTitle';
 // =========== Button =============
 export { default as Button } from './Button';
+// ============= CheckBox =========
+export { default as CheckBox } from './CheckBox';
 // ========= Divider ==============
 export { default as Divider } from './Divider/';
 export { default as DividerLine } from './Divider/DividerLine';
@@ -23,6 +25,8 @@ export { default as Input } from './Input/Input';
 export { InputLeftAddon, InputRightAddon } from './Input/InputAddon';
 export { default as InputGroup } from './Input/InputGroup';
 export { InputLeftElement, InputRightElement } from './Input/InputIcon';
+// ========== Link ============
+export { default as Link } from './Link/';
 // ========= Message =========
 export { useMessage } from './Message/message';
 // =======  Modal ========

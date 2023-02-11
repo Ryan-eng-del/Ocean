@@ -30,21 +30,21 @@ const RadioDemo1 = () => {
           <Radio value={4}>D</Radio>
         </RadioGroup>
 
-        <RadioGroup onChange={onChange} value={value} solid noExam>
+        <RadioGroup onChange={onChange} value={value} solid exam>
           <Radio value={1}>A</Radio>
           <Radio value={2}>B</Radio>
           <Radio value={3}>C</Radio>
           <Radio value={4}>D</Radio>
         </RadioGroup>
 
-        <RadioGroup onChange={onChange} value={value} solid={false} noExam>
+        <RadioGroup onChange={onChange} value={value} solid={false} exam>
           <Radio value={1}>A</Radio>
           <Radio value={2}>B</Radio>
           <Radio value={3}>C</Radio>
           <Radio value={4}>D</Radio>
         </RadioGroup>
 
-        <RadioGroup onChange={onChange} value={value} type="gradual" noExam>
+        <RadioGroup onChange={onChange} value={value} type="gradual" exam>
           <Radio value={1}>A</Radio>
           <Radio value={2}>B</Radio>
           <Radio value={3}>C</Radio>
