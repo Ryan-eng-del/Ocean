@@ -8,8 +8,8 @@ import {
   DrawerHeadTitle,
   GlobalThemeProvider,
   Radio,
+  RadioGroup,
 } from 'Ocean';
-import RadioGroup from 'Ocean/RadioGroup';
 import React, { useState } from 'react';
 import { AlignType } from '../../common/type';
 

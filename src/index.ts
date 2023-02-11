@@ -35,7 +35,7 @@ export { default as ModalHeadTitle } from './Modal/ModalHeadTitle';
 export { default as ModalMask } from './Modal/ModalMask';
 // ============ Radio ==========
 export { default as Radio } from './Radio';
-export { default as RadioGroup } from './RadioGroup';
+export { default as RadioGroup } from './Radio/group';
 // ========== Option ==========
 export { default as Select } from './Select';
 export { default as Option } from './Select/option';

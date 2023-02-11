@@ -4,7 +4,7 @@ import { ocean } from 'Ocean/System';
 import React, { CSSProperties, Fragment } from 'react';
 import { DirectionType } from '../common/type';
 import { OceanComponent, StyleProps } from '../System/system.type';
-import { RadioProvider } from './RadioContext';
+import { RadioProvider } from './context';
 
 interface RadioGroup {
   value: any;

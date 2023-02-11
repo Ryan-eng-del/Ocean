@@ -3,7 +3,7 @@ import React, { ReactNode } from 'react';
 import ButtonBase from '../Button/ButtonBase';
 import { ButtonType } from '../Button/index';
 import { GlobalFontSize, GlobalRadioSize } from '../common/variable';
-import { useRadioContext } from '../RadioGroup/RadioContext';
+import { useRadioContext } from './context';
 import { RadioContainer, RadioContentWrapper, RadioWrapper } from './style';
 
 interface Radio {

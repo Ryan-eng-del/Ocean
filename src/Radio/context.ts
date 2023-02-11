@@ -1,6 +1,6 @@
-import { ButtonType } from 'Ocean/Button';
-import { createContext } from 'Ocean/hooks/useContext';
+import { ButtonType } from '../Button';
 import { SizeType } from '../common/type';
+import { createContext } from '../hooks/useContext';
 interface RadioContext {
   value: any | any[];
   onChange: (
