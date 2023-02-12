@@ -28,6 +28,7 @@ group:
 
 ## 可选择树
 
+可以设置 selectable 选项来选择树
 <code src="./document/select.tsx"></code>
 
 ## 自定义工具栏
