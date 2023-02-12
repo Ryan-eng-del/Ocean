@@ -1,7 +1,7 @@
 ---
 group:
-  title: Component
-  order: 1
+  title: Data Entry
+  order: 3
 ---
 
 # CheckBox

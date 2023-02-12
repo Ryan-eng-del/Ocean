@@ -1,7 +1,7 @@
 ---
 group:
-  title: Component
-  order: 1
+  title: FeedBack
+  order: 3
 ---
 
 # Skeleton

@@ -1,7 +1,7 @@
 ---
 group:
-  title: Component
-  order: 1
+  title: Nav
+  order: 4
 ---
 
 # Tab

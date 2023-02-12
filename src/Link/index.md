@@ -1,6 +1,6 @@
 ---
 group:
-  title: Component
+  title: Common
   order: 1
 ---
 

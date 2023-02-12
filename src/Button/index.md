@@ -1,7 +1,7 @@
 ---
 group:
-  title: Component
-  order: 1
+  title: Common
+  order: 2
 ---
 
 # Button

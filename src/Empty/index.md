@@ -1,7 +1,7 @@
 ---
 group:
   title: Component
-  order: 1
+  order: 999
 ---
 
 # Empty

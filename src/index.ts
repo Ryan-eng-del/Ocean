@@ -25,6 +25,8 @@ export { default as DrawerFooter } from './Drawer/DrawerFooter';
 export { default as DrawerHead } from './Drawer/DrawerHead';
 export { default as DrawerHeadTitle } from './Drawer/DrawerHeadTitle';
 export { default as DrawerMask } from './Drawer/DrawerMask';
+// ========== DropMenu ===============
+export { default as DropMenu } from './DropMenu';
 // ========= Ocean =====
 export { default as Empty } from './Empty';
 // ========== Input ========
@@ -34,6 +36,8 @@ export { default as InputGroup } from './Input/InputGroup';
 export { InputLeftElement, InputRightElement } from './Input/InputIcon';
 // ========== Link ============
 export { default as Link } from './Link/';
+// ============ Menu ===========
+export { default as Menu } from './Menu';
 // ========= Message =========
 export { useMessage } from './Message/message';
 // =======  Modal ========
