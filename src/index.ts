@@ -54,6 +54,8 @@ export { default as Switch } from './Switch';
 // ========== Core System ================
 export { ocean } from './System/';
 export { default as GlobalThemeProvider } from './System/provider';
+// ========== Tabs ========
+export { default as Tabs } from './Tab';
 export { default as TabCloseIcon } from './Tag/TabCloseIcon';
 export { default as TabLabel } from './Tag/TabLabel';
 // =========== Tag ============
