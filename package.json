@@ -50,8 +50,10 @@
     "@types/lodash.mergewith": "^4.6.7",
     "dayjs": "^1.11.7",
     "framer-motion": "^9.0.2",
+    "immer": "^9.0.19",
     "lodash.mergewith": "^4.6.2",
-    "react-transition-group": "^4.4.5"
+    "react-transition-group": "^4.4.5",
+    "use-immer": "^0.8.1"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.1.2",

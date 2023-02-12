@@ -70,3 +70,6 @@ export { default as TabLabel } from './Tag/TabLabel';
 // =========== Tag ============
 export { default as Tag } from './Tag/tag';
 export { TagLeftIcon, TagRightIcon } from './Tag/TagIcon';
+// ============= Tree ===========
+export { default as Tree } from './Tree';
+export { default as TreeItem } from './Tree/TreeItem';
