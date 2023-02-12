@@ -1,5 +1,5 @@
 import { Global, ThemeProvider } from '@emotion/react';
-import { mergeWith } from 'lodash';
+import mergeWith from 'lodash.mergewith';
 import { MessageProvider } from 'Ocean/Message/prvider';
 import React from 'react';
 import { foundations as theme } from '../CSS-System/theme/index';
