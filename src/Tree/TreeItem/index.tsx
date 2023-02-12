@@ -73,6 +73,8 @@ const TreeItem = (props: TreeItem) => {
                 display: 'flex',
                 justify: 'center',
                 align: 'center',
+                transition: 'all ease 110ms',
+                fontSize: '12px',
               }}
               onClick={() => setSelect(!select)}
             >
