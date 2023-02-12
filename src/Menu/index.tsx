@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import React, { ReactNode, useCallback, useMemo, useState } from 'react';
+import { handlePx } from '../util/common';
 import MenuNode from './MenuNode';
 
 export interface MenuItem {
@@ -17,10 +18,11 @@ export interface IMenu {
     e: React.MouseEvent<HTMLElement, MouseEvent>,
   ) => void;
   ableToggle?: boolean;
+  width?: string | number;
 }
 
-const MenuContainer = styled.div`
-  width: 250px;
+const MenuContainer = styled.div<{ width: string }>`
+  width: ${(props) => props.width};
 `;
 
 const Menu = (props: IMenu) => {
@@ -35,6 +37,7 @@ const Menu = (props: IMenu) => {
     expandKey: [],
     curExpandKey: '',
   });
+  const width = handlePx(props.width || '250px');
 
   const getParentKey = useCallback((item: MenuItem[]) => {
     const map = new Map();
@@ -80,6 +83,7 @@ const Menu = (props: IMenu) => {
         curExpandKey: key,
         expandKey: [...draft.expandKey],
       };
+
       if (!draft.expandKey.includes(key)) {
         result.expandKey.push(key);
       } else {
@@ -116,6 +120,10 @@ const Menu = (props: IMenu) => {
     return recursive(item, 1);
   };
 
-  return <MenuContainer>{generateChildrenUI(props.items)}</MenuContainer>;
+  return (
+    <MenuContainer className="menu-container" width={width}>
+      {generateChildrenUI(props.items)}
+    </MenuContainer>
+  );
 };
 export default Menu;

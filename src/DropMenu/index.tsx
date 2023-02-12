@@ -55,6 +55,8 @@ const DropStartMenu = styled.div`
   .ocean-menu-content {
     pointer-events: none;
   }
+  :hover {
+  }
 `;
 
 type DropMenuData = {
@@ -85,6 +87,7 @@ const ChildrenMenuWrapper = styled.div`
   width: 100%;
   position: absolute;
   transition: all ease 110ms;
+
   &:hover {
     opacity: 1;
   }
@@ -120,20 +123,15 @@ const DropMenu = (props: DropMenu) => {
   }, [visible]);
 
   return (
-    <DropMenuWrapper
-      className="ocean-menu-wrapper"
-      onMouseEnter={(e) => {
-        if (mode === 'hover') {
-          menuClick(e);
-        }
-      }}
-      onMouseLeave={() => {
-        if (mode === 'hover') {
-          setVisible(false);
-        }
-      }}
-    >
-      <DropStartMenu onClick={(e) => menuClick(e)}>
+    <DropMenuWrapper className="ocean-menu-wrapper">
+      <DropStartMenu
+        onClick={(e) => menuClick(e)}
+        onMouseEnter={(e) => {
+          if (mode === 'hover') {
+            menuClick(e);
+          }
+        }}
+      >
         {as || (
           <Button
             type="primary"

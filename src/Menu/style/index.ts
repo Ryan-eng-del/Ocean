@@ -19,7 +19,7 @@ export const MenuItemContainer = styled.div<{
   }
 
   cursor: pointer;
-  transition: all 330ms ease;
+  transition: all 120ms ease;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
   margin-bottom: 6px;

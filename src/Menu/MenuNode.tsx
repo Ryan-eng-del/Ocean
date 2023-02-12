@@ -26,6 +26,7 @@ interface MenuNode {
   isToggle?: boolean | undefined;
   memoParent: React.Key[];
 }
+
 const MenuNode = React.forwardRef((props: MenuNode) => {
   const [expand, setExpand] = useState(true);
   const {
@@ -49,6 +50,7 @@ const MenuNode = React.forwardRef((props: MenuNode) => {
 
   const getWrapperHeight = () => refContainer.current.clientHeight + 'px';
   const collapsedSize = 0;
+
   const clickExpand = () => {
     setExpand(() => !expand);
   };
@@ -64,6 +66,7 @@ const MenuNode = React.forwardRef((props: MenuNode) => {
 
   const handleOnEnter = transitionCallback((node: HTMLElement) => {
     node.style['height'] = collapsedSize + 'px';
+    node.style['opacity'] = '1';
   });
 
   const handleEntering = transitionCallback((node: HTMLElement) => {
@@ -80,6 +83,7 @@ const MenuNode = React.forwardRef((props: MenuNode) => {
   const handleOnExit = transitionCallback(
     (node: HTMLElement, heightRef: React.MutableRefObject<string>) => {
       const height = node.clientHeight + 'px';
+      node.style['opacity'] = '0';
       node.style['height'] = height;
       if (!heightRef.current) {
         heightRef.current = height;
