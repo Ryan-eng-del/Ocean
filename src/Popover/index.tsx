@@ -1,10 +1,4 @@
-import {
-  flip,
-  offset,
-  Placement,
-  shift,
-  useFloating,
-} from '@floating-ui/react';
+import { offset, Placement, shift, useFloating } from '@floating-ui/react';
 import { ocean } from 'Ocean/System';
 import { OceanComponent, StyleProps } from 'Ocean/System/system.type';
 import { cx } from 'Ocean/util/common';
@@ -19,12 +13,12 @@ export interface Popover {
 interface PopoverProps extends OceanComponent<'div', Popover> {}
 
 const Popover = (props: PopoverProps) => {
-  const { placement, open } = props;
+  const { placement = 'bottom', open } = props;
   const baseStyle: StyleProps = {};
 
   const floating = useFloating({
-    placement: placement ?? 'bottom',
-    middleware: [offset(10), flip(), shift()],
+    placement,
+    middleware: [offset(10), shift()],
   });
 
   return (

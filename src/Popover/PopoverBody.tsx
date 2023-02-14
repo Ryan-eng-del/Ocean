@@ -16,7 +16,7 @@ const PopoverBody = (props: PopoverBodyProps) => {
     <ocean.div
       {...props}
       __css={baseStyle}
-      className={cx('ocean-divider-text', props.className)}
+      className={cx('ocean-popover-body', props.className)}
     ></ocean.div>
   );
 };

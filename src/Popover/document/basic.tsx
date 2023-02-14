@@ -3,12 +3,12 @@ import {
   GlobalThemeProvider,
   Popover,
   PopoverBody,
+  PopoverContent,
   PopoverFooter,
   PopoverHeader,
   PopoverTrigger,
 } from 'Ocean';
 import React, { useState } from 'react';
-import PopoverContent from '../PopoverContent';
 
 const Basic = () => {
   const [show, setShow] = useState(false);

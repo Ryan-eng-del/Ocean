@@ -5,12 +5,14 @@ import {
   ocean,
   Popover,
   PopoverBody,
+  PopoverContent,
   PopoverFooter,
   PopoverHeader,
   PopoverTrigger,
 } from 'Ocean';
 import React, { useState } from 'react';
-import PopoverContent from '../PopoverContent';
+
+// https://floating-ui.com/docs/getting-started 补充
 
 const Basic = () => {
   const [show, setShow] = useState(false);
@@ -22,7 +24,7 @@ const Basic = () => {
             <Input />
           </PopoverTrigger>
 
-          <Button onClick={() => setShow(!show)}>
+          <Button onClick={() => setShow(!show)} ml={3}>
             {show ? 'close' : 'open'}
           </Button>
         </ocean.div>

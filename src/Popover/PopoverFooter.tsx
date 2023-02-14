@@ -16,7 +16,7 @@ const PopoverFooter = (props: PopoverFooterProps) => {
     <ocean.div
       {...props}
       __css={baseStyle}
-      className={cx('ocean-divider-text', props.className)}
+      className={cx('ocean-popover-footer', props.className)}
     ></ocean.div>
   );
 };

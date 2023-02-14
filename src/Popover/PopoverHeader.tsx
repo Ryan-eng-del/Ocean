@@ -20,7 +20,7 @@ const PopoverHeader = (props: PopoverHeaderProps) => {
     <ocean.div
       {...props}
       __css={baseStyle}
-      className={cx('ocean-divider-text', props.className)}
+      className={cx('ocean-popover-header', props.className)}
     ></ocean.div>
   );
 };
