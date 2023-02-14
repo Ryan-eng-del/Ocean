@@ -11,7 +11,7 @@
 - **XXXLine**: XXX 组件的分割线。
 - **XXXText**: XXX 组件的分割内容。
 
-`Ocean UI` 的 Core System， 可以非常方便的对 Button 进行样式调整。 It's easy to Ocean UI.
+`Ocean UI` 的 Core System， 可以非常方便的对 Spinner 进行样式调整。 It's easy to Ocean UI.
 
 ##### 不同方向 - Direction
 

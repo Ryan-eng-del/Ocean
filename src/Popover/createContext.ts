@@ -5,6 +5,7 @@ interface PopoverContext {
   placement?: Placement;
   floating?: UseFloatingReturn;
   open?: boolean;
+  arrowRef?: any;
 }
 
 export const [PopoverProvider, usePopoverContext] =

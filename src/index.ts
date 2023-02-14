@@ -63,6 +63,8 @@ export { default as Select } from './Select';
 export { default as Option } from './Select/option';
 // ========= Skeleton =========
 export { default as Skeleton } from './Skeleton';
+// ========= Spinner ==========
+export { default as Spinner } from './Spinner';
 // ========= Steps ==========
 export { default as Steps } from './Steps';
 // ========== Switch ==========
