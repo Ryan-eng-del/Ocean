@@ -194,3 +194,4 @@ export type PointerEvents = CSS.Property.PointerEvents;
 export type Transform = CSS.Property.Transform;
 export type Animation = CSS.Property.Animation;
 export type Outline = CSS.Property.Outline;
+export type TransformOrigin = CSS.Property.TransformOrigin;

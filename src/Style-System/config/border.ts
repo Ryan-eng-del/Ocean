@@ -1,4 +1,3 @@
-import { generateStyleToken as t } from '../utils/index';
 import {
   Border,
   BorderBlock,
@@ -36,6 +35,7 @@ import {
   BorderTopStyle,
   BorderWidth,
 } from './css.type';
+import { generateStyleToken as t } from './utils/index';
 
 export const border = {
   border: t.borders('border'),

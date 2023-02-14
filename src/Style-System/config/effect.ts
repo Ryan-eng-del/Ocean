@@ -1,4 +1,3 @@
-import { generateStyleToken as t } from '../utils/index';
 import {
   BackgroundBlendMode,
   BoxShadow,
@@ -7,6 +6,7 @@ import {
   Outline,
   TextShadow,
 } from './css.type';
+import { generateStyleToken as t } from './utils/index';
 
 export const effect = {
   boxShadow: t.shadows('boxShadow'),

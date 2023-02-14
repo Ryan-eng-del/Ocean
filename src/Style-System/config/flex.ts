@@ -1,4 +1,3 @@
-import { generateStyleToken as t } from '../utils/index';
 import {
   AlignContent,
   AlignItems,
@@ -21,6 +20,7 @@ import {
   PlaceSelf,
   RowGap,
 } from './css.type';
+import { generateStyleToken as t } from './utils/index';
 export const flexBox = {
   alignItems: true,
   alignContent: true,

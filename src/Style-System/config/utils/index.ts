@@ -1,5 +1,5 @@
 import CSS from 'csstype';
-import { CSSGlobalTheme } from '../styleSystem.type';
+import { CSSGlobalTheme } from '../../styleSystem.type';
 
 type CSSProp = keyof CSS.Properties;
 

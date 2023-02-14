@@ -1,5 +1,5 @@
-import { generateStyleToken as t } from '../utils/index';
 import { Color as ColorType } from './css.type';
+import { generateStyleToken as t } from './utils/index';
 
 export const Color = {
   color: t.colors('color'),

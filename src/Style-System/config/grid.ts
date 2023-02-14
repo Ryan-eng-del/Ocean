@@ -1,4 +1,3 @@
-import { generateStyleToken as t } from '../utils/index';
 import {
   GridArea,
   GridAutoColumns,
@@ -18,6 +17,7 @@ import {
   GridTemplateColumns,
   GridTemplateRows,
 } from './css.type';
+import { generateStyleToken as t } from './utils/index';
 export const grid = {
   gridGap: t.space('gridGap'),
   gridColumnGap: t.space('gridColumnGap'),

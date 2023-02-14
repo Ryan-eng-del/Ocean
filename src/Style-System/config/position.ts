@@ -1,4 +1,3 @@
-import { generateStyleToken as t } from '../utils/index';
 import {
   Bottom,
   Inset,
@@ -14,6 +13,7 @@ import {
   Top,
   ZIndex,
 } from './css.type';
+import { generateStyleToken as t } from './utils/index';
 
 export const position = {
   position: t.prop('position'),
@@ -28,6 +28,7 @@ export const position = {
   insetBlockEnd: t.space('insetBlockEnd'),
   left: t.space('left'),
   right: t.space('right'),
+  inset: true,
 };
 
 Object.assign(position, {

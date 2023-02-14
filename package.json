@@ -1,7 +1,18 @@
 {
   "name": "Ocean",
   "version": "0.0.1",
-  "description": "",
+  "description": "Ocean UI is a modern library of CSS-atomized components that provides tailwind-css Highly customizable for your React application.",
+  "keywords": [
+    "ocean",
+    "component",
+    "components",
+    "design",
+    "framework",
+    "frontend",
+    "react",
+    "react-component",
+    "ui"
+  ],
   "license": "MIT",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -47,6 +58,7 @@
     "@ant-design/icons": "^4.8.0",
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
+    "@floating-ui/react": "^0.19.2",
     "@types/lodash.mergewith": "^4.6.7",
     "dayjs": "^1.11.7",
     "framer-motion": "^9.0.2",

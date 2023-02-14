@@ -1,4 +1,3 @@
-import { generateStyleToken as GST } from '../utils/index';
 import {
   Margin,
   MarginBlock,
@@ -13,6 +12,7 @@ import {
   PaddingRight,
   PaddingTop,
 } from './css.type';
+import { generateStyleToken as GST } from './utils/index';
 
 export const space = {
   margin: GST.space('margin'),

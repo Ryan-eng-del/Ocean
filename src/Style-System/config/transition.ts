@@ -1,4 +1,3 @@
-import { generateStyleToken as t } from '../utils/index';
 import {
   Animation,
   Transition,
@@ -8,6 +7,7 @@ import {
   TransitionTimingFunction,
   WillChange,
 } from './css.type';
+import { generateStyleToken as t } from './utils/index';
 
 export const transition = {
   transition: true,

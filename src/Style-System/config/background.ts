@@ -1,4 +1,3 @@
-import { generateStyleToken as t } from '../utils/index';
 import {
   BackgroundAttachment,
   BackgroundClip,
@@ -8,6 +7,7 @@ import {
   BackgroundSize,
   Color,
 } from './css.type';
+import { generateStyleToken as t } from './utils/index';
 export const background = {
   background: t.colors('background'),
   backgroundColor: t.colors('backgroundColor'),

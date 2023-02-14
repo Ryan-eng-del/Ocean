@@ -1,5 +1,3 @@
-import { generateStyleToken as GST } from '../utils/index';
-import { transform } from '../utils/transform';
 import {
   FontFamily,
   FontSize,
@@ -15,6 +13,8 @@ import {
   WhiteSpace,
   WordBreak,
 } from './css.type';
+import { generateStyleToken as GST } from './utils/index';
+import { transform } from './utils/transform';
 
 export const typography = {
   fontFamily: GST.prop('fontFamily', 'fontweights'),

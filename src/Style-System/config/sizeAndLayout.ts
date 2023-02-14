@@ -1,4 +1,3 @@
-import { generateStyleToken as t } from '../utils/index';
 import {
   BlockSize,
   BoxDecorationBreak,
@@ -28,6 +27,7 @@ import {
   Visibility,
   Width,
 } from './css.type';
+import { generateStyleToken as t } from './utils/index';
 
 export const SizeAndLayout = {
   width: t.sizes('width'),
