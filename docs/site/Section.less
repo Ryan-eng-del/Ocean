@@ -1,0 +1,16 @@
+html[data-prefers-color='dark'],
+html[data-prefers-color='light'] {
+  .site-section {
+    &-title {
+      position: relative;
+      z-index: 3;
+      margin: 0 auto;
+      color: black;
+      font-size: 50px;
+      text-align: center;
+      @media (max-width: 480px) {
+        font-size: 30px;
+      }
+    }
+  }
+}
