@@ -257,6 +257,7 @@ const colors = {
     800: '#005885',
     900: '#003F5E',
   },
-};
+} as const;
 
+export type ColorSchema = keyof typeof colors;
 export default colors;

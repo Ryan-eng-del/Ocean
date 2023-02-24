@@ -18,7 +18,7 @@ export const tagTheme = {
   defaultProps: {
     size: 'small',
     variant: 'solid',
-    colorScheme: 'blue',
+    colorScheme: 'teal',
   },
 
   parts: ['root', 'container', 'header'],

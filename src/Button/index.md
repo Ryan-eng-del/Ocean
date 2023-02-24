@@ -66,3 +66,7 @@ Click and enjoy it! It's extremely interesting!
 `Ocean UI` 的 Core System， 可以非常方便的对 Button 进行样式调整。 It's easy to Ocean UI.
 
 <code src="./document/custom.tsx"></code>
+
+### colorSchema 定制
+
+<code src="./document/theme.tsx"></code>

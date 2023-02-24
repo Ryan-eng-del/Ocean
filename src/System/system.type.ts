@@ -1,4 +1,5 @@
 import { Pseudos } from '@cyan-ocean/ui/Style-System/pseudos';
+import { ColorSchema } from '../CSS-System/theme/colors';
 import {
   BorderProps,
   ColorProps,
@@ -23,6 +24,7 @@ export type OceanComponentProps = {
 
 export type OceanPublicComponentProps = {
   css?: StyleProps;
+  colorScheme?: ColorSchema;
 };
 
 export interface StyleProps

@@ -1,8 +1,9 @@
 import { mode } from '@cyan-ocean/ui/util/mode';
 import { defineStyle } from '../../Style-System/defineStyle';
 import { ColorMode } from '../../System/colorMode';
+import { modeProps } from '../../util/mode';
 
-const baseStyle = defineStyle((curMode: ColorMode['initialMode']) => {
+const baseStyle = defineStyle((props: modeProps) => {
   return {
     position: 'relative',
     zIndex: 1,
@@ -10,8 +11,8 @@ const baseStyle = defineStyle((curMode: ColorMode['initialMode']) => {
     align: 'center',
     justify: 'center',
     h: '43px',
-    c: mode('#000', '#fff', curMode),
-    bg: '#fff',
+    c: mode('#000', '#fff', props.curMode),
+    bg: props.colorSchema ? `${props.colorSchema}.500` : '#fff',
     overflow: 'hidden',
     fontWeight: 'medium',
     fontSize: 'md',
@@ -52,11 +53,13 @@ const outline = defineStyle({
   },
 });
 
-const text = defineStyle({
-  color: 'blue.600',
-  _hover: {
-    bg: 'rgb(246, 250, 253)',
-  },
+const text = defineStyle((props: modeProps) => {
+  return {
+    color: props.colorSchema ? '#fff' : 'blue.600',
+    _hover: {
+      bg: props.colorSchema ? `${props.colorSchema}.600` : 'rgb(246, 250, 253)',
+    },
+  };
 });
 
 const danger = defineStyle({

@@ -33,7 +33,10 @@ const ButtonBase = React.forwardRef(function (props: ButtonProps) {
   const rippleRef = useRef<any>(null);
   const mode = useColorMode();
 
-  const runIfFun = changeMode(mode.initialMode);
+  const runIfFun = changeMode({
+    colorSchema: props.colorScheme,
+    curMode: mode.initialMode,
+  });
 
   //toDo 抽象封装成 Hook useMultiplyStyle（props, theme）
   const buttonBaseStyle: StyleProps = {
