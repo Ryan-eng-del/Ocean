@@ -59,6 +59,9 @@ const text = defineStyle((props: modeProps) => {
     _hover: {
       bg: props.colorSchema ? `${props.colorSchema}.600` : 'rgb(246, 250, 253)',
     },
+    _active: {
+      bg: props.colorSchema ? `${props.colorSchema}.700` : undefined,
+    },
   };
 });
 
