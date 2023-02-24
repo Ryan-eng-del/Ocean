@@ -17,7 +17,6 @@ export { default as CountDown } from './CountDown';
 export { default as Divider } from './Divider/';
 export { default as DividerLine } from './Divider/DividerLine';
 export { default as DividerText } from './Divider/DividerText';
-// ======= Drawer ===============
 export { default as Drawer } from './Drawer';
 export { default as DrawerBody } from './Drawer/DrawerBody';
 export { default as DrawerCloseButton } from './Drawer/DrawerCloseButton';
