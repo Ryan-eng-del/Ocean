@@ -69,6 +69,7 @@ const GithubButton = styled(StartButton)`
 const HomePageTitle = styled.h1``;
 const HomePageContainer = styled.div`
   padding: 20px;
+  padding-top: 100px;
   @media (max-width: 1030px) {
     .HomePageHeader {
       flex-direction: column;

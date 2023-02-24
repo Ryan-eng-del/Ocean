@@ -10,7 +10,7 @@ import './site/styles.less';
 
 export default () => (
   <Section
-    title="CSS 原子化体验"
+    title="CSS Atomic Experience "
     style={{ marginTop: 100 }}
     titleStyle={{
       paddingBottom: 100,
@@ -24,6 +24,9 @@ export default () => (
         display="flex"
         justify="center"
         align="center"
+        border="1px"
+        rounded="lg"
+        borderColor="slate.300"
         className="section"
       >
         <ocean.div
@@ -63,6 +66,7 @@ import './site/styles.less';
 export default () => (
   <Section
     style={{ marginTop: 100 }}
+    title="Less code. More speed"
     titleStyle={{
       paddingBottom: 100,
       fontWeight: 'bold',

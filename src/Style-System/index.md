@@ -6,6 +6,27 @@ group:
 
 # Style Props
 
+这是 Ocean UI 当中的第二大系统 Style Props, 这里就是实现原子化 CSS，tailwind 式的地方。你可以使用任何下列给出的简写属性去作为 单独 的 props 或者 覆盖的 props。
+
+```javascript
+<ocean.div
+  rounded="lg"
+  m={3}
+  _hover={{ bg: 'blue.200' }}
+  _active={{ bg: 'red.300' }}
+  _focus={{ bg: 'green.400' }}
+/>
+```
+
+比如 ：
+
+- borderRadius -> rounded
+- margin -> m
+- marginLeft + marginRight -> marginX
+- backgroundColor -> bgColor
+- :hover -> \_hover {} 支持 CSS 伪类选择器
+  ……………………
+
 ## Margin and padding
 
 | Prop              | CSS Property                 | Style System |
