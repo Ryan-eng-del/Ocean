@@ -1,6 +1,6 @@
 {
   "name": "@cyan-ocean/ui",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Ocean UI is a modern library of CSS-atomized components that provides tailwind-css Highly customizable for your React application.",
   "keywords": [
     "ocean",
@@ -13,28 +13,25 @@
     "react-component",
     "ui"
   ],
+  "license": "MIT",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "start": "npm run dev",
-    "dev": "dumi dev",
     "build": "father build",
     "build:watch": "father dev",
+    "dev": "dumi dev",
     "docs:build": "dumi build",
-    "prepare": "husky install && dumi setup",
     "doctor": "father doctor",
     "lint": "npm run lint:es && npm run lint:css",
     "lint:css": "stylelint \"{src,test}/**/*.{css,less}\"",
     "lint:es": "eslint \"{src,test}/**/*.{js,jsx,ts,tsx}\"",
-    "prepublishOnly": "father doctor && npm run build"
+    "prepare": "husky install && dumi setup",
+    "prepublishOnly": "father doctor && npm run build",
+    "start": "npm run dev"
   },
-  "authors": [
-    "cyan0908@163.com"
-  ],
-  "license": "MIT",
-  "files": [
-    "dist"
-  ],
   "commitlint": {
     "extends": [
       "@commitlint/config-conventional"
@@ -57,12 +54,17 @@
       "prettier --parser=typescript --write"
     ]
   },
-  "publishConfig": {
-    "access": "public"
-  },
-  "peerDependencies": {
-    "react": ">=16.9.0",
-    "react-dom": ">=16.9.0"
+  "dependencies": {
+    "@ant-design/icons": "^5.0.1",
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
+    "@floating-ui/react": "^0.19.2",
+    "dayjs": "^1.11.7",
+    "framer-motion": "^9.0.7",
+    "immer": "^9.0.19",
+    "lodash.mergewith": "^4.6.2",
+    "react-transition-group": "^4.4.5",
+    "use-immer": "^0.8.1"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.1.2",
@@ -86,16 +88,14 @@
     "react-dom": "^18.0.0",
     "stylelint": "^14.9.1"
   },
-  "dependencies": {
-    "@ant-design/icons": "^5.0.1",
-    "@emotion/react": "^11.10.6",
-    "@emotion/styled": "^11.10.6",
-    "@floating-ui/react": "^0.19.2",
-    "dayjs": "^1.11.7",
-    "framer-motion": "^9.0.7",
-    "immer": "^9.0.19",
-    "lodash.mergewith": "^4.6.2",
-    "react-transition-group": "^4.4.5",
-    "use-immer": "^0.8.1"
-  }
+  "peerDependencies": {
+    "react": ">=16.9.0",
+    "react-dom": ">=16.9.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "authors": [
+    "cyan0908@163.com"
+  ]
 }
