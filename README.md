@@ -16,8 +16,7 @@
 <p align="center">
   <img alt="MIT License" src="https://img.shields.io/badge/license-MIT-blue.svg" />
   <img alt="Github Stars" src="https://img.shields.io/github/stars/ocean" />
-  <img alt="Npm" src="https://www.npmjs.com/" />
-  <img alt="Npm Download" src="https://www.npmjs.com/package/@cyan-ocean/ui/" />
+ 
 </p>
 
 <br />
