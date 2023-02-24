@@ -32,6 +32,7 @@ It's the website for the latest version of Ocean UI.
 
 - Flexible & composable: Ocean UI components are built on top of a React UI
 - Atomic & Speed
+- Dark Mode 😍 and twenty colorScheme custom theme
 
 ## Support Ocean UI 💖
 
