@@ -1,6 +1,6 @@
 {
   "name": "@cyan-ocean/ui",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Ocean UI is a modern library of CSS-atomized components that provides tailwind-css Highly customizable for your React application.",
   "keywords": [
     "ocean",
@@ -13,6 +13,10 @@
     "react-component",
     "ui"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ryan-eng-del/Ocean"
+  },
   "license": "MIT",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",

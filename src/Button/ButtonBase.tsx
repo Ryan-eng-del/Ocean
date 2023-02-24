@@ -3,6 +3,8 @@ import { StyleProps } from '@cyan-ocean/ui/System/system.type';
 import TouchRipple from '@cyan-ocean/ui/TouchRipple/TouchRipple';
 import { cx } from '@cyan-ocean/ui/util/common';
 import React, { useRef } from 'react';
+import { useColorMode } from '../System/colorMode';
+import { changeMode } from '../util/mode';
 import { ButtonContent } from './ButtonContent';
 import { ButtonLoadingCpn } from './ButtonLoading';
 import { ButtonProps } from './index';
@@ -29,12 +31,15 @@ const ButtonBase = React.forwardRef(function (props: ButtonProps) {
   } = props;
 
   const rippleRef = useRef<any>(null);
+  const mode = useColorMode();
+
+  const runIfFun = changeMode(mode.initialMode);
 
   //toDo 抽象封装成 Hook useMultiplyStyle（props, theme）
   const buttonBaseStyle: StyleProps = {
-    ...baseStyle,
+    ...runIfFun(baseStyle),
     ...sizeMap[size],
-    ...variant[type],
+    ...runIfFun(variant[type]),
     ...loadingStyle(loading),
   };
 

@@ -1,33 +1,39 @@
+import { mode } from '@cyan-ocean/ui/util/mode';
 import { defineStyle } from '../../Style-System/defineStyle';
+import { ColorMode } from '../../System/colorMode';
 
-const baseStyle = defineStyle({
-  position: 'relative',
-  zIndex: 1,
-  display: 'flex',
-  align: 'center',
-  justify: 'center',
-  h: '43px',
-  c: '#fff',
-  bg: '#fff',
-  overflow: 'hidden',
-  fontWeight: 'medium',
-  fontSize: 'md',
-  letterSpacing: 'wide',
-  borderRadius: 'md',
-  cursor: 'pointer',
-  border: 0,
-  transition:
-    'background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms',
+const baseStyle = defineStyle((curMode: ColorMode['initialMode']) => {
+  return {
+    position: 'relative',
+    zIndex: 1,
+    display: 'flex',
+    align: 'center',
+    justify: 'center',
+    h: '43px',
+    c: mode('#000', '#fff', curMode),
+    bg: '#fff',
+    overflow: 'hidden',
+    fontWeight: 'medium',
+    fontSize: 'md',
+    letterSpacing: 'wide',
+    borderRadius: 'md',
+    cursor: 'pointer',
+    border: 0,
+    transition:
+      'background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms',
+  };
 });
 
 // =============== type ===================
-const primary = defineStyle({
-  bg: 'blue.600',
-  _hover: {
-    bg: 'rgb(21, 101, 192)',
-    boxShadow:
-      'rgb(0 0 0 / 20%) 0px 2px 4px -1px, rgb(0 0 0 / 14%) 0px 4px 5px 0px,rgb(0 0 0 / 12%) 0px 1px 10px 0px ',
-  },
+const primary = defineStyle((curMode: ColorMode['initialMode']) => {
+  return {
+    bg: mode('blue.300', 'blue.600', curMode),
+    _hover: {
+      bg: 'rgb(21, 101, 192)',
+      boxShadow:
+        'rgb(0 0 0 / 20%) 0px 2px 4px -1px, rgb(0 0 0 / 14%) 0px 4px 5px 0px,rgb(0 0 0 / 12%) 0px 1px 10px 0px ',
+    },
+  };
 });
 
 const gradual = defineStyle({
