@@ -1,5 +1,3 @@
-# @cyan-ocean/ui
-
 <div align="center">
   <a href="" target="_blank">
     <img alt="ocean Logo" width="200" src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/d9a8cef008104ed38ced7a3a3e7bee72~tplv-k3u1fbpfcp-watermark.image?"/>
@@ -7,7 +5,7 @@
 </div>
 
 <div align="center">
-  <h1>Ocean</h1>
+  <h1>Ocean UI</h1>
 </div>
 
 <h1 align="center">Build Accessible and Atomic CSS React Apps with Speed ⚡️</h1>
