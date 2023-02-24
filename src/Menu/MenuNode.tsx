@@ -27,7 +27,7 @@ interface MenuNode {
   memoParent: React.Key[];
 }
 
-const MenuNode = React.forwardRef((props: MenuNode) => {
+const MenuNode = React.forwardRef<any, MenuNode>((props, ref) => {
   const [expand, setExpand] = useState(true);
   const {
     menuItem: c,
@@ -108,6 +108,7 @@ const MenuNode = React.forwardRef((props: MenuNode) => {
       onExiting={handleOnExiting}
     >
       <MenuNodeContainer
+        ref={ref}
         level={level}
         key={c.key}
         onClick={(e: React.MouseEvent<HTMLElement, MouseEvent>) => {

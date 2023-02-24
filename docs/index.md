@@ -76,7 +76,7 @@ export default () => (
   >
     <iframe
       className="codesandbox"
-      src="https://codesandbox.io/s/thirsty-joji-pkw6v5?file=/src/App.js"
+      src="https://codesandbox.io/s/oceanui-pkw6v5"
       allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
       sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
     ></iframe>

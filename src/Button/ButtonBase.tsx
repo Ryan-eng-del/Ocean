@@ -15,7 +15,7 @@ import {
   variant,
 } from './theme/index';
 
-const ButtonBase = React.forwardRef(function (props: ButtonProps) {
+const ButtonBase = React.forwardRef<any, ButtonProps>(function (props, ref) {
   const {
     children,
     size = 'medium',
@@ -71,6 +71,7 @@ const ButtonBase = React.forwardRef(function (props: ButtonProps) {
         handleOnClick(e);
       }}
       style={style}
+      ref={ref}
       {...restProps}
     >
       {loading && <ButtonLoadingCpn type={type} loadingText={!!loadingText} />}

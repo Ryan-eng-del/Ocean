@@ -42,7 +42,7 @@ function omit<T extends Record<string, any>, K extends keyof T>(
 export function useStyleConfig(props: any) {
   // 用户 props
   const userProps = omit(props, ['children']);
-  // 系统主题
+  // 系统主题 colorSchema 与 mode
   const systemTheme = {};
   // 与默认 props 合并后的 props, eg: { size: 'big', variant: 'solid', colorScheme: 'blue' } props
   const mergeProps = { ...tagTheme.defaultProps, ...systemTheme, ...userProps };

@@ -82,8 +82,8 @@ More guides on how to get started are available
 
 ## CodeSandbox Templates
 
-- JavaScript Starter: https://codesandbox.io/s/thirsty-joji-pkw6v5?file=/src/App.js
-- TypeScript Starter: https://codesandbox.io/s/thirsty-joji-pkw6v5?file=/src/App.js
+- JavaScript Starter: https://codesandbox.io/s/oceanui-pkw6v5
+- TypeScript Starter: https://codesandbox.io/s/oceanui-pkw6v5
 
 ## Testing supported by
 
