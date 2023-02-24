@@ -1,4 +1,4 @@
-import { MapOfSystemConfig } from 'Ocean/Style-System/styleSystem';
+import { MapOfSystemConfig } from '@cyan-ocean/ui/Style-System/styleSystem';
 import { pseudoSelectors } from '../Style-System/pseudos';
 import { systemProps } from './system';
 

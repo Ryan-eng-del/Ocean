@@ -6,8 +6,8 @@ import {
   DrawerFooter,
   DrawerHead,
   DrawerHeadTitle,
-} from 'Ocean';
-import GlobalThemeProvider from 'Ocean/System/provider';
+} from '@cyan-ocean/ui';
+import GlobalThemeProvider from '@cyan-ocean/ui/System/provider';
 import React, { useState } from 'react';
 
 const DialogBasic = () => {

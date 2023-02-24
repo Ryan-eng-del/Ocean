@@ -1,4 +1,4 @@
-import { GlobalThemeProvider, Input, InputGroup } from 'Ocean';
+import { GlobalThemeProvider, Input, InputGroup } from '@cyan-ocean/ui';
 import React from 'react';
 import { InputLeftAddon, InputRightAddon } from '../InputAddon';
 

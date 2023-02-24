@@ -1,4 +1,4 @@
-import { Skeleton } from 'Ocean';
+import { Skeleton } from '@cyan-ocean/ui';
 import React from 'react';
 
 const Basic = () => {

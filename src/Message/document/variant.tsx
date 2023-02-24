@@ -1,4 +1,4 @@
-import { Button, GlobalThemeProvider, ocean, useMessage } from 'Ocean';
+import { Button, GlobalThemeProvider, ocean, useMessage } from '@cyan-ocean/ui';
 import React from 'react';
 import { AlertVariant } from '../../Alert/index';
 

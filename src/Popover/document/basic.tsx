@@ -7,7 +7,7 @@ import {
   PopoverFooter,
   PopoverHeader,
   PopoverTrigger,
-} from 'Ocean';
+} from '@cyan-ocean/ui';
 import React, { useState } from 'react';
 
 const Basic = () => {

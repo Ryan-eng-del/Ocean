@@ -1,4 +1,4 @@
-import { Alert, AlertContent, GlobalThemeProvider } from 'Ocean';
+import { Alert, AlertContent, GlobalThemeProvider } from '@cyan-ocean/ui';
 import React from 'react';
 import AlertIcon from '../AlertIcon';
 

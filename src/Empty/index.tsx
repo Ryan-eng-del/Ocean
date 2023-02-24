@@ -1,6 +1,6 @@
+import { GlobalFontSize, GlobalMargin } from '@cyan-ocean/ui/common/variable';
+import { isNoPass } from '@cyan-ocean/ui/util/common';
 import styled from '@emotion/styled';
-import { GlobalFontSize, GlobalMargin } from 'Ocean/common/variable';
-import { isNoPass } from 'Ocean/util/common';
 import React, { CSSProperties, ReactNode } from 'react';
 import EmptySvg from './empty';
 

@@ -1,6 +1,6 @@
 import { CloseOutlined } from '@ant-design/icons';
-import { ocean } from 'Ocean/System';
-import { OceanComponent } from 'Ocean/System/system.type';
+import { ocean } from '@cyan-ocean/ui/System';
+import { OceanComponent } from '@cyan-ocean/ui/System/system.type';
 import React from 'react';
 import { useAlertContext } from './context';
 

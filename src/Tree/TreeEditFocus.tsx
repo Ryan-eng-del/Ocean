@@ -1,4 +1,4 @@
-import { Button, Input } from 'Ocean';
+import { Button, Input } from '@cyan-ocean/ui';
 import React from 'react';
 
 interface TreeEditFocus {

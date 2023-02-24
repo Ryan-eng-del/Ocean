@@ -1,9 +1,9 @@
-import styled from '@emotion/styled';
 import {
   GlobalColor,
   GlobalFontSize,
   GlobalMargin,
-} from 'Ocean/common/variable';
+} from '@cyan-ocean/ui/common/variable';
+import styled from '@emotion/styled';
 
 interface StepWrapper {
   isLast: boolean;

@@ -1,4 +1,4 @@
-import { Tree, TreeItem } from 'Ocean';
+import { Tree, TreeItem } from '@cyan-ocean/ui';
 import React from 'react';
 const TreeItemDemo = () => {
   return (

@@ -8,9 +8,9 @@ import {
   DrawerHeadTitle,
   Radio,
   RadioGroup,
-} from 'Ocean';
-import { AlignType } from 'Ocean/common/type';
-import GlobalThemeProvider from 'Ocean/System/provider';
+} from '@cyan-ocean/ui';
+import { AlignType } from '@cyan-ocean/ui/common/type';
+import GlobalThemeProvider from '@cyan-ocean/ui/System/provider';
 import React, { useState } from 'react';
 
 const DialogBasic = () => {

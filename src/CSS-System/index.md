@@ -6,7 +6,15 @@ group:
 
 # Style System
 
+这是 Ocean UI 的第一大系统 Style System，从左侧栏可以看到 有各种各样的名称，这些都是 Ocean UI 提供的 CSS 单位，你可以在对应的 CSS 属性上使用单位，基本上涵盖了所有常见的单位。
+
 ## Colors
+
+你可以这样使用,在任何需要颜色,或者需要覆盖颜色的地方，你都可以使用这些值
+
+```javascript
+<ocean.div bg={"slate.300" c="blue.500"}/>
+```
 
 #### 基本颜色
 
@@ -17,6 +25,12 @@ group:
 ## Sizes
 
 #### width | height | maxWidth | minHeight | maxHeight | max-width
+
+你可以这样使用
+
+```javascript
+<ocean.div w={12} h={14} />
+```
 
 #### 基本单位
 
@@ -122,6 +136,12 @@ group:
 
 #### margin | padding
 
+你可以这样使用
+
+```javascript
+<ocean.div p={12} px={14} />
+```
+
 #### 基本单位
 
 | Value | Properties                  |
@@ -166,6 +186,12 @@ group:
 #### 如何使用
 
 ## Radius
+
+你可以这样使用
+
+```javascript
+<ocean.div rounded={'lg'} />
+```
 
 #### 基本单位
 

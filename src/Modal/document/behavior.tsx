@@ -9,7 +9,7 @@ import {
   ModalHeadTitle,
   Radio,
   RadioGroup,
-} from 'Ocean';
+} from '@cyan-ocean/ui';
 import React, { useState } from 'react';
 
 const Basic = () => {

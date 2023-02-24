@@ -1,6 +1,6 @@
-import { ButtonType } from 'Ocean/Button';
-import { SizeType } from 'Ocean/common/type';
-import { ocean } from 'Ocean/System';
+import { ButtonType } from '@cyan-ocean/ui/Button';
+import { SizeType } from '@cyan-ocean/ui/common/type';
+import { ocean } from '@cyan-ocean/ui/System';
 import React, { CSSProperties, Fragment } from 'react';
 import { DirectionType } from '../common/type';
 import { OceanComponent, StyleProps } from '../System/system.type';

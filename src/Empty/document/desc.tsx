@@ -1,4 +1,4 @@
-import { Empty, GlobalThemeProvider } from 'Ocean';
+import { Empty, GlobalThemeProvider } from '@cyan-ocean/ui';
 import React from 'react';
 
 const Basic = () => {

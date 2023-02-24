@@ -1,4 +1,4 @@
-import { GlobalThemeProvider, Input } from 'Ocean';
+import { GlobalThemeProvider, Input } from '@cyan-ocean/ui';
 import React, { useState } from 'react';
 
 const Basic = () => {

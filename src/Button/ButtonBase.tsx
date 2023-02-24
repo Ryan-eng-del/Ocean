@@ -1,8 +1,10 @@
-import { ocean } from 'Ocean';
-import { StyleProps } from 'Ocean/System/system.type';
-import TouchRipple from 'Ocean/TouchRipple/TouchRipple';
-import { cx } from 'Ocean/util/common';
+import { ocean } from '@cyan-ocean/ui';
+import { StyleProps } from '@cyan-ocean/ui/System/system.type';
+import TouchRipple from '@cyan-ocean/ui/TouchRipple/TouchRipple';
+import { cx } from '@cyan-ocean/ui/util/common';
 import React, { useRef } from 'react';
+import { useColorMode } from '../System/colorMode';
+import { changeMode } from '../util/mode';
 import { ButtonContent } from './ButtonContent';
 import { ButtonLoadingCpn } from './ButtonLoading';
 import { ButtonProps } from './index';
@@ -13,7 +15,7 @@ import {
   variant,
 } from './theme/index';
 
-const ButtonBase = React.forwardRef(function (props: ButtonProps) {
+const ButtonBase = React.forwardRef<any, ButtonProps>(function (props, ref) {
   const {
     children,
     size = 'medium',
@@ -29,12 +31,18 @@ const ButtonBase = React.forwardRef(function (props: ButtonProps) {
   } = props;
 
   const rippleRef = useRef<any>(null);
+  const mode = useColorMode();
+
+  const runIfFun = changeMode({
+    colorSchema: props.colorScheme,
+    curMode: mode.initialMode,
+  });
 
   //toDo 抽象封装成 Hook useMultiplyStyle（props, theme）
   const buttonBaseStyle: StyleProps = {
-    ...baseStyle,
+    ...runIfFun(baseStyle),
     ...sizeMap[size],
-    ...variant[type],
+    ...runIfFun(variant[type]),
     ...loadingStyle(loading),
   };
 
@@ -63,6 +71,7 @@ const ButtonBase = React.forwardRef(function (props: ButtonProps) {
         handleOnClick(e);
       }}
       style={style}
+      ref={ref}
       {...restProps}
     >
       {loading && <ButtonLoadingCpn type={type} loadingText={!!loadingText} />}

@@ -1,4 +1,4 @@
-import { GlobalThemeProvider, Spinner } from 'Ocean';
+import { GlobalThemeProvider, Spinner } from '@cyan-ocean/ui';
 import React from 'react';
 
 const Basic = () => {

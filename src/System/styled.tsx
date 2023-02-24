@@ -1,5 +1,5 @@
+import { convertCSS } from '@cyan-ocean/ui/Style-System';
 import createStyled from '@emotion/styled';
-import { convertCSS } from 'Ocean/Style-System';
 import React from 'react';
 import { shouldForwardProp } from './filterProps';
 import { styledComponents } from './styledComponents';

@@ -1,4 +1,4 @@
-import { SizeType } from 'Ocean/common/type';
+import { SizeType } from '@cyan-ocean/ui/common/type';
 import React, { CSSProperties, ReactNode } from 'react';
 import { OceanComponent } from '../System/system.type';
 import { tuple } from '../util/type';

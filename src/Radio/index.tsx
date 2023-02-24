@@ -1,4 +1,4 @@
-import { TypeButtonColor } from 'Ocean/common/variable';
+import { TypeButtonColor } from '@cyan-ocean/ui/common/variable';
 import React, { forwardRef, ReactNode } from 'react';
 import ButtonBase from '../Button/ButtonBase';
 import { ButtonType } from '../Button/index';

@@ -1,7 +1,7 @@
 import { DownOutlined, RightOutlined } from '@ant-design/icons';
+import Button from '@cyan-ocean/ui/Button';
+import { opacityTransition } from '@cyan-ocean/ui/Drawer/style/animation';
 import styled from '@emotion/styled';
-import Button from 'Ocean/Button';
-import { opacityTransition } from 'Ocean/Drawer/style/animation';
 import React, { ReactNode, useEffect, useRef } from 'react';
 import { CSSTransition } from 'react-transition-group';
 import { offEvent, onEvent } from '../util/dom';

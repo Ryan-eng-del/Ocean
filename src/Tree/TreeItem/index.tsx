@@ -1,5 +1,5 @@
 import { CheckOutlined, DownOutlined, LeftOutlined } from '@ant-design/icons';
-import { ocean } from 'Ocean/System';
+import { ocean } from '@cyan-ocean/ui/System';
 import React, { useContext, useEffect, useRef, useState } from 'react';
 import { TransitionGroup } from 'react-transition-group';
 import TreeContext from '../TreeContext';

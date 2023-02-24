@@ -1,4 +1,4 @@
-import { createContext } from 'Ocean/hooks/useContext';
+import { createContext } from '@cyan-ocean/ui/hooks/useContext';
 interface ModalContext {
   visible: boolean;
   cancel: () => void;

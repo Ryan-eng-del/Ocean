@@ -1,5 +1,5 @@
 import { AndroidFilled, AppleOutlined } from '@ant-design/icons';
-import { Button, GlobalThemeProvider, Tabs } from 'Ocean';
+import { Button, GlobalThemeProvider, Tabs } from '@cyan-ocean/ui';
 import React from 'react';
 import { TabItem } from '../index';
 

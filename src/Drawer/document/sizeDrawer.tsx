@@ -9,7 +9,7 @@ import {
   GlobalThemeProvider,
   Radio,
   RadioGroup,
-} from 'Ocean';
+} from '@cyan-ocean/ui';
 import React, { useState } from 'react';
 import { AlignType } from '../../common/type';
 

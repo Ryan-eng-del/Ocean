@@ -1,9 +1,9 @@
-import styled from '@emotion/styled';
 import {
   GlobalColor,
   GlobalFontSize,
   TypeButtonColor,
-} from 'Ocean/common/variable';
+} from '@cyan-ocean/ui/common/variable';
+import styled from '@emotion/styled';
 
 type RadioWrapper = {
   isSelect: boolean;

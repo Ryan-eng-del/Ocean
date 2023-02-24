@@ -1,4 +1,4 @@
-import { CountDown } from 'Ocean';
+import { CountDown } from '@cyan-ocean/ui';
 import React from 'react';
 
 const Basic = () => {

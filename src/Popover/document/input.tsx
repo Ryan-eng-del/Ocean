@@ -9,7 +9,7 @@ import {
   PopoverFooter,
   PopoverHeader,
   PopoverTrigger,
-} from 'Ocean';
+} from '@cyan-ocean/ui';
 import React, { useState } from 'react';
 
 // https://floating-ui.com/docs/getting-started 补充

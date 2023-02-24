@@ -1,6 +1,6 @@
+import { AlignType, TabType } from '@cyan-ocean/ui/common/type';
+import { GlobalColor, GlobalPadding } from '@cyan-ocean/ui/common/variable';
 import styled from '@emotion/styled';
-import { AlignType, TabType } from 'Ocean/common/type';
-import { GlobalColor, GlobalPadding } from 'Ocean/common/variable';
 
 export const getTabItemColor = (isCur: boolean, isDisable: boolean) => {
   if (isDisable) {

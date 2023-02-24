@@ -4,7 +4,8 @@ import {
   AlertIcon,
   AlertTitle,
   GlobalThemeProvider,
-} from 'Ocean';
+} from '@cyan-ocean/ui';
+
 import React from 'react';
 
 const Basic = () => {

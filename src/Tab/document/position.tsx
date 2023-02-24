@@ -1,5 +1,11 @@
 import { AndroidFilled, AppleOutlined } from '@ant-design/icons';
-import { Button, GlobalThemeProvider, Radio, RadioGroup, Tabs } from 'Ocean';
+import {
+  Button,
+  GlobalThemeProvider,
+  Radio,
+  RadioGroup,
+  Tabs,
+} from '@cyan-ocean/ui';
 import React, { useState } from 'react';
 import { AlignType } from '../../common/type';
 import { TabItem } from '../index';

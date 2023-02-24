@@ -1,5 +1,5 @@
+import { GlobalMargin } from '@cyan-ocean/ui/common/variable';
 import styled from '@emotion/styled';
-import { GlobalMargin } from 'Ocean/common/variable';
 
 const skeletonContainerBackground = 'rgba(224, 224, 224, 1)';
 const skeletonCardBackground = `linear-gradient(

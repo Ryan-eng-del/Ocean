@@ -1,4 +1,4 @@
-import { Button, GlobalThemeProvider, Tree, TreeItem } from 'Ocean';
+import { Button, GlobalThemeProvider, Tree, TreeItem } from '@cyan-ocean/ui';
 import React from 'react';
 const TreeItemDemo = () => {
   return (

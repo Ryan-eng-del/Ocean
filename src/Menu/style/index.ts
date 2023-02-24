@@ -1,5 +1,5 @@
+import { GlobalColor } from '@cyan-ocean/ui/common/variable';
 import styled from '@emotion/styled';
-import { GlobalColor } from 'Ocean/common/variable';
 
 export const ChildMenu = styled.div``;
 

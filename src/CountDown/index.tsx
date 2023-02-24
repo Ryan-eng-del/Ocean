@@ -1,6 +1,6 @@
+import { GlobalFontSize } from '@cyan-ocean/ui/common/variable';
 import styled from '@emotion/styled';
 import dayjs, { ManipulateType } from 'dayjs';
-import { GlobalFontSize } from 'Ocean/common/variable';
 import React, { ReactNode, useEffect, useMemo, useRef, useState } from 'react';
 import { FORMATSTRING } from '../common/constant';
 import { SizeType } from '../common/type';

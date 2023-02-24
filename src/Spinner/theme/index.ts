@@ -1,4 +1,4 @@
-import { defineStyle } from 'Ocean/Style-System/defineStyle';
+import { defineStyle } from '@cyan-ocean/ui/Style-System/defineStyle';
 
 export const sizes = {
   xs: defineStyle({

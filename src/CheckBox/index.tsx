@@ -1,5 +1,5 @@
-import { Radio, RadioGroup } from 'Ocean';
-import { RadioGroupProps } from 'Ocean/Radio/group';
+import { Radio, RadioGroup } from '@cyan-ocean/ui';
+import { RadioGroupProps } from '@cyan-ocean/ui/Radio/group';
 import React, { useState } from 'react';
 
 interface CheckOption {

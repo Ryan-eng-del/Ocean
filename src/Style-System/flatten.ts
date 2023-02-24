@@ -1,4 +1,4 @@
-import { isObject } from 'Ocean/util/common';
+import { isObject } from '@cyan-ocean/ui/util/common';
 
 export const flatten = (theme: Record<string, any>): Record<string, any> => {
   const recursive = (theme: Record<string, any>): Record<string, any> => {

@@ -5,7 +5,7 @@ import {
   TabCloseIcon,
   TabLabel,
   Tag,
-} from 'Ocean';
+} from '@cyan-ocean/ui';
 import React, { useState } from 'react';
 
 export default function Basic() {

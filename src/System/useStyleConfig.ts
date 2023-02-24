@@ -18,9 +18,10 @@ export const tagTheme = {
   defaultProps: {
     size: 'small',
     variant: 'solid',
-    colorScheme: 'blue',
+    colorScheme: 'teal',
   },
-  parts: ['root', 'container'],
+
+  parts: ['root', 'container', 'header'],
 };
 
 // {root: {color: 'red', color: 'blue', color: 'red'  }, container: {}}
@@ -38,20 +39,19 @@ function omit<T extends Record<string, any>, K extends keyof T>(
   return result;
 }
 
-export function cseStyleConfig(props: any) {
+export function useStyleConfig(props: any) {
   // 用户 props
   const userProps = omit(props, ['children']);
-  // 系统主题
+  // 系统主题 colorSchema 与 mode
   const systemTheme = {};
   // 与默认 props 合并后的 props, eg: { size: 'big', variant: 'solid', colorScheme: 'blue' } props
   const mergeProps = { ...tagTheme.defaultProps, ...systemTheme, ...userProps };
   const getStyle = resolveStyleConfig(tagTheme);
   // 传递 合并后的 props,得到最终的 style
   const style = getStyle(mergeProps);
-
   return style;
 }
 
-const props = { size: 'big' };
+// const props = { size: 'big' };
 
-cseStyleConfig(props);
+// cseStyleConfig(props);

@@ -3,7 +3,7 @@ import {
   FileOutlined,
   HomeFilled,
 } from '@ant-design/icons';
-import { Breadcrumb, BreadcrumbItem } from 'Ocean';
+import { Breadcrumb, BreadcrumbItem } from '@cyan-ocean/ui';
 import React from 'react';
 
 const Basic = () => {

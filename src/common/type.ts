@@ -1,4 +1,4 @@
-import { tuple } from 'Ocean/util/type';
+import { tuple } from '@cyan-ocean/ui/util/type';
 
 const SizeType = tuple('large', 'small', 'medium');
 

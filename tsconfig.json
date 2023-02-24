@@ -5,12 +5,11 @@
     "skipLibCheck": true,
     "esModuleInterop": true,
     "jsx": "react",
-    "lib": ["dom", "es2019"],
     "baseUrl": "./",
     "paths": {
       "@@/*": [".dumi/tmp/*"],
-      "Ocean": ["src"],
-      "Ocean/*": ["src/*", "*"]
+      "@cyan-ocean/ui": ["src"],
+      "@cyan-ocean/ui/*": ["src/*", "*"]
     }
   },
   "include": [".dumi/**/*", ".dumirc.ts", "src/**/*"]

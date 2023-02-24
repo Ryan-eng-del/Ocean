@@ -1,7 +1,11 @@
-import { ocean } from 'Ocean';
-import { InputType } from 'Ocean/Input/Input';
-import { baseStyle, dimensions, variantStyle } from 'Ocean/Input/theme';
-import { OceanComponent, StyleProps } from 'Ocean/System/system.type';
+import { ocean } from '@cyan-ocean/ui';
+import { InputType } from '@cyan-ocean/ui/Input/Input';
+import {
+  baseStyle,
+  dimensions,
+  variantStyle,
+} from '@cyan-ocean/ui/Input/theme';
+import { OceanComponent, StyleProps } from '@cyan-ocean/ui/System/system.type';
 import React, { forwardRef } from 'react';
 
 interface Select {

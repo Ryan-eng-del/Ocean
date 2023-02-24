@@ -12,5 +12,6 @@ export const createContext = <T>(): ContextReturn<T> => {
     const reactContext = useReactContext(Context);
     return reactContext;
   }
+
   return [Context.Provider, useContext, Context] as ContextReturn<T>;
 };

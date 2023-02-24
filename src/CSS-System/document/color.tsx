@@ -1,3 +1,5 @@
+import { useMessage } from '@cyan-ocean/ui/Message/message';
+import GlobalThemeProvider from '@cyan-ocean/ui/System/provider';
 import styled from '@emotion/styled';
 import React from 'react';
 import colors from '../theme/colors';
@@ -40,26 +42,33 @@ const ColorBlock = styled.div<{ bg: string }>`
 `;
 
 const Color = () => {
+  const { message } = useMessage();
+
   const clickColorBlock = (colorValue: string) => {
+    message({
+      content: `${colorValue} 复制成功！！`,
+      variant: 'solid',
+    });
     navigator.clipboard.writeText(colorValue);
-    // .then(() => Message.open({ content: 'Copy Successful!' }));
   };
 
   const UI = Object.entries(colors).map(([colorName, colorValue], index) => {
     const children = Object.entries(colorValue).map(
       ([colorNum, colorResult], index) => {
         return (
-          <div
-            key={index}
-            style={{ marginRight: '12px', marginBottom: '20px' }}
-          >
-            <ColorBlock
-              bg={colorResult}
-              onClick={() => clickColorBlock(colorResult)}
-            ></ColorBlock>
-            <div className="color-number">{colorNum}</div>
-            <div className="color-value">{colorResult}</div>
-          </div>
+          <GlobalThemeProvider key={index}>
+            <div
+              style={{ marginRight: '12px', marginBottom: '20px' }}
+              onClick={(e) => {
+                clickColorBlock(colorResult);
+                e.stopPropagation();
+              }}
+            >
+              <ColorBlock bg={colorResult}></ColorBlock>
+              <div className="color-number">{colorNum}</div>
+              <div className="color-value">{colorResult}</div>
+            </div>
+          </GlobalThemeProvider>
         );
       },
     );

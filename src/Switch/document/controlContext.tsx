@@ -1,4 +1,4 @@
-import { GlobalThemeProvider, Switch } from 'Ocean';
+import { GlobalThemeProvider, Switch } from '@cyan-ocean/ui';
 import React, { useState } from 'react';
 
 const Basic = () => {

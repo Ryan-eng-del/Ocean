@@ -1,4 +1,4 @@
-import { ocean } from 'Ocean';
+import { ocean } from '@cyan-ocean/ui';
 import React, { ReactNode } from 'react';
 
 export const ButtonContent = (props: {

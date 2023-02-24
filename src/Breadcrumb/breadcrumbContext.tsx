@@ -6,6 +6,7 @@ interface BreadcrumbContext {
   outline: boolean;
   underline: boolean;
 }
+
 const BreadcrumbContext = createContext<BreadcrumbContext>({
   fontSize: '13px',
   outline: false,

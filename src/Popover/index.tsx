@@ -1,3 +1,6 @@
+import { ocean } from '@cyan-ocean/ui/System';
+import { OceanComponent, StyleProps } from '@cyan-ocean/ui/System/system.type';
+import { cx } from '@cyan-ocean/ui/util/common';
 import {
   arrow,
   offset,
@@ -5,9 +8,6 @@ import {
   shift,
   useFloating,
 } from '@floating-ui/react';
-import { ocean } from 'Ocean/System';
-import { OceanComponent, StyleProps } from 'Ocean/System/system.type';
-import { cx } from 'Ocean/util/common';
 import React, { useRef } from 'react';
 import { PopoverProvider } from './createContext';
 

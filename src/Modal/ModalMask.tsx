@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { ocean } from 'Ocean';
-import { OceanComponent } from 'Ocean/System/system.type';
+import { ocean } from '@cyan-ocean/ui';
+import { OceanComponent } from '@cyan-ocean/ui/System/system.type';
 import { CSSTransition } from 'react-transition-group';
 import { StyleProps } from '../System/system.type';
 import { useModalContext } from './context';

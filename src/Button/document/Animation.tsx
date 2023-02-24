@@ -1,4 +1,4 @@
-import { Button, GlobalThemeProvider } from 'Ocean';
+import { Button, GlobalThemeProvider } from '@cyan-ocean/ui';
 import React from 'react';
 
 const BasicButton = () => {

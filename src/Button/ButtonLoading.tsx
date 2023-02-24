@@ -1,7 +1,7 @@
+import { ButtonType } from '@cyan-ocean/ui/Button';
+import { GlobalColor } from '@cyan-ocean/ui/common/variable';
+import { ocean } from '@cyan-ocean/ui/System';
 import styled from '@emotion/styled';
-import { ButtonType } from 'Ocean/Button';
-import { GlobalColor } from 'Ocean/common/variable';
-import { ocean } from 'Ocean/System';
 import React from 'react';
 import { StyleProps } from '../System/system.type';
 

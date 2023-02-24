@@ -1,6 +1,6 @@
+import { isNoPass } from '@cyan-ocean/ui/util/common';
 import { css } from '@emotion/react';
 import styled from '@emotion/styled';
-import { isNoPass } from 'Ocean/util/common';
 import React, { CSSProperties, ReactNode } from 'react';
 import { PxType } from '../common/type';
 

@@ -1,4 +1,9 @@
-import { Divider, DividerLine, DividerText, GlobalThemeProvider } from 'Ocean';
+import {
+  Divider,
+  DividerLine,
+  DividerText,
+  GlobalThemeProvider,
+} from '@cyan-ocean/ui';
 import React from 'react';
 
 const Basic = () => {

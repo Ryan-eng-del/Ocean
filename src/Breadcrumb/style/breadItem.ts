@@ -1,6 +1,6 @@
+import { IsType, PxType } from '@cyan-ocean/ui/common/type';
 import { css } from '@emotion/react';
 import styled from '@emotion/styled';
-import { IsType, PxType } from 'Ocean/common/type';
 
 const oceanBreadcrumbLightItemColor = '#4e5969';
 const oceanBreadcrumbBackgroundColor = 'rgb(245, 245, 245)';

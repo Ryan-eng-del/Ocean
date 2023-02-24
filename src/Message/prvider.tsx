@@ -1,5 +1,5 @@
+import { ocean } from '@cyan-ocean/ui/System';
 import { AnimatePresence } from 'framer-motion';
-import { ocean } from 'Ocean/System';
 import React, { Fragment, useSyncExternalStore } from 'react';
 import { createPortal } from 'react-dom';
 import { StyleProps } from '../System/system.type';

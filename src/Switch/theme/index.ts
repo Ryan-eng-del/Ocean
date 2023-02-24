@@ -1,5 +1,5 @@
-import { SwitchType } from 'Ocean/common/type';
-import { GlobalColor } from 'Ocean/common/variable';
+import { SwitchType } from '@cyan-ocean/ui/common/type';
+import { GlobalColor } from '@cyan-ocean/ui/common/variable';
 
 const customBackground = 'rgb(170, 180, 190)';
 const iosBackground = 'rgb(101, 196, 102)';

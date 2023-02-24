@@ -1,5 +1,5 @@
+import { SwitchType } from '@cyan-ocean/ui/common/type';
 import styled from '@emotion/styled';
-import { SwitchType } from 'Ocean/common/type';
 import { dot, getBackground, rightSwitch, track } from '../theme';
 
 const customDotBackground = 'rgb(0, 30, 60)';

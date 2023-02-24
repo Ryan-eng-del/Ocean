@@ -1,7 +1,7 @@
-import { SizeType } from 'Ocean/common/type';
-import { ocean } from 'Ocean/System';
-import { OceanComponent, StyleProps } from 'Ocean/System/system.type';
-import { cx } from 'Ocean/util/common';
+import { SizeType } from '@cyan-ocean/ui/common/type';
+import { ocean } from '@cyan-ocean/ui/System';
+import { OceanComponent, StyleProps } from '@cyan-ocean/ui/System/system.type';
+import { cx } from '@cyan-ocean/ui/util/common';
 import React from 'react';
 import { baseStyle, sizeStyle, variant } from './theme';
 

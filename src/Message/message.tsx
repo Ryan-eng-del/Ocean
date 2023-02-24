@@ -1,4 +1,3 @@
-import { motion, Variants } from 'framer-motion';
 import {
   Alert,
   AlertCloseIcon,
@@ -6,8 +5,9 @@ import {
   AlertIcon,
   AlertTitle,
   ocean,
-} from 'Ocean';
-import { MessageType, PxType } from 'Ocean/common/type';
+} from '@cyan-ocean/ui';
+import { MessageType, PxType } from '@cyan-ocean/ui/common/type';
+import { motion, Variants } from 'framer-motion';
 import React, { useEffect } from 'react';
 import { AlertVariant } from '../Alert/index';
 import { StyleProps } from '../System/system.type';

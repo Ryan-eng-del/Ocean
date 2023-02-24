@@ -1,4 +1,4 @@
-import { GlobalThemeProvider, Radio, RadioGroup } from 'Ocean';
+import { GlobalThemeProvider, Radio, RadioGroup } from '@cyan-ocean/ui';
 import React, { useState } from 'react';
 
 const RadioDemo1 = () => {

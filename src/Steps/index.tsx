@@ -1,5 +1,5 @@
 import { CheckOutlined } from '@ant-design/icons';
-import { isNoPass } from 'Ocean/util/common';
+import { isNoPass } from '@cyan-ocean/ui/util/common';
 import React, {
   CSSProperties,
   ReactNode,

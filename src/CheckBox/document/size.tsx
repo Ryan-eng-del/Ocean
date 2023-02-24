@@ -1,4 +1,4 @@
-import { CheckBox, GlobalThemeProvider } from 'Ocean';
+import { CheckBox, GlobalThemeProvider } from '@cyan-ocean/ui';
 import React from 'react';
 
 // const plainOptions = ['Apple', 'Pear', 'Orange'];

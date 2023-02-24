@@ -1,5 +1,5 @@
 import { CheckOutlined, CloseOutlined } from '@ant-design/icons';
-import { GlobalThemeProvider, Switch } from 'Ocean';
+import { GlobalThemeProvider, Switch } from '@cyan-ocean/ui';
 import React from 'react';
 
 const Basic = () => {

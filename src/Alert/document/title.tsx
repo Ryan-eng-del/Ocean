@@ -4,7 +4,7 @@ import {
   AlertIcon,
   AlertTitle,
   GlobalThemeProvider,
-} from 'Ocean';
+} from '@cyan-ocean/ui';
 import React from 'react';
 
 const Basic = () => {
@@ -22,7 +22,7 @@ const Basic = () => {
         <AlertTitle flex={'none'} marginY={3}>
           This is an Alert!
         </AlertTitle>
-        <AlertContent>Please enjoy Ocean UI!</AlertContent>
+        <AlertContent>Please enjoy ocean-ui UI!</AlertContent>
       </Alert>
     </GlobalThemeProvider>
   );

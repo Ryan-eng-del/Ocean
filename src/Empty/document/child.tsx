@@ -1,5 +1,5 @@
-import { Button, Empty } from 'Ocean';
-import GlobalThemeProvider from 'Ocean/System/provider';
+import { Button, Empty } from '@cyan-ocean/ui';
+import GlobalThemeProvider from '@cyan-ocean/ui/System/provider';
 import React from 'react';
 
 const Basic = () => {

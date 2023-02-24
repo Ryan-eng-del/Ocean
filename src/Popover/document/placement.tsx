@@ -9,7 +9,7 @@ import {
   PopoverTrigger,
   Radio,
   RadioGroup,
-} from 'Ocean';
+} from '@cyan-ocean/ui';
 import React, { useState } from 'react';
 import type { Popover as PopoverProps } from '../index';
 

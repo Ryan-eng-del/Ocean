@@ -1,4 +1,4 @@
-import { Empty } from 'Ocean';
+import { Empty } from '@cyan-ocean/ui';
 import React from 'react';
 
 const Basic = () => {

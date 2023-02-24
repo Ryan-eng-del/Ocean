@@ -1,6 +1,6 @@
 import { GithubOutlined } from '@ant-design/icons';
-import { TabLabel, Tag, TagLeftIcon } from 'Ocean';
-import GlobalThemeProvider from 'Ocean/System/provider';
+import { TabLabel, Tag, TagLeftIcon } from '@cyan-ocean/ui';
+import GlobalThemeProvider from '@cyan-ocean/ui/System/provider';
 import React from 'react';
 
 const Basic = () => {

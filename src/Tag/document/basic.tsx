@@ -1,5 +1,5 @@
-import { Tag } from 'Ocean';
-import GlobalThemeProvider from 'Ocean/System/provider';
+import { Tag } from '@cyan-ocean/ui';
+import GlobalThemeProvider from '@cyan-ocean/ui/System/provider';
 import React from 'react';
 
 const Basic = () => {

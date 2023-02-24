@@ -1,4 +1,4 @@
-import { PxType } from 'Ocean/common/type';
+import { PxType } from '@cyan-ocean/ui/common/type';
 
 export const handlePx = (size: PxType): string => {
   let value = size;

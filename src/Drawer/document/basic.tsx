@@ -6,7 +6,7 @@ import {
   DrawerHead,
   DrawerHeadTitle,
   GlobalThemeProvider,
-} from 'Ocean';
+} from '@cyan-ocean/ui';
 import React, { useState } from 'react';
 import DrawerFooter from '../DrawerFooter';
 

@@ -1,5 +1,5 @@
+import { ocean } from '@cyan-ocean/ui';
 import { keyframes } from '@emotion/react';
-import { ocean } from 'Ocean';
 import React, { forwardRef } from 'react';
 import { OceanComponent, StyleProps } from '../System/system.type';
 import { sizes, spinnerTheme } from './theme';

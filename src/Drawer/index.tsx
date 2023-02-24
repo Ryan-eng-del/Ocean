@@ -1,7 +1,7 @@
+import { ocean } from '@cyan-ocean/ui/System';
+import { offEvent, onEvent, stopPropagation } from '@cyan-ocean/ui/util/dom';
+import { opacityTransition } from '@cyan-ocean/ui/util/transition';
 import styled from '@emotion/styled';
-import { ocean } from 'Ocean/System';
-import { offEvent, onEvent, stopPropagation } from 'Ocean/util/dom';
-import { opacityTransition } from 'Ocean/util/transition';
 import React, { useEffect, useState } from 'react';
 import { CSSTransition } from 'react-transition-group';
 import { AlignType } from '../common/type';

@@ -1,5 +1,5 @@
 import { FacebookFilled, TwitterCircleFilled } from '@ant-design/icons';
-import { Button, GlobalThemeProvider, ocean } from 'Ocean';
+import { Button, GlobalThemeProvider, ocean } from '@cyan-ocean/ui';
 import React from 'react';
 
 const BasicButton = () => {

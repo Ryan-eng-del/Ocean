@@ -1,7 +1,7 @@
 import { CloseOutlined } from '@ant-design/icons';
-import { ocean } from 'Ocean/System';
-import { OceanComponent } from 'Ocean/System/system.type';
-import { cx } from 'Ocean/util/common';
+import { ocean } from '@cyan-ocean/ui/System';
+import { OceanComponent } from '@cyan-ocean/ui/System/system.type';
+import { cx } from '@cyan-ocean/ui/util/common';
 import React from 'react';
 import { StyleProps } from '../System/system.type';
 import { useModalContext } from './context';

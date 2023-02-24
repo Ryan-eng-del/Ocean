@@ -1,5 +1,5 @@
-import { ocean } from 'Ocean/System';
-import { OceanComponent, StyleProps } from 'Ocean/System/system.type';
+import { ocean } from '@cyan-ocean/ui/System';
+import { OceanComponent, StyleProps } from '@cyan-ocean/ui/System/system.type';
 import React from 'react';
 import { usePopoverContext } from './createContext';
 import PopoverTransition from './PopoverAnimated';

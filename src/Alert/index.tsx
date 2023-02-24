@@ -1,8 +1,8 @@
+import { ocean } from '@cyan-ocean/ui/System';
+import { OceanComponent } from '@cyan-ocean/ui/System/system.type';
+import { cx } from '@cyan-ocean/ui/util/common';
+import { opacityTransition } from '@cyan-ocean/ui/util/transition';
 import styled from '@emotion/styled';
-import { ocean } from 'Ocean/System';
-import { OceanComponent } from 'Ocean/System/system.type';
-import { cx } from 'Ocean/util/common';
-import { opacityTransition } from 'Ocean/util/transition';
 import React, { useEffect, useState } from 'react';
 import { CSSTransition } from 'react-transition-group';
 import { isNoPass } from '../util/common';

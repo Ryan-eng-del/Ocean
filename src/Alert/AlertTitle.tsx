@@ -1,5 +1,5 @@
-import { ocean } from 'Ocean/System';
-import { cx } from 'Ocean/util/common';
+import { ocean } from '@cyan-ocean/ui/System';
+import { cx } from '@cyan-ocean/ui/util/common';
 import React from 'react';
 import { OceanComponent } from '../System/system.type';
 

@@ -3,7 +3,7 @@ import {
   MailOutlined,
   SettingOutlined,
 } from '@ant-design/icons';
-import { Menu } from 'Ocean';
+import { Menu } from '@cyan-ocean/ui';
 import React from 'react';
 import type { MenuItem } from '../index';
 

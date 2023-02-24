@@ -5,7 +5,7 @@ import {
   Tag,
   TagLeftIcon,
   TagRightIcon,
-} from 'Ocean';
+} from '@cyan-ocean/ui';
 import React from 'react';
 
 const Basic = () => {
