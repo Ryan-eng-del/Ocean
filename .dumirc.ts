@@ -8,5 +8,4 @@ export default defineConfig({
     logo: '/logo.png',
     nav: [{ title: '', link: '' }],
   },
-  publicPath: '/Ocean/',
 });
