@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_cyan_ocean_ui=self.webpackChunk_cyan_ocean_ui||[]).push([[4002,2560],{85897:function(u,e,n){n.r(e);var c=n(26057),i=n(79685),a=n(63342),_=function(){return(0,a.jsx)(c.GlobalThemeProvider,{children:(0,a.jsx)(c.ocean.div,{bg:"cyan",children:"NIHAO1"})})},r=function(){return(0,a.jsx)(c.GlobalThemeProvider,{children:(0,a.jsx)(_,{})})};e.default=r}}]);

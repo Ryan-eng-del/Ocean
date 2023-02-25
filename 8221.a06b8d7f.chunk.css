@@ -1,0 +1,1 @@
+html[data-prefers-color=dark] .site-section-title,html[data-prefers-color=light] .site-section-title{position:relative;z-index:3;margin:0 auto;color:#000;font-size:50px;text-align:center}@media (max-width: 480px){html[data-prefers-color=dark] .site-section-title,html[data-prefers-color=light] .site-section-title{font-size:30px}}
