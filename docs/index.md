@@ -46,7 +46,7 @@ export default () => (
         <ocean.div
           mx={10}
           className="img"
-          background="url('https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/53ec527f43474b9888f38ff8ff48ae6f~tplv-k3u1fbpfcp-watermark.image?') center / contain no-repeat "
+          background="url('/ocean.png') center / contain no-repeat "
           w={400}
           h={400}
         ></ocean.div>
